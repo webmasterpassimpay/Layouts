@@ -4207,8 +4207,8 @@ body {
    max-width: 736px;
    width: 100%;
    margin: 0 auto;
-   padding: 0px 20px 100px;
-
+   padding: 0px 20px;
+   padding-bottom: 150px;
 }
 
 .wallet-support__title.page-crypto {

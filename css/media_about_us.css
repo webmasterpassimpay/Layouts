@@ -1,0 +1,141 @@
+.media-about-us__body {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 5px;
+}
+
+.media-about-us__body .about-media__item {
+   min-height: 320px;
+   height: 100%;
+}
+
+
+
+.about-media-top {
+   margin: 0 auto;
+   margin-bottom: 130px;
+   max-width: 1800px;
+   padding: 3px;
+}
+
+@media (max-width:1800px) {
+   .about-media-top {
+      margin-bottom: calc(100vw / 1800 * 130);
+   }
+}
+
+.about-media__container {}
+
+.about-media-top__body {
+   display: flex;
+   background-color: #1843BF;
+   border-radius: 50px;
+}
+
+.about-media-top__block:first-child {
+   padding-bottom: 26.66%;
+   flex: 0 0 47.78%;
+   border-radius: 50px;
+   overflow: hidden;
+}
+
+.about-media-top__block:last-child {
+   padding: 30px;
+   flex: 1 1 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.about-media-top__block:first-child img {
+   padding: 3px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 50px;
+}
+
+.about-media-top__block {
+   position: relative;
+}
+
+.about-media-top__block-body {
+   max-width: 700px;
+}
+
+.about-media-top__block-title {
+   margin-bottom: 30px;
+   font-family: 'Nekst';
+   font-weight: 700;
+   font-size: 40px;
+   color: #ffffff;
+}
+
+.about-media-top__block-subtitle {
+   margin-bottom: 30px;
+   font-size: 18px;
+   font-weight: 700;
+   color: #ffffff;
+   line-height: 120%;
+}
+
+.about-media-top__text {
+   font-size: 14px;
+   line-height: 150%;
+   color: #ffffff;
+}
+
+.about-media-top__text p {
+   margin-bottom: 25px;
+}
+
+.about-media-top__text p:last-child {
+   margin-bottom: 0px;
+}
+
+@media (max-width:991.98px) {
+   .about-media-top__block-title {
+
+      font-size: 30px;
+
+   }
+
+   .about-media-top__block-subtitle {
+
+      font-size: 16px;
+
+   }
+
+   .about-media-top__text {
+      font-size: 14px;
+
+   }
+}
+
+@media (max-width:766.98px) {
+   .about-media-top__body {
+      flex-direction: column;
+   }
+
+   .media-about-us__body {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .about-media-top__block:first-child {
+      padding-bottom: 55.8%;
+      order: 2;
+   }
+
+   .about-media-top__block:last-child {
+      order: 1;
+   }
+}
+
+@media (max-width:550px) {
+   .media-about-us__body {
+      grid-template-columns: 1fr;
+   }
+}

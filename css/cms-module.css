@@ -414,6 +414,7 @@
 
    .module__question-title {
       font-size: 30px;
+      text-align: center;
    }
 }
 
@@ -829,9 +830,9 @@
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
    gap: 5px;
-   -webkit-box-align: stretch;
+   /*    -webkit-box-align: stretch;
    -ms-flex-align: stretch;
-   align-items: stretch;
+   align-items: stretch; */
 }
 
 .about-media__block {

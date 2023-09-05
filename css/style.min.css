@@ -4195,6 +4195,8 @@ body {
 }
 
 .wallet-support__title {
+   flex: 0 0 50%;
+
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -4227,6 +4229,8 @@ body {
 }
 
 .wallet-support__cont {
+   flex: 0 0 50%;
+   height: 300px;
    padding: 0 40px;
 }
 

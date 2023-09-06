@@ -339,6 +339,7 @@
    font-family: Nekst;
    font-size: 40px;
    font-weight: 700;
+   text-align: center;
 }
 
 
@@ -364,7 +365,6 @@
 @media (max-width:991.98px) {
    .payment-process__title {
       font-size: 30px;
-      text-align: center;
    }
 
    .payment-process__text {

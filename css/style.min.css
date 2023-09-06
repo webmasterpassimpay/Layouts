@@ -4179,6 +4179,8 @@ body {
    max-width: 1800px;
 }
 
+
+
 .wallet-support__inner {
    display: -webkit-box;
    display: -ms-flexbox;
@@ -4194,21 +4196,30 @@ body {
    border-radius: 20px;
 }
 
+.wallet-support .wallet-support__inner .wallet-support__shell {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr;
+   align-items: center;
+}
+
+
 .wallet-support__title {
-   display: -webkit-box;
+
+   /* display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
    -webkit-box-orient: vertical;
    -webkit-box-direction: normal;
    -ms-flex-direction: column;
    flex-direction: column;
-   gap: 20px;
+   gap: 20px; */
    text-align: center;
    max-width: 736px;
    width: 100%;
    margin: 0 auto;
    padding: 0px 20px;
-   padding-bottom: 150px;
+
 }
 
 .wallet-support__title.page-crypto {
@@ -4229,6 +4240,7 @@ body {
 
 .wallet-support__cont {
    padding: 0 40px;
+   overflow: hidden;
 }
 
 .wallet-support__swiper {
@@ -11325,7 +11337,7 @@ input[type="date"]::-webkit-outer-spin-button {
 
 @supports (width: clamp(3.125rem, 1.7336956522rem + 6.9565217391vw, 8.125rem)) {
    .wallet-support__item {
-      width: clamp(80px, 1.7336956522rem + 6.9565217391vw, 12.1rem);
+      width: clamp(80px, 3.7336956522rem + 6.9565217391vw, 12.1rem);
    }
 }
 

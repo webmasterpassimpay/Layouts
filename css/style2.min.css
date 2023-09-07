@@ -864,6 +864,10 @@ body {
    border-radius: 40px;
 }
 
+.abaut-main.crypto-payments-modifier .abaut-main_cont {
+   box-shadow: none;
+}
+
 .abaut-main .abaut-main_cont .abaut-main_img {
    width: 100%;
    max-width: 860px;

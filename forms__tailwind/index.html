@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <title>HTML</title>
+   <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+   <meta name="viewport" content="width=device-width" initial-scale=1.0>
+   <link href="./dist/output.css" rel="stylesheet">
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="body_form">
+   <section class=" form ">
+      <div class="flex flex-nowrap">
+         <div class="form_left">
+            <button type="button" class="flex">
+               <span><img src="./icon/icon_1.svg" alt="Иконка параметры"></span>
+               <span class="form_options-text">Параметры</span>
+            </button>
+            <div class="form_subscribers">
+               <a href="#"><img src="./icon/icon_2.png" alt="Brjyrf инстаграм"></a>
+               <span class="flex-auto font-semibold">
+                  <div class="text-xl">Инстаграм Подписчики - 23 руб. за 1000 шт.</div>
+                  <div>[Мир, База 10К, Скорость до 5К/сутки, min 100]</div>
+               </span>
+               <span class="form_arrow"><button type="button"><img src="./icon/arrow-down.svg" alt="Указатель, стрелка вниз"></button></span>
+            </div>
+            <div class="form_quantity">
+               15151 заказов в этой разновидности
+            </div>
+            <div class="form_info">
+               <div class="form_info-block rounded-tl-2xl" href="#">
+                  <div><img src="./icon/info_icon-1.svg" alt="Иконка молния"></div>
+                  <div class="form_info-text">6-24 часа</div>
+                  <div class="form_info-subtext">Скорость запуска</div>
+               </div>
+               <div class="form_info-block" href="#">
+                  <div><img src="./icon/info_icon-2.svg" alt="Иконка молния"></div>
+                  <div class="form_info-text">До 5000 в сутки</div>
+                  <div class="form_info-subtext">Скорость привлечения</div>
+               </div>
+               <div class="form_info-block rounded-tr-2xl" href="#">
+                  <div><img src="./icon/info_icon-3.svg" alt="Иконка молния"></div>
+                  <div class="form_info-text">Боты</div>
+                  <div class="form_info-subtext">Аудитория</div>
+               </div>
+               <div class="form_info-block rounded-bl-2xl" href="#">
+                  <div><img src="./icon/info_icon-4.svg" alt="Иконка молния"></div>
+                  <div class="form_info-text">Весь мир</div>
+                  <div class="form_info-subtext">Георасположение</div>
+               </div>
+               <div class="form_info-block" href="#">
+                  <div><img src="./icon/info_icon-5.svg" alt="Иконка молния"></div>
+                  <div class="form_info-text">Без гарантий</div>
+                  <div class="form_info-subtext">Гарантия</div>
+               </div>
+               <a class="form_info-block rounded-br-2xl bg-[#F5F6F8] text-[#0D4FE8]" href="#">
+                  <div><img src="./icon/info_icon-6.svg" alt="Иконка молния"></div>
+                  <div class="form_info-text">Особенность базы</div>
+                  <div class="form_info-subtext text-[#0D4FE8]">Прочитать</div>
+               </a>
+            </div>
+            <div>
+               <div class="form_text">Мы не предоставляем гарантию на отписку. Если вас интересует услуга с гарантией, выберите другую из выпадающего списка.</div>
+               <div class="form_text">Следует понимать что по услугам без гарантии нужно накручивать максимально аккуратно, например: 1) Не стоит накручивать сразу много за раз 2) Не стоит накручивать если профиль абсолютно пустой 3) Не стоит накручивать на только зарегистрированный профиль.</div>
+               <div class="form_text">Если Вас это не устраивает, выбирайте услугу из выпадающего списка с гарантией</div>
+            </div>
+         </div>
+         <div class="form_right">
+            <div class="form_body">
+               <div class="text-2xl font-semibold mb-5">Заказать накрутку</div>
+               <form action="#" method="post" name="order" id="idnamber">
+                  <div class="form__title-input">
+                     <img src="./icon/form_icon-1.svg" alt="Иконка ссылки (два кольца скреплённых вместе)">
+                     <span class="form__title-text">Ссылка на профиль</span>
+                  </div>
+                  <input class="form_input" type="text" placeholder="Placeholder" name="link" value="">
+                  <div class="form__title-input">
+                     <img src="./icon/form_icon-2.svg" alt="Иконка почты (конверт)">
+                     <span class="form__title-text">E-mail Мы отправим на него ваши данные</span>
+                  </div>
+                  <input class="form_input" type="text" placeholder="Placeholder" name="link" value="">
+                  <div class="form__title-input">
+                     <img src="./icon/form_icon-3.svg" alt="Иконка двакубика со стрелками показывающими их движение по кругу">
+                     <span class="form__title-text">Количество, мин: 100, макс: 10000</span>
+                  </div>
+                  <input class="form_input price w-1/2 text-2xl" type="text" placeholder="10000" name="link" value="">
+                  <div class="form__title-input">
+                     <img src="./icon/form_icon-4.svg" alt="Иконка двакубика со стрелками показывающими их движение по кругу">
+                     <span class="form__title-text">Стоимость.</span><a class="form_link" href="#">Как заказать бесплатно?</a>
+                  </div>
+                  <div class="font_price">12.30 руб</div>
+                  <button class="form_button bg-[#0d4fe8]" type="submit">Заказать</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+</body>
+
+</html>

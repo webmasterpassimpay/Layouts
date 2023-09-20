@@ -4179,9 +4179,9 @@ body {
    max-width: 1800px;
 }
 
-
-
 .wallet-support__inner {
+   position: relative;
+   padding: 40px;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -4206,21 +4206,11 @@ body {
 
 
 .wallet-support__title {
-
-   /* display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-orient: vertical;
-   -webkit-box-direction: normal;
-   -ms-flex-direction: column;
-   flex-direction: column;
-   gap: 20px; */
    text-align: center;
    max-width: 736px;
    width: 100%;
    margin: 0 auto;
    padding: 0px 20px;
-
 }
 
 .wallet-support__title.page-crypto {
@@ -4228,6 +4218,7 @@ body {
 }
 
 .wallet-support__title p {
+   margin-bottom: 20px;
    color: #fff;
    font-family: Nekst;
    font-weight: 700;
@@ -4242,6 +4233,22 @@ body {
 .wallet-support__cont {
    padding: 0 40px;
    overflow: hidden;
+}
+
+@media (max-width:991.98px) {
+   .wallet-support__inner {
+      padding: 20px;
+   }
+
+   .wallet-support__title {
+      margin-bottom: 20px;
+      padding: 0px;
+   }
+
+   .wallet-support__cont {
+      padding: 0px;
+   }
+
 }
 
 .wallet-support__swiper {
@@ -4263,9 +4270,9 @@ body {
 }
 
 .integration__title {
+   margin: 0 auto;
    max-width: 800px;
    width: 100%;
-   margin: 0 auto;
    text-align: center;
 }
 
@@ -6882,28 +6889,9 @@ input[type="date"]::-webkit-outer-spin-button {
       margin-bottom: 100px;
    }
 
-   /*    .wallet-support__inner {
-      border-radius: 20px;
-   } */
-
-   .wallet-support__inner {
-      padding-top: 2.5rem;
-   }
-
-   .wallet-support__title {
-      margin-bottom: 3.75rem;
-   }
-
-   .wallet-support__title p {
-      font-size: 2.5rem;
-   }
 
    .wallet-support__title span {
       font-size: 0.875rem;
-   }
-
-   .wallet-support__item {
-      width: 12.1rem;
    }
 
    .integration {
@@ -8097,28 +8085,12 @@ input[type="date"]::-webkit-outer-spin-button {
       margin-bottom: 6.5vw;
    }
 
-   /* .wallet-support__inner {
-      border-radius: 0.625rem;
-   } */
-
-   .wallet-support__inner {
-      padding-top: 1.875rem;
-   }
-
-   .wallet-support__title {
-      margin-bottom: 1.875rem;
-   }
-
    .wallet-support__title p {
       font-size: 1.25rem;
    }
 
    .wallet-support__title span {
       font-size: 0.625rem;
-   }
-
-   .wallet-support__item {
-      width: 12.1rem;
    }
 
    .integration {
@@ -11287,7 +11259,7 @@ input[type="date"]::-webkit-outer-spin-button {
       border-radius: calc(0.625rem + 1.25 * (100vw - 20rem) / 71.875);
    }
 } */
-
+/* 
 @supports (padding-top: clamp(1.875rem, 1.2836956522rem + 2.9565217391vw, 4rem)) {
    .wallet-support__inner {
       padding-top: clamp(1.875rem, 1.2836956522rem + 2.9565217391vw, 4rem);
@@ -11298,7 +11270,7 @@ input[type="date"]::-webkit-outer-spin-button {
    .wallet-support__inner {
       padding-top: calc(1.875rem + 2.125 * (100vw - 20rem) / 71.875);
    }
-}
+} */
 
 @supports (margin-bottom: clamp(1.875rem, 1.3532608696rem + 2.6086956522vw, 3.75rem)) {
    .wallet-support__title {
@@ -11336,7 +11308,7 @@ input[type="date"]::-webkit-outer-spin-button {
    }
 }
 
-@supports (width: clamp(3.125rem, 1.7336956522rem + 6.9565217391vw, 8.125rem)) {
+/* @supports (width: clamp(3.125rem, 1.7336956522rem + 6.9565217391vw, 8.125rem)) {
    .wallet-support__item {
       width: clamp(80px, 3.7336956522rem + 6.9565217391vw, 12.1rem);
    }
@@ -11346,7 +11318,7 @@ input[type="date"]::-webkit-outer-spin-button {
    .wallet-support__item {
       width: calc(12.1rem + 5 * (100vw - 20rem) / 71.875);
    }
-}
+} */
 
 @supports (margin-bottom: clamp(4.375rem, 2.4619565217rem + 9.5652173913vw, 11.25rem)) {
    .integration {
@@ -12887,11 +12859,6 @@ input[type="date"]::-webkit-outer-spin-button {
    }
 }
 
-.wallet-support__inner {
-   position: relative;
-   padding-bottom: clamp(1.875rem, 13vw, 2.5rem);
-}
-
 .wallet-support__inner .canvasjs {
    display: none;
 }
@@ -14125,10 +14092,24 @@ a[disabled="disabled"] {
    scrollbar-color: #000099 #fff;
 }
 
+
 .wallet-support__item {
    background: #fff;
    border-radius: 50%;
-   padding: 13px;
+   padding: 3px;
+   width: 193px;
+}
+
+@media (max-width:1820px) {
+   .wallet-support__item {
+      width: 11vw;
+   }
+}
+
+@media (max-width:766.98px) {
+   .wallet-support__item {
+      width: 15vw;
+   }
 }
 
 .inner_modal h3 {

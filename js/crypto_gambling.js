@@ -1,6 +1,7 @@
 
 // Определение устройства PC / Mobile (mouse / touchScreen)
-if (typeof isMobile == "undefined") {
+
+if (typeof isMobile == 'undefined') {
    const isMobile = {
       Android: function () {
          return navigator.userAgent.match(/Android/i);
@@ -23,17 +24,17 @@ if (typeof isMobile == "undefined") {
             isMobile.BlackBerry() ||
             isMobile.iOS() ||
             isMobile.Opera() ||
-            isMobile.Windows());
+            isMobile.Windows()
+         )
       }
-   }
-
-
+   };
    if (isMobile.any()) {
       document.body.classList.add('_touch');
    } else {
       document.body.classList.add('_pc');
    };
 };
+
 /* открывает блоки в Questions */
 if (document.querySelector('.module__questions')) {
    const moduleQuestion = document.querySelectorAll('.module__question');

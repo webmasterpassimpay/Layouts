@@ -1,0 +1,612 @@
+@charset "UTF-8";
+
+@font-face {
+   font-family: Nekst;
+   font-display: swap;
+   src: url(../fonts/Nekst-Black.woff2) format("woff2"), url(../fonts/Nekst-Black.woff) format("woff");
+   font-weight: 900;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Nekst;
+   font-display: swap;
+   src: url(../fonts/Nekst-Bold.woff2) format("woff2"), url(../fonts/Nekst-Bold.woff) format("woff");
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Ubuntu;
+   font-display: swap;
+   src: url(../fonts/Ubuntu-Light.woff2) format("woff2"), url(../fonts/Ubuntu-Light.woff) format("woff");
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Ubuntu;
+   font-display: swap;
+   src: url(../fonts/Ubuntu-Bold.woff2) format("woff2"), url(../fonts/Ubuntu-Bold.woff) format("woff");
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Ubuntu;
+   font-display: swap;
+   src: url(../fonts/Ubuntu-Medium.woff2) format("woff2"), url(../fonts/Ubuntu-Medium.woff) format("woff");
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Ubuntu;
+   font-display: swap;
+   src: url(../fonts/Ubuntu-Regular.woff2) format("woff2"), url(../fonts/Ubuntu-Regular.woff) format("woff");
+   font-weight: 400;
+   font-style: normal;
+}
+
+
+* {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+*,
+:after,
+:before {
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+:active,
+:focus {
+   outline: 0;
+   -webkit-tap-highlight-color: transparent;
+}
+
+a:active,
+a:focus {
+   outline: 0;
+   -webkit-tap-highlight-color: transparent;
+}
+
+aside,
+footer,
+header,
+nav {
+   display: block;
+}
+
+body,
+html {
+   font-size: 100%;
+   line-height: 1;
+   font-size: 16px;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust: 100%;
+   -webkit-text-size-adjust: 100%;
+}
+
+button,
+input,
+textarea {
+   font-family: inherit;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+button {
+   cursor: pointer;
+   background-color: transparent;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+a,
+a:visited {
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+ul li {
+   list-style: none;
+}
+
+img {
+   vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-size: inherit;
+   font-weight: 400;
+}
+
+[class$=__container] {
+   max-width: 1210px;
+   padding: 0 10px;
+   margin: 0 auto;
+}
+
+input[type=number],
+input[type=date] {
+   -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0px;
+}
+
+
+body {
+   font-family: Ubuntu;
+   overflow-x: hidden;
+   background-color: #f5f8fb;
+}
+
+
+
+/* =================================================*/
+/*                    АНИМАЦИИ                      */
+/* =================================================*/
+
+._link-anim {
+   position: relative;
+   padding: 0 1px;
+   display: inline-block;
+   -webkit-transition: color ease 0.3s;
+   -o-transition: color ease 0.3s;
+   transition: color ease 0.3s;
+   /*   color: #1843bf;
+   text-decoration: none;
+   line-height: 1.2; */
+}
+
+._link-anim::after {
+   content: "";
+   position: absolute;
+   z-index: 0;
+   width: 100%;
+   height: 1px;
+   left: 0;
+   bottom: -3px;
+   background-color: #cedef1;
+   -webkit-transition: height ease 0.3s;
+   -o-transition: height ease 0.3s;
+   transition: height ease 0.3s;
+   opacity: 0.4;
+}
+
+._link-anim:hover::after {
+   height: calc(100% + 6px);
+}
+
+.btn,
+.btn2,
+.btn3,
+.bnt4 {
+   cursor: pointer;
+}
+
+
+.btn3 {
+   position: relative;
+   z-index: 0;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   /*  border: 1px #1843BF solid;
+   width: 100%;
+   height: 50px;
+   padding: 0 20px;
+   background: none;
+   border-radius: 10px;
+   font-weight: 500;
+   color: #343434; */
+}
+
+.btn3::before {
+   --size: 0;
+   content: "";
+   position: absolute;
+   z-index: -1;
+   left: var(--x);
+   top: var(--y);
+   width: var(--size);
+   height: var(--size);
+   background: radial-gradient(circle closest-side, rgba(24, 67, 191, 0.5), transparent);
+   transform: translate(-50%, -50%);
+   transition: width 0.2s ease, height 0.2s ease;
+}
+
+.btn3:hover::before {
+   --size: 400px;
+}
+
+a.btn3:hover {
+   color: #fff;
+}
+
+.btn3 svg path {
+   transition: stroke 0.3s;
+}
+
+.btn3:hover svg path {
+   stroke: #ffffff;
+}
+
+
+/*=================================================*/
+/* глобальные стили */
+/* правила стилей */
+/*=================================================*/
+
+
+[class*="__container"] {
+   padding: 0px 20px;
+   margin: 0 auto;
+   max-width: 1480px;
+   width: 100%;
+}
+
+.scrollbar::-webkit-scrollbar {
+   width: 3px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+   background-color: #009;
+}
+
+
+
+/* ================== */
+/* modal windows */
+/* ================== */
+
+.btn_close_modal {
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   width: 35px;
+   height: 35px;
+   background: #F5F8FB;
+   border-radius: 5px;
+   border: none;
+   overflow: hidden;
+}
+
+.btn_close_modal:after {
+   content: '';
+   position: absolute;
+   z-index: 2;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url(../svg/btn_close_modal.svg) no-repeat center;
+}
+
+.btn_close_modal:before,
+.close_alert_notif:before {
+   --size: 0;
+   content: "";
+   position: absolute;
+   z-index: 1;
+   left: var(--x);
+   top: var(--y);
+   width: var(--size);
+   height: var(--size);
+   background: radial-gradient(circle closest-side, #cecece, transparent);
+   transform: translate(-50%, -50%);
+   transition: width 0.2s ease, height 0.2s ease;
+}
+
+.btn_close_modal:hover:before,
+.close_alert_notif:hover:before {
+   --size: 60px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================== */
+/* contact form */
+/* ================== */
+
+.contact-form {
+   padding: 10px;
+   position: fixed;
+   z-index: 100;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   background: rgba(0, 0, 0, 0.5);
+   -webkit-backdrop-filter: blur(2.5px);
+   backdrop-filter: blur(2.5px);
+   overflow-y: auto;
+   display: none;
+}
+
+.contact-form__wrapper {
+   padding: 20px;
+   max-width: 500px;
+   background-color: #ffffff;
+   border-radius: 20px;
+}
+
+.contact-form__body {
+   position: relative;
+}
+
+.contact-form__textarea {
+   padding: 14px 10px;
+   margin-bottom: 10px;
+   width: 100%;
+   height: 260px;
+   line-height: 150%;
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+   border: 1px solid #C6D6E5;
+   border-radius: 10px;
+}
+
+.contact-form__textarea::-webkit-input-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__textarea::-moz-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__textarea:-ms-input-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__textarea::-ms-input-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__textarea::placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__input {
+   padding: 14px 10px;
+   margin-bottom: 10px;
+   width: 100%;
+   border-radius: 10px;
+   border: 1px solid #C6D6E5;
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__input::-webkit-input-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__input::-moz-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__input:-ms-input-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__input::-ms-input-placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__input::placeholder {
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__title {
+   padding: 6px;
+   margin-bottom: 20px;
+   color: #343434;
+   font-size: 18px;
+   font-weight: 700;
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.contact-form__grid {
+   display: -ms-grid;
+   display: grid;
+   -ms-grid-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
+   -webkit-column-gap: 10px;
+   -moz-column-gap: 10px;
+   column-gap: 10px;
+}
+
+.contact-form__return {
+   position: relative;
+}
+
+.contact-form__checked {
+   /*  display: none; */
+   padding: 14px 10px;
+   position: absolute;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   gap: 10px;
+   top: 47px;
+   right: 0;
+   background-color: #FFF;
+   border-radius: 10px;
+   border: 1px solid #C6D6E5;
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__return-value {
+   padding: 14px 10px;
+   width: 100%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   border-radius: 10px;
+   border: 1px solid #C6D6E5;
+   color: #9FA8B1;
+   font-family: Ubuntu;
+   font-size: 14px;
+}
+
+.contact-form__return-item {
+   padding: 5px 10px;
+   border-radius: 5px;
+   cursor: pointer;
+   -webkit-transition: color 0.3s, background-color 0.3s;
+   -o-transition: color 0.3s, background-color 0.3s;
+   transition: color 0.3s, background-color 0.3s;
+}
+
+.contact-form__return-item:hover {
+   background-color: #1843BF;
+   color: #ffffff;
+}
+
+.contact-form__return-item input {
+   display: none;
+}
+
+.contact-form__text {
+   margin-bottom: 20px;
+   color: #565656;
+   text-align: center;
+   font-family: Ubuntu;
+   font-size: 12px;
+   line-height: 150.4%;
+}
+
+.contact-form__button.button-blue {
+   width: 100%;
+   min-height: 50px;
+}
+
+.contact-form__arrow {
+   -webkit-transition: -webkit-transform 0.5s;
+   transition: -webkit-transform 0.5s;
+   -o-transition: transform 0.5s;
+   transition: transform 0.5s;
+   transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+#return-value-block.active .contact-form__arrow {
+   -webkit-transform: rotate3d(1, 0, 0, 180deg);
+   transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.contact-form__checked {
+   opacity: 0;
+   pointer-events: none;
+   -webkit-transition: opacity 0.5s;
+   -o-transition: opacity 0.5s;
+   transition: opacity 0.5s;
+}
+
+#return-value-block.active .contact-form__checked {
+   opacity: 1;
+   pointer-events: all;
+}
+
+.contact-form__close {
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 10px;
+   border-radius: 5px;
+   width: 34px;
+   height: 34px;
+   background-color: #F5F8FB;
+}
+
+#contact_form-block .btn_close_modal {
+   top: 0px;
+   right: 0px;
+}

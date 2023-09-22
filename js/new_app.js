@@ -1,36 +1,37 @@
-const isMobile = {
-   Android: function () {
-      return navigator.userAgent.match(/Android/i);
-   },
-   BlackBerry: function () {
-      return navigator.userAgent.match(/BlackBerry/i);
-   },
-   iOS: function () {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-   },
-   Opera: function () {
-      return navigator.userAgent.match(/Opera Mini/i);
-   },
-   Windows: function () {
-      return navigator.userAgent.match(/IEMobile/i);
-   },
-   any: function () {
-      return (
-         isMobile.Android() ||
-         isMobile.BlackBerry() ||
-         isMobile.iOS() ||
-         isMobile.Opera() ||
-         isMobile.Windows());
-   }
-};
-if (isMobile.any()) {
-   document.body.classList.add('_touch');
-} else {
-   document.body.classList.add('_pc');
-};
+if (typeof isMobile == "undefined") {
 
+   const isMobile = {
+      Android: function () {
+         return navigator.userAgent.match(/Android/i);
+      },
+      BlackBerry: function () {
+         return navigator.userAgent.match(/BlackBerry/i);
+      },
+      iOS: function () {
+         return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+      },
+      Opera: function () {
+         return navigator.userAgent.match(/Opera Mini/i);
+      },
+      Windows: function () {
+         return navigator.userAgent.match(/IEMobile/i);
+      },
+      any: function () {
+         return (
+            isMobile.Android() ||
+            isMobile.BlackBerry() ||
+            isMobile.iOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows());
+      }
+   };
+   if (isMobile.any()) {
+      document.body.classList.add('_touch');
+   } else {
+      document.body.classList.add('_pc');
+   };
 
-
+}
 
 if (document.querySelector('.header')) {
 
@@ -51,9 +52,10 @@ if (document.querySelector('.header')) {
       let siseSubmenuX = event.target.closest('._with-submenu').querySelector('.new-submenu__wrapper').clientHeight;
       let siseSubmenuY = event.target.closest('._with-submenu').querySelector('.new-submenu__wrapper').clientWidth;
       fonMenu.style.opacity = "1";
+      fonMenu.style.pointerEvents = "all";
       fonMenuIn.style.height = siseSubmenuX + 40 + 'px';
       fonMenuIn.style.width = siseSubmenuY + 40 + 'px';
-      fonMenuArrow.style.left = -fonMenu.offsetLeft + event.target.closest('._with-submenu-button').offsetLeft + event.target.closest('._with-submenu-button').clientWidth / 2 + 'px';
+      fonMenuArrow.style.right = siseSubmenuY + 20 - (-fonMenu.offsetLeft + event.target.closest('._with-submenu-button').offsetLeft + event.target.closest('._with-submenu-button').clientWidth / 2) + 'px';
       newSubmenu.forEach(e => {
          if (e == event.target.closest('._with-submenu').querySelector('.new-submenu')) {
             e.style.opacity = '1';
@@ -77,6 +79,8 @@ if (document.querySelector('.header')) {
          e.style.transform = '';
       })
       fonMenu.style.opacity = "0";
+      fonMenu.style.pointerEvents = "none";
+
    }
    function openNavMenu(event) {
       /* больше 766,98 px */
@@ -151,6 +155,7 @@ if (document.querySelector('.lang_list')) {
 
 if (document.querySelector('.review-bitcoin')) {
    let reviewBitcoinTabsItem = document.querySelectorAll('.review-bitcoin__tabs-item');
+   // let reviewBitcoinTabsItem = document.querySelectorAll('.review-bitcoin__tabs-item');
    let reviewBitcoinSchedule = document.querySelectorAll('.review-bitcoin__schedule');
    document.body.addEventListener('click', (event) => {
       /* открывает модальное "обзор bitcoin" */
@@ -171,31 +176,173 @@ if (document.querySelector('.review-bitcoin')) {
 
 
 
+if (document.querySelector('#block_scroll')) {
+   let blockScroll = document.querySelector('#block_scroll');
+   let scrollArrows = document.querySelector('#scroll_arrows');
+   scrollArrows.addEventListener('click', (event) => {
+      if (event.target.closest('#block-scroll__arrow-up')) {
+         blockScroll.scrollTo({
+            top: blockScroll.scrollTop + 200,
+            behavior: "smooth"
+         })
+      }
+      if (event.target.closest('#block-scroll__arrow-down')) {
+         blockScroll.scrollTo({
+            top: blockScroll.scrollTop - 200,
+            behavior: "smooth"
+         })
+      }
+   })
+}
+
+if (document.querySelector('#contact-form')) {
+
+   let returnValue = document.querySelector('#return-value');
+   let returnInput = document.forms.contact_form;
+   //  let valueChecked = document.querySelector('#return-value-checked');
+   let valueBlock = document.querySelector('#return-value-block');
+   let contactFormBlock = document.querySelector('#contact_form-block');
+   document.body.addEventListener('click', (event) => {
+      valueBlock.classList.toggle('active', event.target.closest('#return-value-button'));
+      if (event.target.closest('#contact-form-open')) {
+         contactFormBlock.style.display = 'flex';
+         document.body.style.overflow = "hidden";
+      }
+      if (event.target.closest('.btn_close_modal')) {
+         contactFormBlock.style.display = 'none';
+         document.body.style.overflow = "";
+      }
+   })
+   returnInput.addEventListener('change', (event => {
+      if (event.target.getAttribute('name') == 'return') {
+         returnValue.innerHTML = event.target.dataset.val;
+         //    valueBlock.classList.remove('active');
+      }
+   }))
+}
+
+if (document.querySelector('.search-site__wrapper')) {
+   let searchSiteInput = document.querySelector('.search-site__input');
+   let searchSiteModal = document.querySelector('#search-site-modal')
+   document.body.addEventListener('click', (event) => {
+      if (event.target.closest('#search-site__clear')) {
+         searchSiteInput.value = '';
+      }
+      if (event.target.closest('#button-search-open')) {
+         searchSiteModal.style.display = "flex"
+         document.querySelector('body').style.overflow = 'hidden';
+      }
+      if (event.target.closest('#button-search-close')) {
+         searchSiteModal.style.display = "none"
+         document.querySelector('body').style.overflow = '';
+      }
+      //  #button-search-open
+
+   })
+}
 
 
-/* import { createChart } from './lightweight-charts.standalone.development.js';
+/* открывает блоки в Module for CMS */
+if (document.querySelector('.module__cms') && document.querySelector('._touch')) {
+   const moduleCmsShell = document.querySelectorAll('.module__cms-shell');
+   document.body.addEventListener('click', function (event) {
+      if (event.target.closest('.module__cms-shell')) {
+         moduleCmsShell.forEach(e => {
+            if (e == event.target.closest('.module__cms-shell')) {
+               e.classList.toggle('module__cms-shell_activ');
+            } else {
+               e.classList.remove('module__cms-shell_activ');
+            }
+         })
+      } else {
+         moduleCmsShell.forEach(e => {
+            e.classList.remove('module__cms-shell_activ');
+         })
+      }
+   })
+}
 
-console.log(createChart); */
+
+/* открывает блоки в Questions */
+if (document.querySelector('.module__questions')) {
+   const moduleQuestion = document.querySelectorAll('.module__question');
+   function sizeQuestion(e) {
+      if (e.classList.contains('module__question-active')) {
+         e.querySelector('.module__question-answer').style.height = e.querySelector('.module__question-answer-size').offsetHeight + 'px';
+      }
+   }
+   function closeQuestion(e) {
+      e.classList.remove('module__question-active');
+      e.querySelector('.module__question-answer').style.height = '0px';
+   }
+   document.body.addEventListener('click', function (event) {
+      if (event.target.closest('.module__question')) {
+         moduleQuestion.forEach(e => {
+            if (e == event.target.closest('.module__question') && !e.classList.contains('module__question-active')) {
+               e.classList.add('module__question-active');
+               sizeQuestion(e);
+            } else {
+               closeQuestion(e)
+            }
+         })
+      } else {
+         moduleQuestion.forEach(e => { closeQuestion(e) })
+      }
+   })
+   window.addEventListener('resize', () => { moduleQuestion.forEach(e => { sizeQuestion(e) }) })
+}
 
 
-/* const Chart_1 = createChart(document.getElementById('test'), { width: 1000, height: 700 });
 
-const series = Chart_1.addAreaSeries({
-   topColor: '#1ffc02',
-   bottomColor: '#1ffc0218',
-   lineColor: 'red',
+if (document.querySelector('.learn-more')) {
+   document.body.addEventListener('click', (event) => {
+      if (event.target.closest('.learn-more')) {
+         console.log(event.target.closest('.learn-more-body').querySelector('.annotatio__content'));
+         event.target.closest('.learn-more-body').querySelector('.annotatio__content').style.height =
+            event.target.closest('.learn-more-body').querySelector('.annotatio__text').offsetHeight + 'px';
+         event.target.closest('.learn-more').style.display = 'none';
+      }
+   })
+
+   let callback = function (entries, observer) {
+      entries.forEach(entry => {
+         if (!entry.isIntersecting && entry.target.getBoundingClientRect().top > 0) {
+            entry.target.querySelector('.annotatio__content').style.height = '0px';
+            entry.target.querySelector('.learn-more').style.display = 'inline-block';
+         }
+      })
+   };
+
+   let observer = new IntersectionObserver(callback, { threshold: 0.1 });
+   let target = document.querySelectorAll('.learn-more-body');
+   target.forEach(function (event) {
+      observer.observe(event);
+   })
+
+}
+
+
+
+$('body').on('mousemove', ' .btn-dashed', function (e) {
+   var x = e.pageX - $(this).offset().left;
+   var y = e.pageY - $(this).offset().top;
+   $(this).css({ '--x': `${x}px`, '--y': `${y}px` });
 });
 
-series.setData([
-   { time: '2019-04-11', value: 80.01 },
-   { time: '2019-04-12', value: 96.63 },
-   { time: '2019-04-13', value: 76.64 },
-   { time: '2019-04-14', value: 81.89 },
-   { time: '2019-04-15', value: 74.43 },
-   { time: '2019-04-16', value: 80.01 },
-   { time: '2019-04-17', value: 90.63 },
-   { time: '2019-04-18', value: 76.64 },
-   { time: '2019-04-19', value: 81.89 },
-   { time: '2019-04-20', value: 74.43 },
-]);
- */
+
+
+
+/* модальное окно в footer "нашли баг?" */
+if (document.querySelector('.bug__modal')) {
+   document.body.addEventListener('click', function (event) {
+
+      if (!event.target.closest('.bug__modal-body') || event.target.closest('.bug__modal__title-exit')) {
+         document.querySelector('.bug__modal').classList.remove('bug__modal-active');
+         document.body.classList.remove('bug__modal-active_hidden');
+      }
+      if (event.target.closest('.footer__bug')) {
+         document.querySelector('.bug__modal').classList.add('bug__modal-active');
+         document.body.classList.add('bug__modal-active_hidden');
+      }
+   })
+}

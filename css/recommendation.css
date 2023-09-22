@@ -1,0 +1,799 @@
+@charset "UTF-8";
+
+@font-face {
+   font-family: Nekst;
+   font-display: swap;
+   src:
+      url("../fonts/Nekst-Black.woff2") format("woff2"),
+      url("../fonts/Nekst-Black.woff") format("woff");
+   font-weight: 900;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Nekst;
+   font-display: swap;
+   src:
+      url("../fonts/Nekst-Bold.woff2") format("woff2"),
+      url("../fonts/Nekst-Bold.woff") format("woff");
+   font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: Ubuntu;
+   font-display: swap;
+   src:
+      url("../fonts/Ubuntu-Regular.woff2") format("woff2"),
+      url("../fonts/Ubuntu-Regular.woff") format("woff");
+   font-weight: 400;
+   font-style: normal;
+}
+
+
+.__hover-blue:hover {
+   background-color: #B5CDFB;
+}
+
+.recommendations__main {
+   font-family: Ubuntu;
+   font-weight: 400;
+}
+
+.recommendations {
+   padding: 10px;
+}
+
+.recommendations,
+.recommendations button {
+   font-family: Nekst;
+   font-weight: 900;
+}
+
+.recommendations__body {
+   max-width: 1820px;
+   margin: 0 auto 8%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   padding: 3px;
+   background-color: #1843BF;
+   border-radius: 50px;
+   -webkit-box-shadow: 0 100px 80px rgba(2, 85, 255, 0.07), 0 64.8148px 46.8519px rgba(2, 85, 255, 0.0531481), 0 38.5185px 25.4815px rgba(2, 85, 255, 0.0425185), 0 20px 13px rgba(2, 85, 255, 0.035), 0 8.14815px 6.51852px rgba(2, 85, 255, 0.0274815), 0 1.85185px 3.14815px rgba(2, 85, 255, 0.0168519);
+   box-shadow: 0 100px 80px rgba(2, 85, 255, 0.07), 0 64.8148px 46.8519px rgba(2, 85, 255, 0.0531481), 0 38.5185px 25.4815px rgba(2, 85, 255, 0.0425185), 0 20px 13px rgba(2, 85, 255, 0.035), 0 8.14815px 6.51852px rgba(2, 85, 255, 0.0274815), 0 1.85185px 3.14815px rgba(2, 85, 255, 0.0168519);
+}
+
+.recommendations__block:first-child {
+   position: relative;
+   padding-bottom: 29%;
+   -webkit-box-flex: 0;
+   -ms-flex: 0 0 43%;
+   flex: 0 0 43%;
+   border-radius: 50px;
+   overflow: hidden;
+}
+
+.recommendations__block:first-child img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   -o-object-fit: cover;
+   object-fit: cover;
+}
+
+.recommendations__block:last-child {
+   -webkit-box-flex: 1;
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+   padding: 70px;
+}
+
+.recommendations__content {
+   color: #ffffff;
+}
+
+.recommendations__title {
+   margin-bottom: 30px;
+   font-size: 40px;
+   line-height: 120%;
+}
+
+.recommendations__text {
+   margin-bottom: 30px;
+   font-size: 18px;
+   line-height: 120%;
+}
+
+.recommendations__button {
+   padding: 20px 33px;
+   font-size: 18px;
+   border-radius: 10px;
+   background-color: #FF6600;
+   color: #ffffff;
+}
+
+
+/* logo */
+
+.passimpay-logo {
+   margin-bottom: 100px;
+}
+
+.passimpay-logo__body {
+   max-width: 880px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.passimpay-logo__title {
+   margin-bottom: 20px;
+   font-family: Nekst;
+   font-weight: 700;
+   font-size: 40px;
+   font-weight: 700;
+   color: #1F2226;
+}
+
+.passimpay-logo__text {
+   margin-bottom: 20px;
+   font-size: 16px;
+   line-height: 150%;
+   color: rgba(31, 34, 38, 0.4862745098);
+}
+
+.passimpay-logo__download {
+   margin-bottom: 60px;
+}
+
+.passimpay-logo__download-button {
+   padding: 17px 30px;
+   font-family: Nekst;
+   font-weight: 900;
+   background-color: #1843BF;
+   color: #ffffff;
+   border-radius: 10px;
+}
+
+.passimpay-logo__content {
+   display: -ms-grid;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+   gap: 40px;
+}
+
+.passimpay-logo__shell {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+}
+
+.passimpay-logo__logo {
+   margin-bottom: 10px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   width: 455px;
+   height: 155px;
+   background-color: #ffffff;
+   border-radius: 30px;
+}
+
+.passimpay-logo__logo.passimpay-logo__logo-blue {
+   background-color: #1A75E2;
+}
+
+.passimpay-logo__format {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-column-gap: 8px;
+   -moz-column-gap: 8px;
+   column-gap: 8px;
+   color: rgba(31, 34, 38, 0.5019607843);
+}
+
+.passimpay-logo__format-text {
+   font-size: 14px;
+   text-transform: capitalize;
+}
+
+.passimpay-logo__format-svg,
+.passimpay-logo__format-eps,
+.passimpay-logo__format-png {
+   padding: 4px 8px;
+   font-size: 12px;
+   text-transform: uppercase;
+   background-color: rgba(31, 34, 38, 0.1019607843);
+   border-radius: 6px;
+   -webkit-transition: background-color 0.3s;
+   -o-transition: background-color 0.3s;
+   transition: background-color 0.3s;
+}
+
+
+
+/* fonts */
+
+.passimpay-fonts {
+   margin-bottom: 100px;
+}
+
+.passimpay-fonts__body {
+   padding: 60px 80px;
+   background-color: #ffffff;
+   border-radius: 30px;
+}
+
+.passimpay-fonts__title {
+   margin-bottom: 60px;
+   font-family: Nekst;
+   font-weight: 700;
+   font-size: 40px;
+   font-weight: 700;
+   color: #1F2226;
+   text-align: center;
+   line-height: 120%;
+}
+
+.passimpay-fonts__content {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-column-gap: 40px;
+   -moz-column-gap: 40px;
+   column-gap: 40px;
+}
+
+.passimpay-fonts__block {
+   -webkit-box-flex: 1;
+   -ms-flex: 1 0 30%;
+   flex: 1 0 30%;
+}
+
+.passimpay-fonts__font {
+   margin-bottom: 15px;
+   padding: 40px;
+   text-align: center;
+   font-size: 28px;
+   color: #1F2226;
+   background-color: #F2F5FA;
+   border-radius: 30px;
+}
+
+.passimpay-fonts__font-nekst {
+   font-family: Nekst;
+   font-weight: 900;
+}
+
+.passimpay-fonts__text {
+   margin-bottom: 20px;
+   font-size: 16px;
+   line-height: 150%;
+   color: rgba(31, 34, 38, 0.4862745098);
+}
+
+.passimpay-fonts__link {
+   padding-bottom: 20px;
+}
+
+.passimpay-fonts__link a {
+   font-size: 18px;
+   font-weight: 500;
+   color: #356DF3;
+}
+
+/* colors */
+
+.passimpay-colors {
+   background-color: #ffffff;
+}
+
+.passimpay-colors__body {
+   padding: 60px;
+}
+
+.passimpay-colors__title {
+   margin-bottom: 40px;
+   font-family: Nekst;
+   font-weight: 700;
+   font-size: 40px;
+   font-weight: 700;
+   color: #1F2226;
+   text-align: center;
+}
+
+.passimpay-colors__color-main-item {
+   margin-bottom: 40px;
+   color: #ffffff;
+}
+
+.passimpay-colors__color-main-sample {
+   margin-bottom: 20px;
+   padding: 20px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   height: 100px;
+   border-radius: 30px;
+}
+
+.passimpay-colors__color-main-name {
+   font-family: Nekst;
+   font-weight: 700;
+   font-size: 30px;
+   text-align: center;
+}
+
+.passimpay-colors__color-main-code {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+}
+
+.passimpay-colors__color-main-subscribe {
+   color: rgba(0, 0, 0, 0.3803921569);
+}
+
+.passimpay-colors__color-main-sample.__blue {
+   background-color: #1843BF;
+}
+
+.passimpay-colors__color-main-sample.__orange {
+   background-color: #FF6600;
+}
+
+.passimpay-colors__color-main-sample.__gradient-1 {
+   background: -webkit-gradient(linear, left top, right top, from(#FF6600), to(#1843BF));
+   background: -o-linear-gradient(left, #FF6600, #1843BF);
+   background: linear-gradient(90deg, #FF6600, #1843BF);
+}
+
+.passimpay-colors__color-main-sample.__gradient-2 {
+   background: -webkit-gradient(linear, left top, right top, from(#197CE1), to(#9FBDFF));
+   background: -o-linear-gradient(left, #197CE1, #9FBDFF);
+   background: linear-gradient(90deg, #197CE1, #9FBDFF);
+}
+
+.passimpay-colors__color-list {
+   display: -ms-grid;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+   gap: 10px;
+}
+
+.passimpay-colors__color-list-item {
+   -webkit-box-flex: 0;
+   -ms-flex: 0 1 12%;
+   flex: 0 1 12%;
+   margin-bottom: 20px;
+}
+
+.passimpay-colors__color-list-sample {
+   margin-bottom: 20px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   min-height: 100px;
+   border-radius: 30px;
+   color: #ffffff;
+}
+
+.passimpay-colors__color-list-name {
+   font-size: 16px;
+   line-height: 150%;
+   color: rgba(0, 0, 0, 0.3803921569);
+}
+
+.__black {
+   background-color: #161616;
+}
+
+.__gray {
+   background-color: #565656;
+}
+
+.__light_blue-1 {
+   background-color: #CEDEF1;
+   color: #343434;
+}
+
+.__light_blue-2 {
+   background-color: #B5CDFB;
+   color: #343434;
+}
+
+.__background {
+   background-color: #F5F8FB;
+   color: #343434;
+}
+
+.__success {
+   background-color: #33CC66;
+}
+
+.__error {
+   background-color: #FF3B2E;
+}
+
+.__warning {
+   background-color: #FEB46D;
+}
+
+/* icons */
+
+.passimpay-icons {
+   padding: 60px;
+}
+
+.passimpay-icons__body {
+   color: rgba(31, 34, 38, 0.5019607843);
+}
+
+.passimpay-icons__block {
+   max-width: 800px;
+   margin: 0 auto;
+}
+
+.passimpay-icons__title {
+   margin-bottom: 20px;
+   font-family: Nekst;
+   font-weight: 700;
+   font-size: 40px;
+   font-weight: 700;
+   text-align: center;
+   color: #1F2226;
+}
+
+.passimpay-icons__text {
+   margin-bottom: 40px;
+   text-align: center;
+   line-height: 130%;
+   color: rgba(32, 35, 39, 0.5019607843);
+}
+
+.passimpay-icons__lists {
+   margin-bottom: 60px;
+   display: -ms-grid;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   -ms-grid-rows: 1fr;
+   grid-template-rows: 1fr;
+   gap: 20px;
+   -ms-grid-columns: (1fr)[4];
+}
+
+.passimpay-icons__lists:last-child {
+   margin-bottom: 0px;
+}
+
+.passimpay-icons__item {
+   margin-bottom: 20px;
+}
+
+.passimpay-icons__item-image {
+   margin-bottom: 10px;
+}
+
+.passimpay-icons__item-image img,
+.passimpay-icons__item-image svg {
+   height: 100%;
+   width: 100%;
+}
+
+.passimpay-icons__item-text {
+   margin-bottom: 6px;
+}
+
+.passimpay-icons__item-button button {
+   padding: 2px 8px;
+   border-radius: 6px;
+   background-color: rgba(31, 34, 38, 0.1019607843);
+}
+
+.passimpay-icons__item-button-copy {
+   transition: background-color 0.5s;
+
+}
+
+/* image */
+
+.passimpay-image__body {
+   padding: 60px 0px;
+}
+
+.passimpay-image__block {
+   text-align: center;
+}
+
+.passimpay-image__title {
+   margin-bottom: 20px;
+   font-family: Nekst;
+   font-weight: 700;
+   font-size: 40px;
+   color: #1F2226;
+}
+
+.passimpay-image__text {
+   margin-bottom: 40px;
+   line-height: 130%;
+   color: rgba(32, 35, 39, 0.5019607843);
+}
+
+.passimpay-image__lists {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   -webkit-column-gap: 10px;
+   -moz-column-gap: 10px;
+   column-gap: 10px;
+}
+
+.passimpay-image__item {
+   -webkit-box-flex: 0;
+   -ms-flex: 0 1 310px;
+   flex: 0 1 310px;
+   color: rgba(32, 35, 39, 0.5019607843);
+}
+
+.passimpay-image__image {
+   margin-bottom: 27px;
+}
+
+.passimpay-image__image img {
+   width: 100%;
+}
+
+.passimpay-image__subscribe-text {
+   margin-right: 8px;
+}
+
+.passimpay-image__subscribe-link {
+   padding: 2px 8px;
+   text-transform: uppercase;
+   border-radius: 6px;
+   background-color: rgba(31, 34, 38, 0.1019607843);
+   transition: background-color 0.5s;
+
+}
+
+/* icon style */
+
+.passimpay-style-icon__body {
+   padding: 60px 0px;
+}
+
+.passimpay-style-icon__block {
+   text-align: center;
+}
+
+.passimpay-style-icon__title {
+   font-size: 40px;
+   font-weight: 700;
+   color: #1F2226;
+   margin-bottom: 20px;
+}
+
+.passimpay-style-icon__text {
+   margin-bottom: 40px;
+   line-height: 130%;
+   color: rgba(32, 35, 39, 0.5019607843);
+}
+
+.passimpay-style-icon__lists {
+   display: -ms-grid;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+   gap: 10px;
+}
+
+.passimpay-style-icon__item {
+   margin-bottom: 30px;
+}
+
+.passimpay-style-icon__image {
+   margin-bottom: 20px;
+   padding: 20px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   border-radius: 30px;
+   background-color: #ffffff;
+}
+
+.passimpay-style-icon__image img {
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.passimpay-style-icon__subscribe span {
+   margin-right: 8px;
+}
+
+.passimpay-style-icon__subscribe-link {
+   padding: 2px 8px;
+   text-transform: uppercase;
+   border-radius: 6px;
+   background-color: rgba(31, 34, 38, 0.1019607843);
+}
+
+@media (max-width: 1470px) {
+   .recommendations__block:last-child {
+      padding: 4.7619047619vw;
+   }
+
+   .passimpay-logo {
+      margin-bottom: 6.8027210884vw;
+   }
+
+   .passimpay-fonts {
+      margin-bottom: 6.8027210884vw;
+   }
+
+   .passimpay-fonts__body {
+      padding: 4.0816326531vw;
+   }
+
+   .passimpay-colors__body {
+      padding: 4.0816326531vw;
+   }
+
+   .passimpay-icons {
+      padding: 4.0816326531vw;
+   }
+}
+
+@media (max-width: 1180px) {
+   .passimpay-colors__color-list {
+      -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+      -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .recommendations__title {
+      font-size: 34px;
+   }
+
+   .passimpay-fonts__content {
+      display: block;
+   }
+
+   .passimpay-colors__color-list {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+   }
+
+   .passimpay-icons__lists {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+   }
+
+   .passimpay-image__body {
+      padding: 4.0816326531vw 0px;
+   }
+
+   .passimpay-image__lists {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+   }
+
+   .passimpay-image__item {
+      margin-bottom: 30px;
+   }
+
+   .passimpay-style-icon__body {
+      padding: 4.0816326531vw 0px;
+   }
+}
+
+@media (max-width: 766.98px) {
+   .recommendations__body {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+   }
+
+   .recommendations__block:first-child {
+      padding-bottom: 58%;
+      overflow: hidden;
+   }
+
+   .recommendations__title {
+      font-size: 30px;
+   }
+
+   .recommendations__download {
+      text-align: center;
+   }
+
+   .recommendations__button {
+      width: 90%;
+   }
+
+   .passimpay-colors__body {
+      padding: 30px 0px;
+   }
+
+   .passimpay-icons {
+      padding: 30px 0px;
+   }
+}
+
+@media (max-width: 500px) {
+   .passimpay-logo__content {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   }
+
+   .passimpay-logo__shell,
+   .passimpay-logo__block,
+   .passimpay-logo__logo {
+      width: 100%;
+   }
+
+   .passimpay-logo__logo img {
+      max-width: 80%;
+      max-height: 80%;
+   }
+
+   .passimpay-colors__color-list {
+      display: block;
+   }
+
+   .passimpay-icons__lists {
+      display: block;
+   }
+
+   .passimpay-image__lists {
+      display: block;
+   }
+}

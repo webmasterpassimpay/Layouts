@@ -1,28 +1,18 @@
-.do-business {}
+.do-business {
+   margin-bottom: 150px;
+}
+
+@media (max-width:1470px) {
+   .do-business {
+      margin-bottom: calc(100vw / 1470 * 150);
+   }
+}
 
 .do-business__body {
    position: relative;
    padding: 30px 10px;
    border-radius: 20px;
-   background-color: #1843BF;
-}
-
-.do-business__body.page-crypto {
-   padding: 75px;
-}
-
-.do-business__image-center.page-crypto {
-   margin: 0px -20px 0px;
-}
-
-.do-business__body.page-crypto .do-business__wrapper {
-   margin-bottom: 50px;
-}
-
-.do-business__wrapper {
-   margin: 0 auto;
-   max-width: 1050px;
-   text-align: center;
+   background-color: #000099;
 }
 
 .do-business__title {
@@ -36,7 +26,6 @@
    color: #ffffff;
 }
 
-
 .do-business__subtitle {
    margin: 0 auto 22px;
    padding: 0px 10px;
@@ -45,24 +34,6 @@
    text-align: center;
    line-height: 150%;
    color: #C0D6FF;
-}
-
-.do-business__wrapper .do-business__subtitle {
-   margin-bottom: 0px;
-}
-
-.do-business__wrapper .do-business__subtitle,
-.do-business__wrapper .do-business__title {
-   max-width: 100%;
-   width: 100%;
-}
-
-.do-business__valutar {
-   margin-bottom: 10px;
-   color: #FEB46D;
-   font-family: Ubuntu;
-   font-size: 20px;
-   line-height: 150.4%;
 }
 
 .do-business__block {
@@ -75,10 +46,6 @@
    -ms-flex-align: center;
    align-items: center;
    max-width: 1030px;
-}
-
-.do-business__block.page-crypto {
-   max-width: 1250px;
 }
 
 .do-business__image-left {
@@ -94,15 +61,6 @@
    -webkit-box-flex: 0;
    -ms-flex: 0 0 20%;
    flex: 0 0 20%;
-}
-
-.do-business__image-center.page-crypto {
-   -ms-flex: 0 0 43%;
-   flex: 0 0 43%;
-}
-
-.do-business__image-center img {
-   width: 100%;
 }
 
 .do-business__image-right {
@@ -220,13 +178,6 @@
    }
 }
 
-@media (max-width:991.98px) {
-
-   .do-business__title {
-      font-size: 30px;
-   }
-}
-
 @media (max-width: 766.98px) {
    .do-business__block {
       padding: 10px;
@@ -237,17 +188,12 @@
    }
 
    .do-business__title {
-      font-size: 24px;
-   }
-
-   .do-business__valutar {
-      font-size: 16px;
+      font-size: 20px;
    }
 
    .do-business__subtitle {
       font-size: 16px;
    }
-
 
    .do-business__image-left {
       margin-right: 0px;
@@ -383,19 +329,14 @@
       -ms-transform: rotate(-90deg) translate(-162.7%, 6%);
       transform: rotate(-90deg) translate(-162.7%, 6%);
    }
-
-   .do-business__body.page-crypto {
-      padding: 20px 10px;
-   }
-
-   .do-business__image-center.page-crypto {
-      margin: -10px 0px -17px;
-   }
 }
 
 @media (max-width: 500px) {
+   .do-business__title {
+      font-size: 15px;
+   }
 
    .do-business__subtitle {
-      font-size: 12px;
+      font-size: 10px;
    }
 }

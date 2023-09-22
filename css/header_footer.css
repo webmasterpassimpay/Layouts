@@ -309,6 +309,12 @@
    border-radius: 10px;
    background-color: #ffffff;
    color: #1843BF;
+
+}
+
+.header__regAuth-register span {
+   position: relative;
+   z-index: 2;
 }
 
 .submenu-left .new-submenu-lists {

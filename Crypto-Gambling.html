@@ -2163,7 +2163,7 @@
 
 
       <!-- payment gateway process -->
-      <div class="payment-process mb-section-rule">
+      <section class="payment-process mb-section-rule">
          <div class="payment-process__container">
             <div class="payment-process__container-small">
 
@@ -2690,7 +2690,7 @@
 
             </div>
          </div>
-      </div>
+      </section>
 
 
 
@@ -2761,63 +2761,785 @@
 
 
 
+      <!-- Section Wallet Support -->
+      <section class="wallet-support mb-section-rule">
+         <div class="wallet-support__container">
+            <div class="wallet-support__inner" id="canvascontainer">
+               <script id="vertexShader" type="x-shader/x-vertex">
+
+                     // Uniforms
+                     uniform float time;
+                     varying vec3 vNormal;
+                          
+                     void main(void) {
+                        vec3 v = position;
+                        vNormal = normal;
+                        v.z += cos(2.0 * position.x + (time)) * 4085.5;
+                        
+                        gl_Position = projectionMatrix *
+                                 modelViewMatrix *
+                                 vec4(v, 1.0);
+                     }
+                     
+                           </script>
+
+
+               <script id="fragmentShader" type="x-shader/x-fragment">
+                     varying vec3 vNormal;
+                     uniform float time;
+                          
+                     void main(void) {
+                        vec3 light = vec3(0.1, .9, .1);
+                     
+                        light = normalize(light);
+                     
+                        float dProd = max(0.2, dot(vNormal, light));
+                     
+                        gl_FragColor = vec4(dProd, // R
+                                      dProd, // G
+                                      dProd, // B
+                                      1.0);  // A
+                     }
+                     
+                           </script>
+
+               <script src="./js/walletsupport/three.js"></script>
+
+
+               <div class="canvasjs"><canvas width="1920" height="501"></canvas></div>
+
+               <script>
+                  var vertexHeight = 15000;
+                  var planeDefinition = 100;
+                  var planeSize = 1245000;
+                  var totalObjects = 50000;
+                  var frame = 0;
+
+                  var container = document.createElement('div');
+                  document.getElementById("canvascontainer").appendChild(container);
+
+                  var camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 1, 400000)
+                  camera.position.z = 550000;
+                  camera.position.y = 10000;
+                  camera.lookAt(new THREE.Vector3(0, 6000, 0));
+
+
+                  var scene = new THREE.Scene();
+                  scene.fog = new THREE.Fog(0x23233f, 1, 300000);
+
+                  var uniforms =
+                  {
+                     time: { type: "f", value: 0.0 }
+                  };
+
+
+                  var material = new THREE.ShaderMaterial({
+                     uniforms: uniforms,
+                     vertexShader: document.getElementById('vertexShader').textContent,
+                     fragmentShader: document.getElementById('fragmentShader').textContent,
+                     wireframe: true,
+                     fog: false
+                  });
 
 
 
+                  var plane = new THREE.Mesh(new THREE.PlaneGeometry(planeSize, planeSize, planeDefinition, planeDefinition), material);
+                  plane.rotation.x -= Math.PI * .5;
+
+                  scene.add(plane);
+
+                  var geometry = new THREE.Geometry();
+
+                  for (i = 0; i < totalObjects; i++) {
+                     var vertex = new THREE.Vector3();
+                     vertex.x = Math.random() * planeSize - (planeSize * .5);
+                     vertex.y = (Math.random() * 100000) + 10000;
+                     vertex.z = Math.random() * planeSize - (planeSize * .5);
+                     geometry.vertices.push(vertex);
+                  }
+
+                  var material = new THREE.ParticleBasicMaterial({ size: 200 });
+                  var particles = new THREE.ParticleSystem(geometry, material);
+
+                  scene.add(particles);
+
+                  var renderer = new THREE.WebGLRenderer();
+                  renderer.setSize(window.innerWidth, window.innerHeight);
+                  container.appendChild(renderer.domElement);
+
+
+                  render();
+
+                  function render() {
+                     requestAnimationFrame(render);
+                     camera.position.z -= 150;
+                     if (camera.position.z < 0) {
+                        camera.position.z = 550000;
+                     }
+                     uniforms.time.value = frame;
+                     frame += .04;
+                     //console.log(frame);
+                     //  dateVerts();
+                     renderer.render(scene, camera);
+                  }
+               </script>
+               <div><canvas width="1680" height="901" style="width: 3360px; height: 1802px;"></canvas></div>
+
+
+               <div class="wallet-support__shell">
+
+                  <div class="wallet-support__block">
+                     <h2 class="wallet-support__title title-rule">All popular payment wallets are included</h2>
+                     <p class="wallet-support__text text-rule mb-list-rule">PassimPay поддерживает более 15 криптовалют, на которые приходится 70% мировой капитализации крипторынка. И только те монеты, которым доверяют более 300 млн пользователей.
+                        PassimPay поддерживает более 15 криптовалют, на которые приходится 70% мировой капитализации крипторынка. И только те монеты, которым доверяют более 300 млн пользователей.
+                     </p>
+                  </div>
+                  <div class="wallet-support__cont">
+                     <div class="wallet-support__swiper swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                        <div class="wallet-support__swiper-wrapper swiper-wrapper" id="swiper-wrapper-af1868f70ad55fa1" aria-live="off" style="transform: translate3d(-10560px, 0px, 0px); transition-duration: 0ms;">
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/btc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ltc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/bch.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/eth.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" role="group" aria-label="5 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/doge.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5" role="group" aria-label="6 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/trx.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" role="group" aria-label="7 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdt.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" role="group" aria-label="8 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdd.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" role="group" aria-label="9 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/bnb.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="9" role="group" aria-label="10 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/busd.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="10" role="group" aria-label="11 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="11" role="group" aria-label="12 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/eos.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="12" role="group" aria-label="13 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ada.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="13" role="group" aria-label="14 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/shib.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="14" role="group" aria-label="15 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dash.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="15" role="group" aria-label="16 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/hft.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="16" role="group" aria-label="17 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dydx.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="17" role="group" aria-label="18 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/link.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="18" role="group" aria-label="19 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/aave.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="19" role="group" aria-label="20 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/crv.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="20" role="group" aria-label="21 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ach.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="21" role="group" aria-label="22 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/matic.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="22" role="group" aria-label="23 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dai.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="23" role="group" aria-label="24 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/near.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="24" role="group" aria-label="25 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/atom.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="25" role="group" aria-label="26 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/twt.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="26" role="group" aria-label="27 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dot.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="27" role="group" aria-label="28 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/xmr.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="28" role="group" aria-label="29 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/avax.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="29" role="group" aria-label="30 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/flow.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="30" role="group" aria-label="31 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/zec.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="31" role="group" aria-label="32 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ksm.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="32" role="group" aria-label="33 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/sol.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="0" role="group" aria-label="1 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/btc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="1" role="group" aria-label="2 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ltc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="2" role="group" aria-label="3 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/bch.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="3" role="group" aria-label="4 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/eth.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="4" role="group" aria-label="5 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/doge.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="5" role="group" aria-label="6 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/trx.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="6" role="group" aria-label="7 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdt.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="7" role="group" aria-label="8 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdd.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="8" role="group" aria-label="9 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/bnb.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="9" role="group" aria-label="10 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/busd.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-prev" data-swiper-slide-index="10" role="group" aria-label="11 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-active" data-swiper-slide-index="11" role="group" aria-label="12 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/eos.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-next" data-swiper-slide-index="12" role="group" aria-label="13 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ada.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="13" role="group" aria-label="14 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/shib.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="14" role="group" aria-label="15 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dash.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="15" role="group" aria-label="16 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/hft.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="16" role="group" aria-label="17 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dydx.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="17" role="group" aria-label="18 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/link.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="18" role="group" aria-label="19 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/aave.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="19" role="group" aria-label="20 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/crv.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="20" role="group" aria-label="21 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ach.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="21" role="group" aria-label="22 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/matic.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="22" role="group" aria-label="23 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dai.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="23" role="group" aria-label="24 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/near.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="24" role="group" aria-label="25 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/atom.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="25" role="group" aria-label="26 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/twt.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="26" role="group" aria-label="27 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dot.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="27" role="group" aria-label="28 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/xmr.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="28" role="group" aria-label="29 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/avax.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="29" role="group" aria-label="30 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/flow.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="30" role="group" aria-label="31 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/zec.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="31" role="group" aria-label="32 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ksm.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide" data-swiper-slide-index="32" role="group" aria-label="33 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/sol.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" role="group" aria-label="1 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/btc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="1" role="group" aria-label="2 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ltc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" role="group" aria-label="3 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/bch.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" role="group" aria-label="4 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/eth.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" role="group" aria-label="5 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/doge.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="5" role="group" aria-label="6 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/trx.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="6" role="group" aria-label="7 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdt.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="7" role="group" aria-label="8 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdd.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="8" role="group" aria-label="9 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/bnb.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="9" role="group" aria-label="10 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/busd.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev" data-swiper-slide-index="10" role="group" aria-label="11 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/usdc.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="11" role="group" aria-label="12 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/eos.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="12" role="group" aria-label="13 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ada.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="13" role="group" aria-label="14 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/shib.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="14" role="group" aria-label="15 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dash.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="15" role="group" aria-label="16 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/hft.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="16" role="group" aria-label="17 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dydx.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="17" role="group" aria-label="18 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/link.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="18" role="group" aria-label="19 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/aave.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="19" role="group" aria-label="20 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/crv.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="20" role="group" aria-label="21 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ach.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="21" role="group" aria-label="22 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/matic.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="22" role="group" aria-label="23 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dai.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="23" role="group" aria-label="24 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/near.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="24" role="group" aria-label="25 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/atom.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="25" role="group" aria-label="26 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/twt.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="26" role="group" aria-label="27 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/dot.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="27" role="group" aria-label="28 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/xmr.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="28" role="group" aria-label="29 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/avax.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="29" role="group" aria-label="30 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/flow.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="30" role="group" aria-label="31 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/zec.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="31" role="group" aria-label="32 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/ksm.svg" alt="">
+                           </div>
+                           <div class="wallet-support__item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="32" role="group" aria-label="33 / 33" style="margin-right: 110px;">
+                              <img src="./svg/currency/sol.svg" alt="">
+                           </div>
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                     </div>
+                  </div>
+
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+      <!-- Section Application -->
+      <section class="application mb-section-rule">
+         <div class="application__container">
+            <div class="application__inner">
+               <div class="application__img">
+
+                  <svg viewBox="0 0 663 715" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                     <image width="349" height="349" y="366" xlink:href="./img/application_img_1.svg"></image>
+                     <image width="360" height="360" x="73.161" y="271.901" xlink:href="./img/application_img_2.png"></image>
+                     <image data-prlx-mouse="" width="302" height="392" x="4.4" y="144.9" transform="matrix(0.643923, 0, 0, 0.650083, 84.861038, 114.13208)" xlink:href="./img/application_img_3.svg" style="transform: translate3d(4.27679%, -1.76936%, 0px);"></image>
+                     <image data-prlx-mouse="" data-prlx-dyr="" data-prlx-dxr="" width="341" height="640" x="152.817" y="37.63" xlink:href="./img/application_img_4_en.webp" style="transform: translate3d(-4.27679%, 1.76936%, 0px);"></image>
+                     <image data-prlx-mouse="" data-prlx-dyr="" width="43" height="40" x="153.832" y="646.752" xlink:href="./img/application_img_5.webp" style="transform: translate3d(4.27679%, 1.76936%, 0px);"></image>
+                     <image width="20" height="126" x="10.772" y="29.357" xlink:href="./img/application_img_6.svg"></image>
+                     <image width="126" height="20" x="420" y="650" xlink:href="./img/application_img_7.svg"></image>
+                     <image data-prlx-mouse="" data-prlx-dyr="" width="95" height="95" x="559.725" y="3.202" xlink:href="./img/application_img_8.webp" style="transform: translate3d(4.27679%, 1.76936%, 0px);"></image>
+                     <image class="application_image_shadow" data-prlx-mouse="" width="180" height="208" x="417.472" y="147.302" style="transform: translate3d(4.27679%, -1.76936%, 0px);" xlink:href="./img/application_img_9_en.svg"></image>
+                     <image data-prlx-mouse="" data-prlx-dxr="" width="236" height="236" x="336.856" y="385.422" xlink:href="./img/application_img_10_en.svg" style="transform: translate3d(-4.27679%, -1.76936%, 0px);"></image>
+                  </svg>
+
+               </div>
+               <div class="application__cont">
+                  <div class="application__info">
+                     <h2 class="application__info-title title-rule">Download the PassimPay app for your smartphone</h2>
+                     <p class="application__info-text text-rule mb-list-rule">Take your online casino management to the next level with the convenience of the PassimPay mobile app. Whether you're on iOS or Android, our app provides you with real-time transaction insights, payment tracking, and seamless casino control, all at your fingertips. Stay connected and manage your casino operations effortlessly, anytime and anywhere.</p>
+                  </div>
+                  <div class="application__download"><!-- data-da=".application__img,768,last" -->
+                     <ul>
+                        <li>
+                           <a href="/en/application"><img src="./img/application/googleplay-logo_en.svg" alt=""></a>
+                        </li>
+                        <li>
+                           <a href="/en/application#ios"><img src="./img/application/appstore-logo_en.svg" alt=""></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+
+
+      <!-- Use PassimPay -->
+      <article class="block-1__body mb-section-rule">
+         <div class="block-1__container">
+            <div class="block-1__body">
+
+               <div class="block-1__content">
+                  <h2 class="block-1__title title-rule">Use PassimPay for you and your business</h2>
+                  <div class="block-1__shell">
+                     <p class="block-1__text text-rule mb-list-rule">The best payment system for both business and everyday life. Withdrawal fee ranges from 0.1% to 1% for a personal account and up to 3.5% for a business account, regardless of the amount!</p>
+                     <p class="block-1__text text-rule mb-list-rule">Use Passimpay as a wallet or payment gateway for your website. Convenient, fast, and advantageous.</p>
+                  </div>
+                  <a class="block-1__button button-orange btn1" href="/en/help">
+                     <span class="button-orange__text">Get connected</span>
+                     <span class="button-orange__icon">
+                        <img src="./svg/arrow-right.svg" alt="">
+                     </span>
+                  </a>
+
+               </div>
+
+               <div class="block-1__image">
+                  <img src="./img/img-2.png" alt="">
+               </div>
+
+            </div>
+         </div>
+      </article>
+
+
+
+
+      <!-- media about us -->
+      <section class="about-media mb-section-rule">
+         <div class="about-media__container">
+            <div class="about-media__title title-rule">Media about us</div>
+            <div class="about-media__body">
+
+               <div class="about-media__block">
+                  <a class="" href="/minfin.com.ua">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_09.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">«PassimPay: огляд нового зручного фінансового інструменту»</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">minfin.com.ua</span>
+                           <span class="link-style-rule__icon">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="about-media__block">
+                  <a class="" href="/minfin.com.ua">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_10.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">«10 dolog, amit a PassimPay-ről tudni érdemes»</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">bitcoinbazis.hu</span>
+                           <span class="link-style-rule__icon">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+
+               <div class="about-media__block">
+                  <a class="" href="/decenter.org">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_11.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">«PassimPay Introduces Crypto Payments Solution for Businesses and Individuals»</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">u.today</span>
+                           <span class="link-style-rule__icon ">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+
+               <div class="about-media__block">
+                  <a class="" href="/decenter.org">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_12.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">«PassimPay: The Place for Cryptocurrency Transactions»</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">thecoinrepublic.com</span>
+                           <span class="link-style-rule__icon ">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="about-media__block">
+                  <a class="" href="/decenter.org">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_13.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">«PassimPay: Extensive overview of the innovative and convenient financial tool»</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">networkustad.com</span>
+                           <span class="link-style-rule__icon">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="about-media__block">
+                  <a class="" href="/decenter.org">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_14.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">PassimPay: The Ultimate Crypto Payment Solution For Businesses</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">cryptomode.com</span>
+                           <span class="link-style-rule__icon ">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="about-media__block">
+                  <a class="" href="/decenter.org">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_15.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">PassimPay: The Next Generation Cryptocurrency Payment Gateway for Businesses</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">blockchainreporter.net</span>
+                           <span class="link-style-rule__icon">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="about-media__block">
+                  <a class="" href="/decenter.org">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_16.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">Cryptocurrency Payments Made Easy With PassimPay</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">cryptowisser.com</span>
+                           <span class="link-style-rule__icon">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="about-media__block">
+                  <a class="" href="/decenter.org">
+                     <div class="about-media__item">
+                        <div class="about-media__image"><img src="./img/icon__about/about_17.png" alt="Иконка ресурса"></div>
+                        <div class="about-media__text">Secure and Efficient Payment Solutions From PassimPay for Businesses</div>
+                        <div class="about-media__date">28.09.2017</div>
+                        <div class="about-media__link link-style-rule">
+                           <span class="link-style-rule__text _link-anim">thenewscrypto.com</span>
+                           <span class="link-style-rule__icon ">
+                              <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                           </span>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+            </div>
+
+            <div class="about-media__button">
+               <a href="#" class="button-blue btn1">
+                  <span>View all articles</span>
+                  <span class="about-media__button-arrow">
+                     <img src="./svg/arrow-diagonal.svg" alt="">
+                  </span>
+               </a>
+            </div>
+
+         </div>
+      </section>
+
+
+
+
+
+
+      <!-- Questions -->
+      <section class="module__questions mb-section-rule">
+         <div class="content__container">
+            <div class="module__question-title title-rule">Frequently Asked Questions</div>
+            <ul>
+               <li class="module__question">
+                  <div class="module__question-item">
+                     <span>Which is the best crypto casino payment gateway?</span>
+                     <span>
+                        <svg class="module__question-arrow" width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect class="module__question-arrow-border" x="0.5" y="1.26562" width="59" height="59" rx="29.5" stroke="#CEDEF1" />
+                           <rect class="module__question-arrow-background" x="0.5" y="1.26562" width="59" height="59" rx="29.5" fill="transparent" />
+                           <path class="module__question-arrow-arrow" d="M37 27.7656L30 33.7656L28.25 32.2656M23 27.7656L25.3333 29.7656" stroke="#CEDEF1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="module__question-answer">
+                     <div class="module__question-answer-size">
+                        Choosing the right crypto casino payment gateway is crucial for seamless transactions and enhanced player experience. PassimPay.io emerges as a standout option, offering a comprehensive solution tailored to the needs of online casino owners. With support for a wide range of cryptocurrencies, user-friendly interfaces, top-notch security features, and efficient customer support, PassimPay.io stands out as the ideal payment gateway for crypto casinos. Make the smart choice to ensure smooth and secure transactions for your casino business.
+                        <div class="module__question-answer-line"></div>
+                     </div>
+                  </div>
+               </li>
+               <li class="module__question">
+                  <div class="module__question-item">
+                     <span>What to do if my CMS is not on the list of ready-made modules?</span>
+                     <span>
+                        <svg class="module__question-arrow" width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect class="module__question-arrow-border" x="0.5" y="1.26562" width="59" height="59" rx="29.5" stroke="#CEDEF1" />
+                           <rect class="module__question-arrow-background" x="0.5" y="1.26562" width="59" height="59" rx="29.5" fill="transparent" />
+                           <path class="module__question-arrow-arrow" d="M37 27.7656L30 33.7656L28.25 32.2656M23 27.7656L25.3333 29.7656" stroke="#CEDEF1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="module__question-answer">
+                     <div class="module__question-answer-size">
+                        Please, send us a request for connection through the form on the modules page. Also, you can contact us directly via Telegram or any convenient way in the "Contacts" section.
+                        <div class="module__question-answer-line"></div>
+                     </div>
+                  </div>
+               </li>
+               <li class="module__question">
+                  <div class="module__question-item">
+                     <span>What fee does PassimPay charge for receiving payments through the plugin?</span>
+                     <span>
+                        <svg class="module__question-arrow" width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect class="module__question-arrow-border" x="0.5" y="1.26562" width="59" height="59" rx="29.5" stroke="#CEDEF1" />
+                           <rect class="module__question-arrow-background" x="0.5" y="1.26562" width="59" height="59" rx="29.5" fill="transparent" />
+                           <path class="module__question-arrow-arrow" d="M37 27.7656L30 33.7656L28.25 32.2656M23 27.7656L25.3333 29.7656" stroke="#CEDEF1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="module__question-answer">
+                     <div class="module__question-answer-size">
+                        The service does not charge for deposits and incoming transactions. You can receive any amount in any of the provided currencies and keep it free of charge.
+                        <div class="module__question-answer-line"></div>
+                     </div>
+                  </div>
+               </li>
+               <li class="module__question">
+                  <div class="module__question-item">
+                     <span>How do I test the integration?</span>
+                     <span>
+                        <svg class="module__question-arrow" width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <rect class="module__question-arrow-border" x="0.5" y="1.26562" width="59" height="59" rx="29.5" stroke="#CEDEF1" />
+                           <rect class="module__question-arrow-background" x="0.5" y="1.26562" width="59" height="59" rx="29.5" fill="transparent" />
+                           <path class="module__question-arrow-arrow" d="M37 27.7656L30 33.7656L28.25 32.2656M23 27.7656L25.3333 29.7656" stroke="#CEDEF1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                     </span>
+                  </div>
+                  <div class="module__question-answer">
+                     <div class="module__question-answer-size">
+                        You can make a test purchase. Create a product with a minimum value and pay for it via the payment module or payment link. Once you received the funds and payment notification to your PassimPay account, the integration went successfully.
+                        <div class="module__question-answer-line"></div>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </section>
 
 
 
 
 
    </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
    <!-- Footer -->

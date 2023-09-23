@@ -807,37 +807,6 @@ if (document.querySelector('.bug__modal')) {
 }
 
 
-/* открывает блоки в Questions */
-if (document.querySelector('.module__questions')) {
-    const moduleQuestion = document.querySelectorAll('.module__question');
-    function sizeQuestion(e) {
-        if (e.classList.contains('module__question-active')) {
-            e.querySelector('.module__question-answer').style.height = e.querySelector('.module__question-answer-size').offsetHeight + 'px';
-        }
-    }
-    function closeQuestion(e) {
-        e.classList.remove('module__question-active');
-        e.querySelector('.module__question-answer').style.height = '0px';
-    }
-    document.body.addEventListener('click', function (event) {
-        if (event.target.closest('.module__question')) {
-            moduleQuestion.forEach(e => {
-                if (e == event.target.closest('.module__question') && !e.classList.contains('module__question-active')) {
-                    e.classList.add('module__question-active');
-                    sizeQuestion(e);
-                } else {
-                    closeQuestion(e)
-                }
-            })
-        } else {
-            moduleQuestion.forEach(e => { closeQuestion(e) })
-        }
-    })
-    window.addEventListener('resize', () => { moduleQuestion.forEach(e => { sizeQuestion(e) }) })
-}
-
-
-
 if (document.querySelector('.learn-more')) {
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('.learn-more')) {

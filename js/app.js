@@ -44,7 +44,7 @@
                 const el = lock_padding[index];
                 el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
             }
-            body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+            //    body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
             document.documentElement.classList.add("lock");
             bodyLockStatus = false;
             setTimeout((function () {
@@ -741,6 +741,17 @@ if (typeof isMobile == "undefined") {
 
 }
 
+/* анимация для ссылок */
+if (document.querySelector('.link-anim')) {
+    document.querySelectorAll('.link-anim').forEach((e) => {
+        e.innerHTML = '<span>' + `${e.innerHTML.split(' ').join(' </span><span>')}` + '</span>'
+    })
+}
+
+
+const mediaQuery768 = window.matchMedia('(max-width: 767.98px)');
+const mediaQuery992 = window.matchMedia('(max-width: 991.98px)')
+
 
 /* открывает блоки в Module for CMS */
 if (document.querySelector('.module__cms') && document.querySelector('._touch')) {
@@ -926,9 +937,35 @@ if (document.querySelector('.header')) {
         })
     }
 
+
+    /* позиционирование header при прокрутке*/
+
+    let header = document.querySelector('#header');
+    let hp = document.querySelector('#hp');
+    let callback = function (entries, observer) {
+        if (!entries[0].isIntersecting && !mediaQuery768.matches) {
+            header.classList.add('fixed-start');
+            hp.style.marginBottom = '100px';
+            requestAnimationFrame(() => {
+                header.classList.add('fixed');
+            })
+
+        } else {
+            header.classList.remove('fixed-start');
+            header.classList.remove('fixed');
+            hp.style.marginBottom = '0px';
+        }
+    };
+
+    let observer = new IntersectionObserver(callback, { rootMargin: '0px' });
+    observer.observe(hp);
+
+
+
 }
+
 /* модальное окно "язык/валюта" */
-if (document.querySelector('.lang_list')) {
+if (document.querySelector('.lang__list')) {
     let inputSearch = document.forms.search_language.elements.input_search;
     let modalTabs = document.querySelectorAll('.modal_tabs');
     let currencyListLink = document.querySelectorAll('.currency__list-link');
@@ -1017,7 +1054,7 @@ if (document.querySelector('#contact-form')) {
 }
 
 if (document.querySelector('.search-site__wrapper')) {
-    let searchSiteInput = document.querySelector('.search-site__input');
+    let searchSiteInput = document.querySelector('.search-site__input-item');
     let searchSiteModal = document.querySelector('#search-site-modal')
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('#search-site__clear')) {

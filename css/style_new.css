@@ -172,26 +172,27 @@ body {
 /*                    АНИМАЦИИ                      */
 /* =================================================*/
 
-._link-anim {
+
+.link-anim span {
    position: relative;
    padding: 0 1px;
    display: inline-block;
    -webkit-transition: color ease 0.3s;
    -o-transition: color ease 0.3s;
    transition: color ease 0.3s;
-   /*   color: #1843bf;
    text-decoration: none;
-   line-height: 1.2; */
+   line-height: 1.2;
 }
 
-._link-anim::after {
+.link-anim span::after {
    content: "";
    position: absolute;
    z-index: 0;
+   left: 0;
+   bottom: -2px;
    width: 100%;
    height: 1px;
-   left: 0;
-   bottom: -3px;
+
    background-color: #cedef1;
    -webkit-transition: height ease 0.3s;
    -o-transition: height ease 0.3s;
@@ -199,15 +200,54 @@ body {
    opacity: 0.4;
 }
 
-._link-anim:hover::after {
-   height: calc(100% + 6px);
+a:hover .link-anim span::after,
+button:hover .link-anim .l::after {
+   height: 100%;
 }
+
+
+._link-anim {
+   position: relative;
+   padding: 0 1px;
+   display: inline-block;
+   -webkit-transition: color ease 0.3s;
+   -o-transition: color ease 0.3s;
+   transition: color ease 0.3s;
+   text-decoration: none;
+   line-height: 1.2;
+}
+
+._link-anim::after {
+   content: "";
+   position: absolute;
+   z-index: 0;
+   left: 0;
+   bottom: -2px;
+   width: 100%;
+   height: 1px;
+
+   background-color: #cedef1;
+   -webkit-transition: height ease 0.3s;
+   -o-transition: height ease 0.3s;
+   transition: height ease 0.3s;
+   opacity: 0.4;
+}
+
+a:hover._link-anim::after,
+button:hover._link-anim .l::after,
+a:hover ._link-anim::after,
+button:hover ._link-anim .l::after {
+   height: 100%;
+}
+
+
 
 
 .btn1,
 .btn3 {
    position: relative;
    z-index: 0;
+   display: block;
    overflow: hidden;
    cursor: pointer;
 }
@@ -240,21 +280,25 @@ body {
    background: radial-gradient(circle closest-side, #3E68E3, transparent);
 }
 
+
+.btn3:hover {
+   color: #fff;
+}
+
 .btn3::before {
    background: radial-gradient(circle closest-side, rgba(24, 67, 191, 0.5), transparent);
 }
 
-a.btn3:hover {
-   color: #fff;
+.btn3 svg path {
+   transition: stroke 0.3s;
 }
 
 .btn3:hover svg path {
    stroke: #ffffff;
 }
 
-.btn3 svg path {
-   transition: stroke 0.3s;
-}
+
+
 
 
 
@@ -666,6 +710,8 @@ a.btn3:hover {
 /* block-1 */
 /* ================================== */
 
+
+
 .block-1__body {
    display: -webkit-box;
    display: -ms-flexbox;
@@ -676,6 +722,10 @@ a.btn3:hover {
    -webkit-box-pack: justify;
    -ms-flex-pack: justify;
    justify-content: space-between;
+   gap: 60px;
+}
+
+.block-1.gateway-block-1 .block-1__body {
    gap: 20px;
 }
 
@@ -715,6 +765,7 @@ a.btn3:hover {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
+      gap: 20px;
    }
 
    .block-1__image {
@@ -726,11 +777,6 @@ a.btn3:hover {
       order: 1;
    }
 
-   .block-1__image img {
-      margin-right: -5%;
-      width: calc(105%);
-   }
-
    .block-1__button.button-orange {
       margin: 0 auto;
 
@@ -738,6 +784,7 @@ a.btn3:hover {
 }
 
 @media (max-width:767.98px) {
+
    .block-1__button.button-orange {
       min-width: 100%;
    }
@@ -1978,6 +2025,8 @@ a.btn3:hover {
 /* ================================= */
 /* question */
 /* ================================= */
+.module__questions {}
+
 .module__question-title {
    text-align: center;
 }
@@ -1989,6 +2038,8 @@ a.btn3:hover {
 }
 
 .module__question-answer {
+   transform: translateY(0deg);
+   will-change: height;
    display: flex;
    align-items: center;
    height: 0px;
@@ -2288,6 +2339,7 @@ a.btn3:hover {
    color: #9FA8B1;
    font-family: Ubuntu;
    font-size: 14px;
+
 }
 
 .contact-form__input::-webkit-input-placeholder {

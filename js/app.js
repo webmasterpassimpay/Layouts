@@ -943,7 +943,7 @@ if (document.querySelector('.header')) {
     let header = document.querySelector('#header');
     let hp = document.querySelector('#hp');
     let callback = function (entries, observer) {
-        if (!entries[0].isIntersecting && !mediaQuery768.matches) {
+        if (!entries[0].isIntersecting) {// && !mediaQuery768.matches
             header.classList.add('fixed-start');
             hp.style.marginBottom = '100px';
             requestAnimationFrame(() => {

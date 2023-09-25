@@ -243,7 +243,6 @@
 }
 
 .annotatio__body {
-   margin: 0 auto;
    padding: 40px;
    background-color: #FFFFFF;
    border-radius: 20px;
@@ -494,7 +493,7 @@
 
 @media (max-width: 1440px) {
    .margin-bottom-block {
-      margin-bottom: 8vw;
+      margin-bottom: 6.9vw;
    }
 }
 

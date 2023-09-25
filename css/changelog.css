@@ -1,0 +1,415 @@
+.changelog__container {
+    padding: 35px 0 126px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1843BF;
+    box-shadow: 0px 100px 80px rgba(87, 144, 187, 0.07), 0px 64.8148px 46.8519px rgba(87, 144, 187, 0.0531481), 0px 38.5185px 25.4815px rgba(87, 144, 187, 0.0425185), 0px 20px 13px rgba(87, 144, 187, 0.035), 0px 8.14815px 6.51852px rgba(87, 144, 187, 0.0274815), 0px 1.85185px 3.14815px rgba(87, 144, 187, 0.0168519);
+    border-radius: 50px;
+    margin-bottom: 112px;
+}
+
+@font-face {
+    font-family: "Nekst-Black";
+    src: url("../fonts/Nekst-Black.woff2") format("woff2"),
+        url("../fonts/Nekst-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Nekst-Bold";
+    src: url("../fonts/Nekst-Bold.woff2") format("woff2"),
+        url("../fonts/Nekst-Bold.woff") format("woff");
+}
+
+.changelog-top {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.changelog-top__title {
+    font-size: 40px;
+    color: #FFFFFF;
+    font-family: "Nekst-Black";
+    font-weight: 400;
+}
+
+.changelog-top__description {
+    color: #EDEDED;
+    font-size: 18px;
+    margin-top: 25px;
+    max-width: 788px;
+}
+
+.changelog-top__tabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #1A75E2;
+}
+
+.changelog-top__tabs-container {
+    padding: 0 80px;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.changelog-top__tab {
+    color: #1A75E2;
+
+    padding-right: 100px;
+    font-family: "Nekst-Bold";
+    padding-bottom: 27px;
+    transition: color .3s ease;
+    font-size: 20px;
+    letter-spacing: 0px;
+    margin-bottom: -2px;
+}
+
+.changelog-top__tab:focus {
+    color: white;
+    border-bottom: 2px solid;
+    border-color: white;
+    padding-bottom: 25px;
+}
+
+
+.changelog-body {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+.changelog-main {
+    display: flex;
+    margin-top: 88px;
+}
+
+.changelog-body__item {
+    display: flex;
+    gap: 44px;
+}
+
+.changelog-body__item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: url(../svg/changelog-end_of_item.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100%;
+    transition: all .4 ease;
+
+}
+
+.changelog-body__item:last-child .changelog-body__item-container {
+    background: none;
+}
+
+.changelog-body__img {
+    max-width: 650px;
+    width: 100%;
+    min-height: 341px;
+    /* #000000 */
+
+    background: rgba(0, 0, 0, 0.2);
+    /* Style */
+
+    border: 1px solid #1A75E2;
+    border-radius: 8px;
+}
+
+.next_changelog-body__item .changelog-body__item-container {}
+
+.changelog-datas__item {
+    background: rgba(255, 254, 241, 0.08);
+    border-radius: 6px;
+    padding: 6px 12px 5px 10px;
+    color: #FFFEF1;
+    font-size: 12px;
+    font-family: 'Ubuntu';
+}
+
+.changelog-body__date {
+    background: rgba(255, 254, 241, 0.08);
+    border-radius: 6px;
+    padding: 6px 12px 5px 10px;
+    color: #FFFEF1;
+    font-size: 12px;
+    font-family: 'Ubuntu';
+}
+
+.changelog-scrollbar {
+    position: relative;
+    width: 1px;
+    height: 100%;
+    background-color: #1A75E2;
+
+}
+
+.changelog-body__title {
+    font-family: 'Nekst-Bold';
+    color: #FFFEF1;
+    font-size: 24px;
+    margin-top: 36px;
+
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.changelog-body__title span {
+    max-width: 600px;
+}
+
+.changelog-body__tags {
+    margin-top: 36px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.changelog-body__tag {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 8px;
+    border-radius: 3px;
+    padding: 5px 10px;
+
+}
+
+.changelog-body__tag-new {
+    color: #5E7CF1;
+    border: 1px solid rgba(94, 124, 241, 0.35);
+}
+
+.changelog-body__text {
+    margin-top: 14px;
+    font-size: 16px;
+    color: #B5CDFB;
+    line-height: 150.4%;
+}
+
+.changelog-scrollbar__dot {
+    width: 15px;
+    height: 15px;
+    background: #FFFEF1;
+    /* Style */
+
+    border: 5px solid #1A75E2;
+    border-radius: 50%;
+    position: sticky;
+    top: 400px;
+    margin-left: -7px;
+    z-index: 3;
+}
+
+#scrollbar-dot1 {}
+
+.changelog-datas__item:first-child {
+    position: sticky;
+    top: 400px;
+
+}
+
+
+.changelog-body__item-info {
+    display: flex;
+    align-items: flex-start;
+    max-width: 150px;
+    justify-content: flex-end;
+    gap: 14px;
+    width: 100%;
+}
+
+.changelog-body__date {
+    position: sticky;
+    top: 400px;
+}
+
+
+.changelog-blured {
+    opacity: .25;
+    animation-name: changelogBlur;
+    animation-duration: .4s;
+    animation-iteration-count: 1;
+}
+
+@keyframes changelogBlur {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .25;
+    }
+}
+
+
+
+.changelog-scrollbar__white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
+.changelog-body__li-title {
+    font-weight: 700;
+    margin-bottom: 11px;
+}
+
+.changelog-body__li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 150.4%;
+}
+
+.mb-14 {
+    margin-bottom: 14px;
+}
+
+
+.changelog-body__li::before {
+    content: '';
+    display: block;
+    min-width: 15px;
+    height: 1px;
+    background: rgba(9, 179, 116, 0.25);
+}
+
+.changelog-body__list {
+    margin-top: 56px;
+    color: #B5CDFB;
+    font-size: 16px;
+}
+
+.changelog-body__subtitle {
+    font-weight: 700;
+    font-size: 16px;
+    color: #B5CDFB;
+}
+
+.mt-58 {
+    margin-top: 58px;
+}
+
+.mt-48 {
+    margin-top: 48px;
+}
+
+
+.changelog-body__tag-improved {
+    border: 1px solid #09B374;
+    color: #09B374;
+}
+
+.pb-111 {
+    padding-bottom: 111px;
+}
+
+.pb-131 {
+    padding-bottom: 131px;
+}
+
+.pb-189 {
+    padding-bottom: 189px;
+}
+
+.pb-148 {
+    padding-bottom: 148px;
+}
+
+.pt-65 {
+    padding-top: 65px;
+}
+
+.pt-66 {
+    padding-top: 66px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.changelog-body__item-date {
+    display: none;
+}
+
+@media (max-width: 780px) {
+    .changelog-body__item-info {
+        display: none;
+    }
+
+    .changelog-body__item-date {
+        display: block;
+        margin-bottom: 16px;
+        background: rgba(255, 254, 241, 0.08);
+        border-radius: 6px;
+        padding: 6px 12px 5px 10px;
+        color: #FFFEF1;
+        font-size: 12px;
+        font-family: 'Ubuntu';
+    }
+
+    .changelog-top__tab {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .changelog-main,
+    .changelog-top {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .changelog-blured {
+        opacity: 1;
+    }
+
+    .changelog-top__tabs-container {
+        padding: 0;
+    }
+}
+
+@media (max-width: 410px) {
+    .changelog-top__tabs {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 15px;
+        border: none;
+        padding-bottom: 0;
+    }
+
+    .changelog-top__tabs .changelog-top__tab {
+        border: none;
+        padding-bottom: 0;
+    }
+}
+
+.changelog-unblured {
+    animation-name: changelogUnBlur;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    opacity: 1;
+}
+
+@keyframes changelogUnBlur {
+    0% {
+        opacity: .25;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -2360,17 +2360,35 @@
    width: 100vw;
    height: 100vh;
    z-index: 100;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
    justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
    align-items: center;
    background-color: #cde0f280;
    backdrop-filter: blur(5px);
    display: none;
 }
 
+
 .bug__modal.bug__modal-active {
    display: flex;
-
 }
+
+@media (max-height:600px) {
+
+
+   .bug__modal {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      overflow-y: auto;
+
+   }
+}
+
+
 
 .bug__modal-active_hidden {
    overflow: hidden;
@@ -2489,6 +2507,8 @@
    content: '';
    transform: rotate(-45deg);
 }
+
+
 
 @media (max-width:490px) {
    .bug__modal-file_button {

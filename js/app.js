@@ -843,7 +843,7 @@ if (document.querySelector('.learn-more')) {
 }
 
 
-if (document.querySelector('.header')) {
+if (document.querySelector('#header')) {
     let header = document.querySelector('#header');
     let hp = document.querySelector('#hp');
     let headerNav = document.querySelector('.header__nav');

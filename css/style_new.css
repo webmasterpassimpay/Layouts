@@ -17,10 +17,10 @@
 }
 
 @font-face {
-   font-family: Ubuntu;
+   font-family: Nekst;
    font-display: swap;
-   src: url(../fonts/Ubuntu-Light.woff2) format("woff2"), url(../fonts/Ubuntu-Light.woff) format("woff");
-   font-weight: 300;
+   src: url(../fonts/Nekst-Regular.woff2) format("woff2"), url(../fonts/Nekst-Regular.woff) format("woff");
+   font-weight: 400;
    font-style: normal;
 }
 
@@ -48,6 +48,13 @@
    font-style: normal;
 }
 
+@font-face {
+   font-family: Ubuntu;
+   font-display: swap;
+   src: url(../fonts/Ubuntu-Light.woff2) format("woff2"), url(../fonts/Ubuntu-Light.woff) format("woff");
+   font-weight: 300;
+   font-style: normal;
+}
 
 * {
    padding: 0;
@@ -331,7 +338,7 @@ button:hover ._link-anim .l::after {
 [class$="__container-big"] {
    padding: 0px 20px;
    margin: 0 auto;
-   max-width: 1800px;
+   max-width: 1840px;
    width: 100%;
 }
 
@@ -373,6 +380,7 @@ button:hover ._link-anim .l::after {
 /* нижний отступ блока */
 .mb-section-rule {
    margin-bottom: 100px;
+
 }
 
 @media (max-width: 1440px) {
@@ -393,7 +401,10 @@ button:hover ._link-anim .l::after {
    font-size: 40px;
    margin-bottom: 20px;
    color: #161616;
+   font-weight: 700;
 }
+
+
 
 @media (max-width:991.98px) {
    .title-rule {
@@ -416,6 +427,7 @@ button:hover ._link-anim .l::after {
    font-size: 40px;
    margin-bottom: 40px;
    color: #161616;
+   font-weight: 700;
 }
 
 @media (max-width:991.98px) {
@@ -484,6 +496,16 @@ button:hover ._link-anim .l::after {
    position: relative;
    top: -3px;
    left: -3px;
+}
+
+
+
+
+/* фон модального окна */
+.modal-base-rule {
+   padding: 20px;
+   border-radius: 20px;
+   background-color: #EEF4FF;
 }
 
 /* оранжевая кнопка */
@@ -732,6 +754,10 @@ button:hover ._link-anim .l::after {
    .abaut-main__content-button {
       max-width: 100%;
    }
+
+   .abaut-main__content-title {
+      text-align: center;
+   }
 }
 
 
@@ -828,7 +854,9 @@ button:hover ._link-anim .l::after {
 /* ================================== */
 /* annotatio */
 /* ================================== */
-.annotatio {}
+.annotatio {
+   margin-bottom: 4px;
+}
 
 .annotatio__body {
    margin-left: auto;
@@ -1432,7 +1460,7 @@ button:hover ._link-anim .l::after {
 .infoblocks__item {
    margin-bottom: 100px;
    padding-bottom: 100px;
-   position: sticky;
+
    top: 20px;
    z-index: 1;
 
@@ -1449,6 +1477,12 @@ button:hover ._link-anim .l::after {
    width: 100%;
    border-bottom: 1px solid #CEDEF1;
    background-color: #f5f8fb;
+}
+
+@media (min-width:991.98px) {
+   .infoblocks__item {
+      position: sticky;
+   }
 }
 
 .infoblocks__item:nth-child(3) {
@@ -1487,6 +1521,11 @@ button:hover ._link-anim .l::after {
    width: 100%;
 }
 
+.infoblocks__item-content {
+   padding-top: 40px;
+   padding-bottom: 40px;
+}
+
 @media (max-width:1279.98px) {
    .infoblocks__item {
       -webkit-column-gap: 40px;
@@ -1506,7 +1545,11 @@ button:hover ._link-anim .l::after {
    .infoblocks__item {
       margin-bottom: 30px;
       padding-bottom: 30px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
+
    }
 }
 
@@ -1781,8 +1824,12 @@ button:hover ._link-anim .l::after {
    overflow: visible;
 }
 
+
 .wallet-support__item {
-   width: 194px;
+   background: #fff;
+   border-radius: 50%;
+   padding: 3px;
+   width: 193px;
 }
 
 .wallet-support__item img {
@@ -1801,15 +1848,11 @@ button:hover ._link-anim .l::after {
 
 @media (max-width:991.98px) {
    .wallet-support__item {
-      width: 124px;
+      width: 120px;
    }
 }
 
-@media (max-width:991.98px) {
-   .wallet-support__item {
-      width: 80px;
-   }
-}
+
 
 
 /* ================================== */
@@ -2386,7 +2429,7 @@ button:hover ._link-anim .l::after {
 
 .home-buisnes-intro__codeMask ul {
    width: 100%;
-   /*    height: 100%; */
+   height: 100%;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -2758,16 +2801,38 @@ a.home-buisnes-intro__button-started {
 
 .advantages__item-img {
    position: relative;
-   height: 300px;
-   max-width: 300px;
-   width: 100%;
-   margin-left: auto;
-   margin-right: auto
+   padding-bottom: 90%;
+
 }
 
-@media (max-width:1479.98px) {
+.advantages__item-img lottie-player {
+
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+@media (max-width:1279.98px) {
    .advantages__item-img {
-      height: calc(1vw * (300 / 14.8));
+      padding-bottom: 40%;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 45%;
+      flex: 0 0 45%;
+
+   }
+}
+
+@media (max-width:991.98px) {
+   .advantages__item-img {
+
+      padding-bottom: 90%;
+   }
+
+   .advantages__item-img lottie-player {
+      object-fit: cover;
    }
 }
 
@@ -2780,6 +2845,7 @@ a.home-buisnes-intro__button-started {
    color: #161616;
    font-family: Nekst;
    font-size: 24px;
+   font-weight: 700;
 }
 
 @media (max-width:767.98px) {
@@ -2819,7 +2885,7 @@ a.home-buisnes-intro__button-started {
    display: grid;
    -ms-grid-columns: 1fr 1fr 1fr 1fr;
    grid-template-columns: 1fr 1fr 1fr 1fr;
-   gap: 4px;
+   gap: 20px;
 }
 
 .swiper-pagination.advantages__pagination {
@@ -2950,6 +3016,7 @@ a.home-buisnes-intro__button-started {
 lottie-player {
    display: block;
    max-width: 100%;
+   width: 100%;
 }
 
 .integration__img svg {
@@ -3085,39 +3152,25 @@ lottie-player {
 }
 
 .calculator-info__item {
-   margin-bottom: 20px;
+
 
    -webkit-box-flex: 1;
    -ms-flex: 1 0 340px;
    flex: 1 0 340px;
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
-
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
-
    -webkit-gap: 25px;
    -moz-gap: 25px;
    gap: 25px;
-
-
    max-width: 50%;
 
 }
 
 .calculator-info__item-img {
-   min-width: 100px;
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   overflow: hidden;
-   -webkit-box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07), 0 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0 20px 13px rgba(0, 0, 0, 0.035), 0 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815),
-      0 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
-   box-shadow: 0 100px 80px rgba(0, 0, 0, 0.07), 0 64.8148px 46.8519px rgba(0, 0, 0, 0.0531481), 0 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0 20px 13px rgba(0, 0, 0, 0.035), 0 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815),
-      0 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -3127,6 +3180,14 @@ lottie-player {
    -webkit-box-pack: center;
    -ms-flex-pack: center;
    justify-content: center;
+   min-width: 100px;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   overflow: hidden;
+   -webkit-box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0.02), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.03), 0px 20px 13px 0px rgba(0, 0, 0, 0.04), 0px 38.5185px 25.4815px 0px rgba(0, 0, 0, 0.04), 0px 64.8148px 46.8519px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+   box-shadow: 0px 1.85185px 3.14815px 0px rgba(0, 0, 0, 0.02), 0px 8.14815px 6.51852px 0px rgba(0, 0, 0, 0.03), 0px 20px 13px 0px rgba(0, 0, 0, 0.04), 0px 38.5185px 25.4815px 0px rgba(0, 0, 0, 0.04), 0px 64.8148px 46.8519px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07)148px 46.8519px rgba(0, 0, 0, 0.0531481), 0 38.5185px 25.4815px rgba(0, 0, 0, 0.0425185), 0 20px 13px rgba(0, 0, 0, 0.035), 0 8.14815px 6.51852px rgba(0, 0, 0, 0.0274815),
+      0 1.85185px 3.14815px rgba(0, 0, 0, 0.0168519);
    background: #fff;
 }
 
@@ -3135,6 +3196,8 @@ lottie-player {
    margin-bottom: 10px;
    font-family: Nekst;
    font-size: 24px;
+   font-weight: 700;
+   ;
 }
 
 .calculator-info__item-info-text {
@@ -3295,12 +3358,8 @@ lottie-player {
 }
 
 .crypto-payments__title-title {
-   font-family: 'Nekst';
-   font-size: 40px;
    line-height: 47px;
    text-align: center;
-   color: #161616;
-   margin-bottom: 18px;
 }
 
 .crypto-payments__title-text {
@@ -3310,7 +3369,6 @@ lottie-player {
    font-size: 14px;
    line-height: 150.4%;
    text-align: center;
-   color: #565656;
 }
 
 .crypto-payments__flex {
@@ -3406,18 +3464,14 @@ lottie-player {
    font-family: 'Nekst';
    font-size: 24px;
    line-height: 100%;
-   margin-bottom: 20px;
-   color: #161616;
+
 }
 
 .crypto-payments__text-right-text {
    font-family: 'Ubuntu';
-   font-style: normal;
-   font-weight: 400;
    font-size: 20px;
    line-height: 23px;
-   margin-bottom: 40px;
-   color: #565656;
+   margin-bottom: 20px;
 }
 
 .crypto-payments__text-right-button {
@@ -3493,7 +3547,6 @@ lottie-player {
 
    .crypto-payments__text-right-title {
       font-size: 24px;
-      margin-bottom: 20px;
    }
 
    .crypto-payments__text-right-button {
@@ -3623,7 +3676,7 @@ lottie-player {
       line-height: 18px;
    }
 
-   .crypto-payments__text-right {
+   /*    .crypto-payments__text-right {
       max-width: 372px;
       padding-left: 10px;
    }
@@ -3631,7 +3684,7 @@ lottie-player {
    .crypto-payments__text-right-title {
       font-size: 24px;
       margin-bottom: 20px;
-   }
+   } */
 
    .crypto-payments__text-right-button {
       max-width: 248px;
@@ -4937,10 +4990,7 @@ lottie-player {
 }
 
 .contact-form__wrapper {
-   padding: 20px;
    max-width: 500px;
-   background-color: #ffffff;
-   border-radius: 20px;
 }
 
 .contact-form__body {
@@ -5059,7 +5109,6 @@ lottie-player {
 .contact-form__checked {
    /*  display: none; */
    padding: 14px 10px;
-   position: absolute;
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -5067,8 +5116,10 @@ lottie-player {
    -webkit-box-direction: normal;
    -ms-flex-direction: column;
    flex-direction: column;
+   position: absolute;
    gap: 10px;
    top: 47px;
+   z-index: 2;
    right: 0;
    background-color: #FFF;
    border-radius: 10px;
@@ -5095,6 +5146,10 @@ lottie-player {
    color: #9FA8B1;
    font-family: Ubuntu;
    font-size: 14px;
+}
+
+.contact-form__return-value {
+   background-color: #ffffff;
 }
 
 .contact-form__return-item {
@@ -5126,6 +5181,7 @@ lottie-player {
 
 .contact-form__button.button-blue {
    width: 100%;
+   min-width: 100%;
    min-height: 50px;
 }
 

@@ -17,6 +17,14 @@
 }
 
 @font-face {
+    font-family: Nekst;
+    font-display: swap;
+    src: url(../fonts/Nekst-Regular.woff2) format("woff2"), url(../fonts/Nekst-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
     font-family: Ubuntu;
     font-display: swap;
     src: url(../fonts/Ubuntu-Light.woff2) format("woff2"), url(../fonts/Ubuntu-Light.woff) format("woff");
@@ -27,8 +35,8 @@
 @font-face {
     font-family: Ubuntu;
     font-display: swap;
-    src: url(../fonts/Ubuntu-Bold.woff2) format("woff2"), url(../fonts/Ubuntu-Bold.woff) format("woff");
-    font-weight: 700;
+    src: url(../fonts/Ubuntu-Regular.woff2) format("woff2"), url(../fonts/Ubuntu-Regular.woff) format("woff");
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -43,10 +51,14 @@
 @font-face {
     font-family: Ubuntu;
     font-display: swap;
-    src: url(../fonts/Ubuntu-Regular.woff2) format("woff2"), url(../fonts/Ubuntu-Regular.woff) format("woff");
-    font-weight: 400;
+    src: url(../fonts/Ubuntu-Bold.woff2) format("woff2"), url(../fonts/Ubuntu-Bold.woff) format("woff");
+    font-weight: 700;
     font-style: normal;
 }
+
+
+
+
 
 * {
     padding: 0;
@@ -2071,13 +2083,23 @@ transform: rotate(180deg) translate(-100%, 50%);
 
 .advantages__item-img {
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 300px;
-    flex: 0 0 300px;
+    -ms-flex: 0 0 235px;
+    flex: 0 0 235px;
 
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    /*     margin-left: auto;
+    margin-right: auto; */
 }
+
+.advantages__item-img lottie-player {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 
 
 @media (max-width:991.98px) {
@@ -2112,7 +2134,7 @@ transform: rotate(180deg) translate(-100%, 50%);
 .advantages__item-title {
     margin-bottom: 20px;
     font-size: 24px;
-    font-family: Nekst;
+    font-family: "Nekst";
     font-weight: 700;
     color: #161616;
 }
@@ -2153,7 +2175,7 @@ transform: rotate(180deg) translate(-100%, 50%);
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 4px;
+    gap: 20px;
 }
 
 .buy-crypto {
@@ -3549,10 +3571,6 @@ transform: rotate(180deg) translate(-100%, 50%);
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-}
-
-.buisnes-intro__container {
-    max-width: 1800px;
 }
 
 .buisnes-intro__inner {

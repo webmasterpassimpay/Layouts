@@ -965,7 +965,7 @@ if (document.querySelector('.header')) {
 }
 
 /* модальное окно "язык/валюта" */
-if (document.querySelector('.lang__list')) {
+if (document.querySelector('.language')) {
     let inputSearch = document.forms.search_language.elements.input_search;
     let modalTabs = document.querySelectorAll('.modal_tabs');
     let currencyListLink = document.querySelectorAll('.currency__list-link');
@@ -979,7 +979,16 @@ if (document.querySelector('.lang__list')) {
         if (event.target.closest('.modal_title_button')) {
             let dataNamber = event.target.closest('.modal_title_button').dataset.modalnamber;
             modal_title_button.forEach(e => { e.classList.toggle('modal_title_button-active', e == event.target.closest('.modal_title_button')) })
-            modalTabs.forEach(e => { e.classList.toggle('modal_tabs-visible', e.dataset.modal == dataNamber) });
+            modalTabs.forEach(e => {
+                if (e.dataset.modal == dataNamber) {
+                    e.style.height = e.querySelector('.tabs-shell').offsetHeight + 'px';
+                } else {
+                    e.style.height = '0px'
+                }
+                //e.classList.toggle('modal_tabs-visible', e.dataset.modal == dataNamber)
+
+
+            });
         }
         if (event.target.closest('.modal_search_clear-icon')) {
             inputSearch.value = '';
@@ -1015,13 +1024,13 @@ if (document.querySelector('#block_scroll')) {
     scrollArrows.addEventListener('click', (event) => {
         if (event.target.closest('#block-scroll__arrow-up')) {
             blockScroll.scrollTo({
-                top: blockScroll.scrollTop + 200,
+                top: blockScroll.scrollTop - 200,
                 behavior: "smooth"
             })
         }
         if (event.target.closest('#block-scroll__arrow-down')) {
             blockScroll.scrollTo({
-                top: blockScroll.scrollTop - 200,
+                top: blockScroll.scrollTop + 200,
                 behavior: "smooth"
             })
         }
@@ -1056,6 +1065,12 @@ if (document.querySelector('#contact-form')) {
 if (document.querySelector('.search-site__wrapper')) {
     let searchSiteInput = document.querySelector('.search-site__input-item');
     let searchSiteModal = document.querySelector('#search-site-modal')
+    let searchSiteShell = document.querySelector('.search-site__shell');
+    function searchSiteClose() {
+        searchSiteModal.style.display = "none"
+        document.querySelector('body').style.overflow = '';
+    }
+
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('#search-site__clear')) {
             searchSiteInput.value = '';
@@ -1065,11 +1080,12 @@ if (document.querySelector('.search-site__wrapper')) {
             document.querySelector('body').style.overflow = 'hidden';
         }
         if (event.target.closest('#button-search-close')) {
-            searchSiteModal.style.display = "none"
-            document.querySelector('body').style.overflow = '';
+            searchSiteClose();
         }
         //  #button-search-open
-
+    })
+    searchSiteModal.addEventListener('mousedown', (e) => {
+        if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose() }
     })
 }
 

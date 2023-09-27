@@ -58,10 +58,14 @@
    }
 }
 
-
+.header__menu-fs {
+   font-family: Ubuntu;
+   font-weight: 500;
+   font-size: 18px;
+}
 
 .header.fixed-start.fixed {
-   top: 5px;
+   top: 10px;
 }
 
 .header__inner {
@@ -71,8 +75,21 @@
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
+
    min-height: 100px;
+
 }
+
+@media (max-width:1279.98px) {
+   .header__inner {
+      -webkit-column-gap: 20px;
+      -moz-column-gap: 20px;
+      column-gap: 20px;
+
+   }
+
+}
+
 
 .header__logo {
    -webkit-box-ordinal-group: 2;
@@ -232,7 +249,6 @@
 
 .btn_type_page {
    color: #1843bf;
-   font-weight: 700;
 }
 
 .header__nav {
@@ -376,6 +392,22 @@
    row-gap: 5px;
 }
 
+.header__mb {
+   order: 6;
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+
+}
+
+
+@media (min-width:1279.98px) {
+   .header__mb {
+      display: none;
+
+   }
+}
+
+
 .header__search {
    margin-left: 20px;
    /*  background-color: #F5F8FB; */
@@ -384,7 +416,7 @@
    overflow: hidden;
    -webkit-box-ordinal-group: 7;
    -ms-flex-order: 6;
-   order: 6;
+   order: 7;
 }
 
 .header__search._dynamic_adapt_ {
@@ -414,7 +446,7 @@
 .header__burger-cont {
    -webkit-box-ordinal-group: 4;
    -ms-flex-order: 3;
-   order: 3;
+   order: 8;
    padding: 3px;
    min-height: 35px;
    min-width: 40px;
@@ -776,13 +808,14 @@
 
 @media (max-width:1279.98px) {
    .header__search {
-      order: 3;
+      order: 7;
    }
 }
 
 .header.fixed-start .header__search {
    background-color: #F5F8FB;
 }
+
 
 .header.fixed-start .header__search path {
    stroke: #1843BF;
@@ -917,6 +950,7 @@
 @media (min-width:1279.98px) {
    .mobile-header {
       display: none;
+
    }
 }
 
@@ -1019,6 +1053,7 @@
    top: 100%;
    left: 0;
    width: 100%;
+   max-width: 100%;
    opacity: 0;
    visibility: hidden;
    pointer-events: none;
@@ -1798,12 +1833,6 @@
 
 
 
-
-
-
-
-
-
 /* =============================== */
 /* modal */
 /* =============================== */
@@ -1830,6 +1859,9 @@
 
 .modal.show {
    display: flex;
+   -webkit-transform: translateZ(0px);
+   -ms-transform: translateZ(0px);
+   transform: translateZ(0px);
 }
 
 
@@ -1843,15 +1875,16 @@
 
 
 .inner_modal {
+   margin: auto;
    position: relative;
    width: 100%;
    max-width: 790px;
-   background: #FFFFFF;
-   border-radius: 15px;
-   margin: auto;
 }
 
-
+.language .inner_modal.modal-base {
+   padding: 0px;
+   padding-bottom: 20px;
+}
 
 .modal_title {
    display: -webkit-box;
@@ -1872,6 +1905,7 @@
 
 .modal_title button {
    margin-bottom: -1px;
+   font-size: 20px;
    display: block;
    min-height: 54px;
    border: none;
@@ -1953,20 +1987,29 @@
 }
 
 .modal_tabs {
-   display: none;
+   margin: 0px 20px;
+   overflow: hidden;
+   height: 0px;
+   transition: height 0.5s, transform 0.5s;
 }
 
-.modal_tabs.modal_tabs-visible {
+.modal_tabs.visible {
+   height: auto;
+}
+
+.tabs-shell {
+   width: 100%;
    display: -ms-grid;
    display: grid;
+
 }
+
 
 
 .lang__list {
    /* display: grid; */
    grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-gap: 10px;
-   margin: 20px;
 }
 
 @media (max-width:767.98px) {
@@ -2022,7 +2065,6 @@
    /*  display: grid; */
    grid-template-columns: repeat(4, 1fr);
    gap: 10px;
-   margin: 20px;
    -ms-grid-columns: (1fr)[4];
 }
 
@@ -2154,7 +2196,6 @@
 }
 
 .search-site__shell {
-
    height: 100%;
    width: 100%;
    max-width: 1120px;
@@ -2167,11 +2208,14 @@
 
 .search-site__wrapper {
    width: 100%;
-   border-radius: 20px;
    overflow: hidden;
-   background-color: #ffffff;
-
 }
+
+.search-site__body.modal-base-rule {
+   padding: 0px;
+}
+
+
 
 .search-site__block {
    padding: 20px;
@@ -2282,6 +2326,7 @@
    font-family: Nekst;
    font-size: 24px;
    line-height: 24px;
+
 }
 
 .search-site__news {
@@ -2333,19 +2378,11 @@
    position: relative;
    width: 570px;
 
-   background-color: #ffffff;
-   border-radius: 20px;
-   padding: 20px;
 }
 
-.bug__modal__title {
-   font-size: 24px;
-   font-weight: 500;
-   margin-bottom: 20px;
-}
+.bug__modal__title {}
 
-.bug__modal__text {
-   color: #9FA8B1;
+.bug__modal__text.text-rule {
    margin-bottom: 20px;
 }
 
@@ -2363,13 +2400,13 @@
 .bug__modal__title-input {
    font-size: 14px;
    font-weight: 700;
-   margin-bottom: 8px;
+   margin-bottom: 10px;
 }
 
-.bug__modal-file_title {
+/* .bug__modal-file_title {
    font-weight: 700;
-   margin-bottom: 8px;
-}
+   margin-bottom: 10px;
+} */
 
 .bug__modal-file_button {
    display: flex;

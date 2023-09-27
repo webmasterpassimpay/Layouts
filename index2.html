@@ -22,8 +22,6 @@
 
 
 
-
-
 	<header id="header" class="header">
 		<div class="header__container">
 			<div class="header__inner">
@@ -49,10 +47,10 @@
 				<div class="header__persbuis" data-da=".mobile-header__inner,1280,last">
 					<ul class="header__persbuis-body">
 						<li class="header__persbuis-item _active">
-							<a class="btn_type_page _link-anim" href="/" data-type="0">Персональный</a>
+							<a class="btn_type_page _link-anim header__menu-fs" href="/" data-type="0">Персональный</a>
 						</li>
 						<li class="header__persbuis-item">
-							<a class="btn_type_page _link-anim" href="/" data-type="1">Бизнес</a>
+							<a class="btn_type_page _link-anim header__menu-fs" href="/" data-type="1">Бизнес</a>
 						</li>
 					</ul>
 				</div>
@@ -64,7 +62,7 @@
 
 						<li class="_with-submenu">
 							<button class="_with-submenu-button" type="button">
-								<p>Мерчант</p>
+								<p class="header__menu-fs">Мерчант</p>
 								<svg class="_with-submenu_svg" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect x="1" y="0.5" width="19" height="19" rx="9.5" fill="white" />
 									<path d="M14 8.5L10.5 11.5L9.625 10.75M7 8.5L8.16667 9.5" stroke="#161616" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
@@ -508,7 +506,7 @@
 
 						<li class="_with-submenu">
 							<button class="_with-submenu-button" type="button">
-								<p>Инфо</p>
+								<p class="header__menu-fs">Инфо</p>
 								<svg class="_with-submenu_svg" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect x="1" y="0.5" width="19" height="19" rx="9.5" fill="white" />
 									<path d="M14 8.5L10.5 11.5L9.625 10.75M7 8.5L8.16667 9.5" stroke="#161616" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
@@ -672,7 +670,7 @@
 												<div class="new-submenu__task-content">
 													<date class="new-submenu__tasks-date">Май 15, 2022</date>
 													<div class="new-submenu__tasks-text">
-														<a class="_link-anim" href="#">Задача организации, в особенности же базовый вектор.</a>
+														<a class="link-anim" href="#">Задача организации, в особенности же базовый вектор.</a>
 													</div>
 												</div>
 
@@ -682,7 +680,7 @@
 												<div class="new-submenu__task-content">
 													<date class="new-submenu__tasks-date">Май 15, 2022</date>
 													<div class="new-submenu__tasks-text">
-														<a class="_link-anim" href="#">Задача организации, в особенности же базовый вектор.</a>
+														<a class="link-anim" href="#">Задача организации, в особенности же базовый вектор.</a>
 													</div>
 												</div>
 											</div>
@@ -691,7 +689,7 @@
 												<div class="new-submenu__task-content">
 													<date class="new-submenu__tasks-date">Май 15, 2022</date>
 													<div class="new-submenu__tasks-text">
-														<a class="_link-anim" href="#">Задача организации, в особенности же базовый вектор.</a>
+														<a class="link-anim" href="#">Задача организации, в особенности же базовый вектор.</a>
 													</div>
 												</div>
 											</div>
@@ -759,7 +757,7 @@
 						</li>
 
 						<li class="header__nav-partners">
-							<a class="_link-anim" href="/partner">Партнерам</a>
+							<a class="header__menu-fs _link-anim" href="/partner">Партнерам</a>
 						</li>
 
 					</ul>
@@ -780,19 +778,23 @@
 						<li class="header__regAuth-entrance">
 							<a class="header__regAuth-login _link-anim" href="/login">
 								<img class="header__regAuth-login-img" src="./img/login.svg" alt="">
-								<p>Вход</p>
+								<p class="header__menu-fs">Вход</p>
 							</a>
 						</li>
 						<li class="header__regAuth-sign-up">
 							<a class="header__regAuth-register btn3" href="/register">
-								<span>Регистрация</span>
+								<span class="header__menu-fs">Регистрация</span>
 							</a>
 						</li>
 					</ul>
 				</div>
 
+				<div class="header__mb"></div>
+
 				<!-- search -->
 				<div class="header__search">
+
+
 					<button id="button-search-open" class="header__search-img btn3" type="button">
 						<!--  <img src="./svg/search.svg" alt=""> -->
 						<svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -811,6 +813,9 @@
 				</div>
 
 				<button class="header__burger-cont icon-menu" type="button">
+
+
+
 					<div class="header__burger menu__icon"><span></span></div>
 					<p>меню</p>
 					<span>скрыть</span>
@@ -820,8 +825,8 @@
 		</div>
 	</header>
 
-
-	<section id="hp" class="header_padding"></section>
+	<section id=" hp" class="header_padding">
+	</section>
 
 
 
@@ -830,7 +835,7 @@
 
 		<!-- Section Intro -->
 		<section class="buisnes-intro mb-section-rule">
-			<div class="buisnes-intro__container">
+			<div class="buisnes-intro__container-big">
 				<div class="buisnes-intro__inner">
 					<div class="buisnes-intro__bg">
 						<div class="buisnes_intro_bg_img"></div>
@@ -1029,9 +1034,7 @@
 									<p>Safe API</p>
 								</div>
 								<div class="advantages__item-text">
-									<p>Have blockchain payments integrated into your business and accept payouts in coins on your website.
-										Have blockchain payments integrated into your business and accept payouts in coins on your website.
-									</p>
+									<p>Have blockchain payments integrated into your business and accept payouts in coins on your website.</p>
 								</div>
 							</div>
 						</div>
@@ -1292,8 +1295,8 @@
 		<section class="crypto-payments mb-section-rule">
 			<div class="crypto-payments__cont">
 				<div class="crypto-payments__title">
-					<h2 class="crypto-payments__title-title">You focus on business while we close on your cryptocurrency payment tasks</h2>
-					<p class="crypto-payments__title-text">A reliable and transparent space trusted by 400+ entities and valued by more than 1 mln buyers.</p>
+					<h2 class="crypto-payments__title-title title-rule">You focus on business while we close on your cryptocurrency payment tasks</h2>
+					<p class="crypto-payments__title-text text-rule">A reliable and transparent space trusted by 400+ entities and valued by more than 1 mln buyers.</p>
 				</div>
 				<div class="crypto-payments__flex">
 					<div class="crypto-payments__img">
@@ -1330,8 +1333,8 @@
 							</ul>
 						</div>
 						<div class="crypto-payments__text-right">
-							<h4 class="crypto-payments__text-right-title">Receive payments anywhere and from anyone</h4>
-							<p class="crypto-payments__text-right-text">Start receiving payment in cryptocurrencies from users located in 190+ countries.</p>
+							<h4 class="crypto-payments__text-right-title title-rule">Receive payments anywhere and from anyone</h4>
+							<p class="crypto-payments__text-right-text text-rule">Start receiving payment in cryptocurrencies from users located in 190+ countries.</p>
 							<a class="crypto-payments__text-right-button button-orange btn1" href="./login">Join now<span class="arrow-right">
 									<img src="./svg/arrow-right.svg" alt=">">
 								</span>
@@ -2462,7 +2465,16 @@
 
 
 
-
+		<svg class="hidden">
+			<linearGradient id="svg_balance_arrow_up" x1="0" x2="0" y1="0" y2="1">
+				<stop stop-color="#18B786" />
+				<stop offset="1" stop-color="white" stop-opacity="0" />
+			</linearGradient>
+			<linearGradient id="svg_balance_arrow_down" x1="0" x2="0" y1="0" y2="1">
+				<stop stop-color="#FE876D" />
+				<stop offset="1" stop-color="white" stop-opacity="0" />
+			</linearGradient>
+		</svg>
 
 
 
@@ -2752,7 +2764,7 @@
 							</p>
 							<!-- modal bug-->
 							<div class="bug__modal">
-								<div class="bug__modal-body">
+								<div class="bug__modal-body modal-base-rule">
 									<button class="bug__modal__title-exit"></button>
 									<div class="bug__modal__title">Нашли баг?</div>
 									<div class="bug__modal__text">Если баг критический, то мы заплатим за него вознаграждения на ваш кошелек.</div>
@@ -2810,7 +2822,7 @@
 
 
 	<div id="language" class="language modal">
-		<div class="inner_modal">
+		<div class="inner_modal modal-base-rule">
 
 			<button class="btn_close_modal"></button>
 
@@ -2846,493 +2858,496 @@
 			</form>
 
 
-			<div class="lang__list modal_tabs modal_tabs-visible" data-modal="1">
-				<a class="lang__list-link" href="/setlang">
-					<span class="lang__list-land">English</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" href="/setlang/tr">
-					<span class="lang__list-land">Türkiye</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" href="/setlang/es">
-					<span class="lang__list-land">Español</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" href="/setlang/zh">
-					<span class="lang__list-land">中文</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" class="noactive" href="ar">
-					<span class="lang__list-land">العربية</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" href="/setlang/uk">
-					<span class="lang__list-land">Українська</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" class="active" href="/setlang/ru">
-					<span class="lang__list-land">Русский</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" class="noactive">
-					<span class="lang__list-land">ไทย</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
-				<a class="lang__list-link" class="noactive">
-					<span class="lang__list-land">हिन्दी</span>
-					<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
-					</svg>
-				</a>
+			<div class="modal_tabs visible" data-modal="1">
+				<div class="lang__list tabs-shell">
+					<a class="lang__list-link" href="/setlang">
+						<span class="lang__list-land">English</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" href="/setlang/tr">
+						<span class="lang__list-land">Türkiye</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" href="/setlang/es">
+						<span class="lang__list-land">Español</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" href="/setlang/zh">
+						<span class="lang__list-land">中文</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" class="noactive" href="ar">
+						<span class="lang__list-land">العربية</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" href="/setlang/uk">
+						<span class="lang__list-land">Українська</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" class="active" href="/setlang/ru">
+						<span class="lang__list-land">Русский</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" class="noactive">
+						<span class="lang__list-land">ไทย</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+					<a class="lang__list-link" class="noactive">
+						<span class="lang__list-land">हिन्दी</span>
+						<svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M-2.62268e-07 7L11 7M11 7L5 1M11 7L5 13" stroke="#000099" />
+						</svg>
+					</a>
+				</div>
 			</div>
 
 
 
-			<div class="currency__list modal_tabs" data-modal="2">
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">United States Dollar</div>
-							<div class="currency__item-abbreviation">USD - $</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Australian Dollar</div>
-							<div class="currency__item-abbreviation">AUD - $</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Brazilian Real</div>
-							<div class="currency__item-abbreviation">BRL - R$</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Canadian Dollar</div>
-							<div class="currency__item-abbreviation">CAD - $</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Swiss Franc</div>
-							<div class="currency__item-abbreviation">CHF - Fr</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Chilean Peso</div>
-							<div class="currency__item-abbreviation">CLP - $</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Chinese Yuan</div>
-							<div class="currency__item-abbreviation">CNY - ¥</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Czech Koruna</div>
-							<div class="currency__item-abbreviation">CZK - Kč</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Danish Krone</div>
-							<div class="currency__item-abbreviation">DKK - kr</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Euro</div>
-							<div class="currency__item-abbreviation">EUR - €</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Pound Sterling</div>
-							<div class="currency__item-abbreviation">GBP - £</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Hong Kong Dollar</div>
-							<div class="currency__item-abbreviation">HKD - $</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Hungarian Forint</div>
-							<div class="currency__item-abbreviation">HUF - Ft</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Indonesian Rupiah</div>
-							<div class="currency__item-abbreviation">IDR - Rp</div>
-						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
-
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Israeli New Shekel</div>
-							<div class="currency__item-abbreviation">ILS -
-								<span>
-									<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M0 0H3.41797C4.08984 0 4.58724 0.164062 4.91016 0.492187C5.23568 0.820312 5.39974 1.30208 5.40234 1.9375V4.03906H4.21484V1.9375C4.21224 1.61979 4.14453 1.38542 4.01172 1.23438C3.87891 1.08333 3.65885 1.00781 3.35156 1.00781H1.1875V6H0V0ZM2.10547 6V1.96094H3.29297V4.99219H5.45703C5.75911 4.99219 5.97786 4.91927 6.11328 4.77344C6.2513 4.625 6.32031 4.38802 6.32031 4.0625V0.0664063H7.50781V4.0625C7.50781 4.69792 7.34505 5.17969 7.01953 5.50781C6.69401 5.83594 6.19661 6 5.52734 6H2.10547Z" fill="#58667E" />
-									</svg>
-								</span>
+			<div class="modal_tabs" data-modal="2">
+				<div class="currency__list tabs-shell">
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">United States Dollar</div>
+								<div class="currency__item-abbreviation">USD - $</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
 							</div>
 						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
+					</a>
 
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Indian Rupee</div>
-							<div class="currency__item-abbreviation">INR - ₹</div>
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Australian Dollar</div>
+								<div class="currency__item-abbreviation">AUD - $</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
 						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
+					</a>
 
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Japanese Yen</div>
-							<div class="currency__item-abbreviation">JPY - ¥</div>
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Brazilian Real</div>
+								<div class="currency__item-abbreviation">BRL - R$</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
 						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
+					</a>
 
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">South Korean Won</div>
-							<div class="currency__item-abbreviation">KRW - ₩</div>
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Canadian Dollar</div>
+								<div class="currency__item-abbreviation">CAD - $</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
 						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
+					</a>
 
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Mexican Peso</div>
-							<div class="currency__item-abbreviation">MXN - $</div>
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Swiss Franc</div>
+								<div class="currency__item-abbreviation">CHF - Fr</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
 						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
-						</div>
-					</div>
-				</a>
+					</a>
 
-				<a class="currency__list-link" href="#">
-					<div class="currency__item">
-						<div class="currency__item-block">
-							<div class="currency__item-name">Malaysian Ringgit</div>
-							<div class="currency__item-abbreviation">MYR - RM</div>
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Chilean Peso</div>
+								<div class="currency__item-abbreviation">CLP - $</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
 						</div>
-						<div class="currency__item-icon">
-							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_4915_8473)">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
-								</g>
-								<defs>
-									<clipPath id="clip0_4915_8473">
-										<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
-									</clipPath>
-								</defs>
-							</svg>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Chinese Yuan</div>
+								<div class="currency__item-abbreviation">CNY - ¥</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
 						</div>
-					</div>
-				</a>
+					</a>
 
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Czech Koruna</div>
+								<div class="currency__item-abbreviation">CZK - Kč</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
 
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Danish Krone</div>
+								<div class="currency__item-abbreviation">DKK - kr</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Euro</div>
+								<div class="currency__item-abbreviation">EUR - €</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Pound Sterling</div>
+								<div class="currency__item-abbreviation">GBP - £</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Hong Kong Dollar</div>
+								<div class="currency__item-abbreviation">HKD - $</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Hungarian Forint</div>
+								<div class="currency__item-abbreviation">HUF - Ft</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Indonesian Rupiah</div>
+								<div class="currency__item-abbreviation">IDR - Rp</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Israeli New Shekel</div>
+								<div class="currency__item-abbreviation">ILS -
+									<span>
+										<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 0H3.41797C4.08984 0 4.58724 0.164062 4.91016 0.492187C5.23568 0.820312 5.39974 1.30208 5.40234 1.9375V4.03906H4.21484V1.9375C4.21224 1.61979 4.14453 1.38542 4.01172 1.23438C3.87891 1.08333 3.65885 1.00781 3.35156 1.00781H1.1875V6H0V0ZM2.10547 6V1.96094H3.29297V4.99219H5.45703C5.75911 4.99219 5.97786 4.91927 6.11328 4.77344C6.2513 4.625 6.32031 4.38802 6.32031 4.0625V0.0664063H7.50781V4.0625C7.50781 4.69792 7.34505 5.17969 7.01953 5.50781C6.69401 5.83594 6.19661 6 5.52734 6H2.10547Z" fill="#58667E" />
+										</svg>
+									</span>
+								</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Indian Rupee</div>
+								<div class="currency__item-abbreviation">INR - ₹</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Japanese Yen</div>
+								<div class="currency__item-abbreviation">JPY - ¥</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">South Korean Won</div>
+								<div class="currency__item-abbreviation">KRW - ₩</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Mexican Peso</div>
+								<div class="currency__item-abbreviation">MXN - $</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<a class="currency__list-link" href="#">
+						<div class="currency__item">
+							<div class="currency__item-block">
+								<div class="currency__item-name">Malaysian Ringgit</div>
+								<div class="currency__item-abbreviation">MYR - RM</div>
+							</div>
+							<div class="currency__item-icon">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g clip-path="url(#clip0_4915_8473)">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4998 18.5832C15.1022 18.5832 18.8332 14.8522 18.8332 10.2498C18.8332 5.64746 15.1022 1.9165 10.4998 1.9165C5.89746 1.9165 2.1665 5.64746 2.1665 10.2498C2.1665 14.8522 5.89746 18.5832 10.4998 18.5832ZM14.4629 8.29561C14.7643 7.94782 14.7268 7.42152 14.3789 7.1201C14.0312 6.81867 13.5048 6.85626 13.2034 7.20406L9.49984 11.4774L7.79625 9.51175C7.49482 9.16392 6.96852 9.12634 6.62073 9.42775C6.27293 9.72917 6.23534 10.2555 6.53676 10.6033L8.87009 13.2956C9.02842 13.4783 9.25817 13.5832 9.49984 13.5832C9.7415 13.5832 9.97125 13.4783 10.1296 13.2956L14.4629 8.29561Z" fill="#16C784" />
+									</g>
+									<defs>
+										<clipPath id="clip0_4915_8473">
+											<rect width="20" height="20" fill="white" transform="translate(0.5 0.25)" />
+										</clipPath>
+									</defs>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+				</div>
 			</div>
 
 
@@ -3359,7 +3374,7 @@
 			</button>
 			<div class="search-site__padding"></div>
 			<div class="search-site__wrapper">
-				<div class="search-site__body">
+				<div class="search-site__body modal-base-rule">
 					<div class="search-site__form" action="#" method="post" name="" id="">
 						<form name="search_site" class="search-site__search">
 							<button type="button" class="search-site__icon">
@@ -3445,8 +3460,9 @@
 		</div>
 	</div>
 
+
 	<div id="contact_form-block" class="contact-form">
-		<div class="contact-form__wrapper">
+		<div class="contact-form__wrapper modal-base-rule">
 			<div class="contact-form__body">
 
 				<button class="btn_close_modal"></button>
@@ -3496,7 +3512,7 @@
 						</div>
 					</div>
 					<p class="contact-form__text">Нажимая кнопку «Отправить», Вы даете свое согласие Администрации PassimPay на обработку и хранение Ваших персональных и других данных, представленных в форме выше.</p>
-					<button class="contact-form__button button-blue" type="submit">Отправить</button>
+					<button class="contact-form__button button-blue btn1" type="submit">Отправить</button>
 				</form>
 			</div>
 		</div>

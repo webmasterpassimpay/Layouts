@@ -844,7 +844,8 @@ if (document.querySelector('.learn-more')) {
 
 
 if (document.querySelector('.header')) {
-
+    let header = document.querySelector('#header');
+    let hp = document.querySelector('#hp');
     let headerNav = document.querySelector('.header__nav');
     let fonMenu = document.querySelector('.header__nav-fon-menu');
     let fonMenuIn = document.querySelector('.header__nav-fon-menu-in');
@@ -939,10 +940,7 @@ if (document.querySelector('.header')) {
 
 
     /* позиционирование header при прокрутке*/
-
-    let header = document.querySelector('#header');
-    let hp = document.querySelector('#hp');
-    let callback = function (entries, observer) {
+    let callback2 = function (entries, observer) {
         if (!entries[0].isIntersecting) {// && !mediaQuery768.matches
             header.classList.add('fixed-start');
             hp.style.marginBottom = '100px';
@@ -957,8 +955,8 @@ if (document.querySelector('.header')) {
         }
     };
 
-    let observer = new IntersectionObserver(callback, { rootMargin: '0px' });
-    observer.observe(hp);
+    let observer2 = new IntersectionObserver(callback2, { rootMargin: '0px' });
+    observer2.observe(hp);
 
 
 

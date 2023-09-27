@@ -168,6 +168,7 @@ input[type=date]::-webkit-outer-spin-button {
 
 
 body.body {
+   position: relative;
    font-family: Ubuntu;
    max-width: 100vw;
    overflow-x: hidden;

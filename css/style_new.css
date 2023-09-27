@@ -491,7 +491,6 @@ button:hover ._link-anim .l::after {
    line-height: 120%;
    color: #1843BF;
    text-align: center;
-   white-space: nowrap;
 }
 
 .link-style-rule__arrow {
@@ -1016,8 +1015,6 @@ button:hover ._link-anim .l::after {
 .grid-block__link {
    margin-bottom: 20px;
    text-align: center;
-   width: max-content;
-   white-space: nowrap;
 }
 
 .grid-block__link.link-style-rule {

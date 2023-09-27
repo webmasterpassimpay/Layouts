@@ -4972,6 +4972,7 @@ lottie-player {
    z-index: 100;
    top: 0;
    left: 0;
+   max-width: 100vw;
    width: 100%;
    height: 100%;
    display: -webkit-box;
@@ -4988,6 +4989,16 @@ lottie-player {
    backdrop-filter: blur(2.5px);
    overflow-y: auto;
    display: none;
+}
+
+@media (max-height:750px) {
+   .contact-form {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      overflow-y: auto;
+   }
+
 }
 
 .contact-form__wrapper {

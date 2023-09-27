@@ -382,7 +382,7 @@ button:hover ._link-anim .l::after {
 .mb-section-rule {
    margin-bottom: 100px;
    max-width: 100vw;
-
+   overflow: hidden;
 }
 
 @media (max-width: 1440px) {

@@ -836,6 +836,12 @@ button:hover ._link-anim .l::after {
    flex: 0 0 58%;
 }
 
+.problems .block-1__image {
+   -webkit-box-flex: 0;
+   -ms-flex: 0 0 45%;
+   flex: 0 0 45%;
+}
+
 .block-1__image svg {
    width: 100%;
 }

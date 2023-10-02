@@ -835,6 +835,13 @@ button:hover ._link-anim .l::after {
    flex: 0 0 58%;
 }
 
+.problems .block-1__image {
+   -webkit-box-flex: 0;
+   -ms-flex: 0 0 42%;
+   flex: 0 0 42%;
+}
+
+
 .block-1__image svg {
    width: 100%;
 }
@@ -3989,9 +3996,10 @@ lottie-player {
 
 
 .reviews {
+   max-width: 100vw;
+   overflow: hidden;
    -webkit-box-shadow: 0 0 10000px transparent;
    box-shadow: 0 0 10000px transparent;
-   overflow: visible;
 }
 
 
@@ -5220,13 +5228,4 @@ lottie-player {
 #contact_form-block .btn_close_modal {
    top: 0px;
    right: 0px;
-}
-
-
-
-
-
-.overflov {
-   overflow-x: hidden;
-   max-width: 100vw;
 }

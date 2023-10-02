@@ -311,17 +311,8 @@
 
 .home-buisnes-intro__info button.home-buisnes-intro__button-contact,
 .home-buisnes-intro__info a.home-buisnes-intro__button-started {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   column-gap: 10px;
-   padding-left: 40px;
-   padding-right: 40px;
    max-width: none;
    width: max-content;
-   min-height: 60px;
-
-   border-radius: 10px;
 }
 
 @media (max-width:766.98px) {
@@ -383,20 +374,16 @@
 
    }
 
-   .home-buisnes-intro__button-text {
+   .home-buisnes-intro__buttons .button-orange__text,
+   .home-buisnes-intro__buttons .button-transparent__text {
       font-size: calc(1vw * (15 / 14.70));
    }
 
-   .home-buisnes-intro__info-list-icon img {
+   .home-buisnes-intro__buttons .button-orange__icon img,
+   .home-buisnes-intro__buttons .button-transparent__icon img {
       width: calc(1vw * (20 / 14.70));
       height: calc(1vw * (20 / 14.70));
    }
-
-   .home-buisnes-intro__info-list-text {
-      font-size: calc(1vw * (16 / 14.70));
-
-   }
-
 }
 
 

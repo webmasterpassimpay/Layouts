@@ -316,8 +316,6 @@ button:hover ._link-anim .l::after {
 
 
 
-
-
 /*=================================================*/
 /* глобальные стили */
 /* правила стилей "RULE" */
@@ -2582,7 +2580,7 @@ button:hover ._link-anim .l::after {
    font-family: Nekst;
    font-weight: 900;
    line-height: normal;
-   color: #009;
+   color: #ffd900;
 }
 
 .home-buisnes-intro__info-text {

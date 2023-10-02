@@ -381,8 +381,6 @@ button:hover ._link-anim .l::after {
 /* нижний отступ блока */
 .mb-section-rule {
    margin-bottom: 100px;
-   max-width: 100vw;
-   overflow: hidden;
 }
 
 @media (max-width: 1440px) {
@@ -500,19 +498,45 @@ button:hover ._link-anim .l::after {
 }
 
 
-
-
 /* фон модального окна */
-.modal-base-rule {
-   padding: 20px;
+.modal-background-rule {
+   padding: 10px;
+   position: fixed;
+   z-index: 100;
+   top: 0;
+   left: 0;
+   max-width: 100vw;
+   width: 100%;
+   height: 100%;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   overflow-y: auto;
+   display: none;
+   background-color: rgba(238, 244, 255, 0.5);
+}
+
+/* фон контента модального окна */
+.modal-frame-rule {
    border-radius: 20px;
-   background-color: #EEF4FF;
+   background-color: #ffffff;
+   -webkit-box-shadow: 0px 1.85185px 3.14815px 0px rgba(87, 144, 187, 0.02), 0px 8.14815px 6.51852px 0px rgba(87, 144, 187, 0.03), 0px 20px 13px 0px rgba(87, 144, 187, 0.04), 0px 38.51852px 25.48148px 0px rgba(87, 144, 187, 0.04);
+   box-shadow: 0px 1.85185px 3.14815px 0px rgba(87, 144, 187, 0.02), 0px 8.14815px 6.51852px 0px rgba(87, 144, 187, 0.03), 0px 20px 13px 0px rgba(87, 144, 187, 0.04), 0px 38.51852px 25.48148px 0px rgba(87, 144, 187, 0.04);
+
 }
 
 /* оранжевая кнопка */
 /* синяя кнопка */
+/* прозрачная енопка */
 .button-blue,
-.button-orange {
+.button-orange,
+.button-transparent {
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -547,18 +571,34 @@ button:hover ._link-anim .l::after {
    background-color: #FF6600;
 }
 
+.button-transparent {
+   color: #FFFFFF;
+   font-weight: 700;
+   border: 1px solid #C6D6E5;
+   background: rgba(255, 255, 255, 0.10)
+}
+
 .button-orange__text {
+   font-weight: 700;
    color: #ffffff;
 }
 
+.button-transparent__icon,
 .button-blue__icon,
 .button-orange__icon {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
    margin-left: 10px;
    height: 28px;
 }
 
 .button-blue__text {
    text-align: center;
+   font-weight: 700;
 }
 
 /* кнопка с пунктирной рамкой */
@@ -602,7 +642,6 @@ button:hover ._link-anim .l::after {
 .btn-dashed:hover {
    color: #fff;
 }
-
 
 
 
@@ -685,6 +724,7 @@ button:hover ._link-anim .l::after {
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;
+   min-height: 680px;
 }
 
 .abaut-main__img {
@@ -710,6 +750,7 @@ button:hover ._link-anim .l::after {
 .abaut-main__content-title {
    margin-bottom: 20px;
    font-family: "Nekst";
+   font-weight: 700;
    font-size: 48px;
    line-height: 115%;
    color: #FFFFFF;
@@ -2609,26 +2650,10 @@ button:hover ._link-anim .l::after {
 
 button.home-buisnes-intro__button-contact,
 a.home-buisnes-intro__button-started {
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-align: center;
-   -ms-flex-align: center;
-   align-items: center;
-   -webkit-box-pack: center;
-   -ms-flex-pack: center;
-   justify-content: center;
-   -webkit-column-gap: 10px;
-   -moz-column-gap: 10px;
-   column-gap: 10px;
-   padding-left: 40px;
-   padding-right: 40px;
    max-width: none;
    width: -webkit-max-content;
    width: -moz-max-content;
    width: max-content;
-   min-height: 60px;
-   border-radius: 10px;
 }
 
 .home-buisnes-intro__button-contact {
@@ -3125,13 +3150,11 @@ lottie-player {
 
 
 /* =============================================== */
-/*  */
+/* calculator */
 /* =============================================== */
 
 
-
 .calculator-info__items {
-
    display: -webkit-box;
    display: -ms-flexbox;
    display: flex;
@@ -3141,8 +3164,10 @@ lottie-player {
    -webkit-column-gap: 35px;
    -moz-column-gap: 35px;
    column-gap: 35px;
-
 }
+
+
+
 
 .calculator-info__title {
    margin: 0 auto 40px;
@@ -3151,8 +3176,6 @@ lottie-player {
 }
 
 .calculator-info__item {
-
-
    -webkit-box-flex: 1;
    -ms-flex: 1 0 340px;
    flex: 1 0 340px;
@@ -3214,10 +3237,15 @@ lottie-player {
 
 @media (max-width:991.98px) {
    .calculator-info__items {
-      display: block;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 40px;
    }
 
    .calculator-info__item {
+      flex: 1 1 auto;
       max-width: 100%;
    }
 
@@ -4966,30 +4994,7 @@ lottie-player {
 /* contact form */
 /* ================== */
 
-.contact-form {
-   padding: 10px;
-   position: fixed;
-   z-index: 100;
-   top: 0;
-   left: 0;
-   max-width: 100vw;
-   width: 100%;
-   height: 100%;
-   display: -webkit-box;
-   display: -ms-flexbox;
-   display: flex;
-   -webkit-box-pack: center;
-   -ms-flex-pack: center;
-   justify-content: center;
-   -webkit-box-align: center;
-   -ms-flex-align: center;
-   align-items: center;
-   background: rgba(0, 0, 0, 0.5);
-   -webkit-backdrop-filter: blur(2.5px);
-   backdrop-filter: blur(2.5px);
-   overflow-y: auto;
-   display: none;
-}
+.contact-form {}
 
 @media (max-height:750px) {
    .contact-form {
@@ -5002,6 +5007,7 @@ lottie-player {
 }
 
 .contact-form__wrapper {
+   padding: 20px;
    max-width: 500px;
 }
 

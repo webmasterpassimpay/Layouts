@@ -2576,7 +2576,7 @@ button:hover ._link-anim .l::after {
 .home-buisnes-intro__info-title {
    margin-bottom: 20px;
    font-size: 40px;
-   color: #fff;
+   color: #ffffff;
    font-family: Nekst;
    font-weight: 900;
    line-height: normal;
@@ -3987,6 +3987,8 @@ lottie-player {
 
 
 .reviews {
+   max-width: 100vw;
+   overflow: hidden;
    -webkit-box-shadow: 0 0 10000px transparent;
    box-shadow: 0 0 10000px transparent;
    overflow: visible;
@@ -5218,13 +5220,4 @@ lottie-player {
 #contact_form-block .btn_close_modal {
    top: 0px;
    right: 0px;
-}
-
-
-
-
-
-.overflov {
-   overflow-x: hidden;
-   max-width: 100vw;
 }

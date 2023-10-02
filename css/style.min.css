@@ -2772,6 +2772,8 @@ transform: rotate(180deg) translate(-100%, 50%);
 }
 
 .reviews {
+    max-width: 100vw;
+    overflow: hidden;
     -webkit-box-shadow: 0 0 10000px transparent;
     box-shadow: 0 0 10000px transparent;
 }

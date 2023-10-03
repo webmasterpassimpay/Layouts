@@ -5229,3 +5229,97 @@ lottie-player {
    top: 0px;
    right: 0px;
 }
+
+.wrpalert {
+    position: fixed;
+    z-index: 300;
+    top: 25px;
+    right: 20px;
+    pointer-events: none
+}
+
+.item_alert {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 304px;
+    padding: 10px 60px 10px 0;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(46px);
+    backdrop-filter: blur(46px);
+    margin-bottom: 10px;
+    -webkit-transition: all .3s;
+    transition: all .3s
+}
+
+.item_alert .color-white {
+    color: #fff
+}
+
+.item_alert.hide {
+    transform: translateX(calc(100% + 20px))
+}
+
+.item_alert_img {
+    width: 72px;
+    min-width: 72px;
+    height: 46px;
+    background-repeat: no-repeat;
+    background-position: center
+}
+
+.close_alert {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px rgba(255, 255, 255, .1) solid;
+    pointer-events: all
+}
+
+.close_alert:hover path {
+    stroke: #000
+}
+
+.item_alert_success {
+    background: #72cc70
+}
+
+.item_alert_success .item_alert_img {
+    background-image: url(../svg/alert_success.svg)
+}
+
+.item_alert_info {
+    background: rgba(64, 198, 240, .7)
+}
+
+.item_alert_info .item_alert_img {
+    background-image: url(../svg/alert_info.svg)
+}
+
+.item_alert_warning {
+    background: #ffc839
+}
+
+.item_alert_warning .item_alert_img {
+    background-image: url(../svg/alert_warning.svg)
+}
+
+.item_alert_error {
+    background: #ff584e;
+    color: #fff
+}
+
+.item_alert_error .item_alert_img {
+    background-image: url(../svg/alert_error.svg)
+}
+
+@supports not ((-webkit-backdrop-filter:none) or not (backdrop-filter:none)) {
+    .item_alert_info {
+        background: rgba(64, 198, 240, 1)
+    }
+}

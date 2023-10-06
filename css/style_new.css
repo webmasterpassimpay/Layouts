@@ -350,6 +350,7 @@ button:hover ._link-anim .l::after {
       padding: 0px 40px;
    }
 
+
 }
 
 @media (max-width:767.98px) {
@@ -360,7 +361,7 @@ button:hover ._link-anim .l::after {
    [class$="__container-big"] {
       padding: 0px 20px;
    }
-
+   
 }
 
 /* обрезает что вылазит за пределы блока */
@@ -382,6 +383,10 @@ button:hover ._link-anim .l::after {
 /* нижний отступ блока */
 .mb-section-rule {
    margin-bottom: 100px;
+}
+
+.mb-title-rule {
+   margin-bottom: 40px;
 }
 
 @media (max-width: 1440px) {
@@ -411,6 +416,7 @@ button:hover ._link-anim .l::after {
    .title-rule {
       font-size: 36px;
    }
+
 }
 
 @media (max-width:767.98px) {
@@ -419,6 +425,9 @@ button:hover ._link-anim .l::after {
       width: 100%;
       text-align: center;
       font-size: 24px;
+   }
+   .mb-title-rule {
+      margin-bottom: 20px;
    }
 }
 
@@ -447,17 +456,37 @@ button:hover ._link-anim .l::after {
 }
 
 
-
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++ */
 /* текст */
 .text-rule {
-   font-family: "Ubuntu";
+   font-family: "Ubuntu"; 
    font-size: 16px;
    line-height: 150%;
    color: #565656;
 }
 
+.text-white-rule {
+   font-family: "Ubuntu"; 
+   font-size: 16px;
+   color: #fff;
+   line-height: 150%;
+}
+
+/* + */
+.font-nekst-rule {
+   font-family: "Nekst";  
+   font-weight: 700;   
+}
+
+/* + */
+.font-nekst-black-rule {
+   font-family: "Nekst";  
+   font-weight: 700;
+   color: #161616;
+}
+
 @media (max-width:991.98px) {
-   .text-rule {
+   .text-rule,.font-nekst-rule, .font-nekst-black-rule, .text-white-rule {
       font-size: 14px;
    }
 }
@@ -475,17 +504,48 @@ button:hover ._link-anim .l::after {
    border-radius: 20px;
 }
 
+/* + */
+/* блок с синим фоном */
+.blue-block-rule {
+   background: -o-linear-gradient(343.05deg, #197ce1 4.87%, #4d95ed 98.28%);
+   background: linear-gradient(106.95deg, #197ce1 4.87%, #4d95ed 98.28%);
+   border-radius: 20px;
+   padding: 40px 35px;
+}
+
+@media (max-width:991.98px) {
+   .blue-block-rule {
+      padding: 20px 17.5px;
+   }
+}
+
 @media (max-width:767.98px) {
    .white-block-rule {
       padding: 20px;
    }
 }
 
-/* ссылка с стрелкой */
+
+/* ссылка со стрелкой */
 .link-style-rule {
    margin-bottom: 20px;
    width: 100%;
    font-size: 18px;
+   font-weight: 700;
+   line-height: 120%;
+   color: #1843BF;
+   text-align: center;
+}
+
+.link-style-rule__text {
+   color: #0C319B;
+}
+
+.link-nekst-style-rule {
+   font-family:"Nekst";
+   margin-bottom: 20px;
+   width: 100%;
+   font-size: 14px;
    font-weight: 700;
    line-height: 120%;
    color: #1843BF;
@@ -805,7 +865,7 @@ button:hover ._link-anim .l::after {
 }
 
 
-
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ================================== */
 /* block-1 */
@@ -866,6 +926,51 @@ button:hover ._link-anim .l::after {
 
 .block-1__button.button-orange {}
 
+/* + список для блока 1 */
+.block-1__list-item {
+   position: relative;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   margin-bottom: 15px;
+}
+
+.block-1__list-item:last-child {
+   margin-bottom: 20px;
+}
+
+.block-1__list-item::before {
+   content: "";
+   width: 20px;
+   height: 20px;
+   position: relative;
+   display: block;
+   border-radius: 50%;
+   border: 5px solid #18b786;
+   min-width: 20px;
+   margin-right: 12px;
+}
+
+.block-1__list-text {
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 150.4%;
+   color: #565656;
+}
+
+.block-1__list-text span {
+   font-family: 'Ubuntu';
+   font-style: normal;
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 18px;
+   color: #161616;
+}
+
+
+
 @media (max-width:991.98px) {
    .block-1__body {
       -webkit-box-orient: vertical;
@@ -888,6 +993,7 @@ button:hover ._link-anim .l::after {
       margin: 0 auto;
 
    }
+
 }
 
 @media (max-width:767.98px) {
@@ -920,6 +1026,21 @@ button:hover ._link-anim .l::after {
    text-align: center;
 }
 
+.annotatio__text {
+   margin-right: auto;
+   margin-left: auto; 
+}
+
+/* + */
+.annotatio__text_mw { 
+   max-width: 950px;
+}
+
+/* + для текста в 1 колонку */
+
+.annotatio__text.center {
+text-align: center;
+}
 
 .annotatio__annotatio {
    margin-bottom: 20px;
@@ -930,8 +1051,6 @@ button:hover ._link-anim .l::after {
    -moz-column-gap: 20px;
    column-gap: 20px;
 }
-
-
 
 .annotatio__annotatio-item {
    -webkit-box-flex: 1;
@@ -1611,9 +1730,44 @@ button:hover ._link-anim .l::after {
 
 .payment-process__title {
    text-align: center;
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 970px;
+   text-align: center;  
 }
 
-.payment-process__text {}
+.payment-process__subtitle {
+   margin-bottom: 20px;
+   font-family: Nekst;
+   font-size: 24px;  
+   font-weight: 700; 
+   color: #161616;
+   line-height: 100%;   
+}
+
+.payment-process__text-nekst {   
+   font-family: Nekst;
+   font-size: 18px;  
+   font-weight: 700;    
+   line-height: 120%;   
+}
+
+@media (max-width:991.98px) {
+   .payment-process__subtitle {
+      font-size: 20px;
+   }
+}
+
+.payment-process__text {
+   max-width: 970px;
+   margin-right: auto;
+   margin-left: auto;
+   text-align: center;
+}
+
+.payment-process__text.bold{
+   font-weight: 700;
+}
 
 .payment-process__image {
    margin-top: 20px;
@@ -1734,7 +1888,9 @@ button:hover ._link-anim .l::after {
    border-radius: 4px;
    border: 1px solid #D9E3EE;
 }
-
+.payment-process__item-text span {
+   font-weight: 700;
+}
 .payment-process__item:not(:last-child) {
    margin-bottom: 10px;
 }
@@ -2124,10 +2280,6 @@ button:hover ._link-anim .l::after {
 }
 
 .about-media__link {
-   color: #0C319B;
-}
-
-.link-style-rule__text {
    color: #0C319B;
 }
 
@@ -2869,6 +3021,7 @@ a.home-buisnes-intro__button-started {
    font-family: Ubuntu;
    font-size: 14px;
    line-height: 150%;
+   text-align: center;
 }
 
 .advantages__pagination {
@@ -5322,4 +5475,93 @@ lottie-player {
     .item_alert_info {
         background: rgba(64, 198, 240, 1)
     }
+}
+
+/* +++++++++++++++++++++++++++++++++++++++ */
+/* ================================================ */
+/* payment gateway*/
+/* ================================================ */
+.payment-gateway{}
+
+
+.payment-gateway__title {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 670px;
+   text-align: center;
+}
+
+.payment-gateway__text {
+   margin: 0 auto;
+   max-width: 870px;
+   width: 100%;
+   text-align: center;
+}
+
+.payment-gateway-inner {
+   max-width: 1280px;
+   margin: 0 auto;
+   width: 100%;
+   display: -ms-grid;
+   display: grid;
+   -ms-grid-columns: 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr;
+   -webkit-column-rule: thick inset #000;
+   -moz-column-rule: thick inset #000;
+   column-rule: thick inset #000;
+   gap: 2px;
+}
+
+@media (max-width:991.98px) {
+   .payment-gateway-inner {
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+@media (max-width:767.98px) {
+   .payment-gateway-inner {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+   }
+}
+
+.payment-gateway__item-inner {
+   max-width: 380px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.payment-gateway__item-inner img {
+   background: #fff;
+   -webkit-box-shadow: 0 38px 18px rgba(255, 255, 255, 0.32), 0 14.637px 5.73333px rgba(255, 255, 255, 0.19437), 0 3.0963px 1.46667px rgba(255, 255, 255, 0.12563);
+   box-shadow: 0 38px 18px rgba(255, 255, 255, 0.32), 0 14.637px 5.73333px rgba(255, 255, 255, 0.19437), 0 3.0963px 1.46667px rgba(255, 255, 255, 0.12563);
+   border-radius: 136px;
+   margin-bottom: 20px;
+   padding: 15px;
+   width: 100px;
+   height: 100px;
+}
+
+.payment-gateway__item-title {
+   font-size: 24px;
+   font-weight: bold;
+   color: #fff;
+   margin-bottom: 20px;
+}
+
+.payment-gateway__item-text {
+   font-size: 16px;
+   color: #fff;
+   line-height: 150%;
+}
+
+@media (max-width:991.98px) {
+   .payment-gateway_item_title {
+      font-size: 18px;
+   }
+
+   .payment-gateway__item-text {
+      font-size: 14px;
+   }
 }

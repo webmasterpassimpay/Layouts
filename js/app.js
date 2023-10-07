@@ -832,6 +832,8 @@ if (document.querySelector('.learn-more')) {
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('.learn-more')) {
             console.log(event.target.closest('.learn-more-body').querySelector('.annotatio__content'));
+            console.log(0,event.target.closest('.learn-more-body').querySelector('.annotatio__text').offsetHeight);
+
             event.target.closest('.learn-more-body').querySelector('.annotatio__content').style.height =
                 event.target.closest('.learn-more-body').querySelector('.annotatio__text').offsetHeight + 'px';
             event.target.closest('.learn-more').style.display = 'none';

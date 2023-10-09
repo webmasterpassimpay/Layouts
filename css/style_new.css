@@ -1873,11 +1873,15 @@ text-align: center;
 }
 
 .payment-process__border {
-   padding: 33px 50px;
+   padding: 40px;
    margin: 0 auto;
-   max-width: 1130px;
+   max-width:100%;
    border-radius: 20px;
    border: 1px solid #C6D6E5;
+}
+
+.payment-process__border-mw1050px {
+   max-width: 1050px;
 }
 
 .payment-process__progress {
@@ -1922,7 +1926,8 @@ text-align: center;
    position: relative;
    z-index: 5;
    width: 20px;
-   height: 20px;
+   height: 20px;   
+   right: 3px;
 }
 
 .payment-process__backgroung-end,
@@ -1945,7 +1950,7 @@ text-align: center;
 .payment-process__line {
    position: absolute;
    top: 50%;
-   left: 19px;
+   left: 16px;
    -webkit-transform: translate(0%, -50%);
    -ms-transform: translate(0%, -50%);
    transform: translate(0%, -50%);
@@ -2005,10 +2010,6 @@ text-align: center;
 
    .payment-process__img {
       padding: 0px;
-   }
-
-   .payment-process__line {
-      left: 19px;
    }
 
    .payment-process__link {

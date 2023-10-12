@@ -1112,3 +1112,15 @@ if (document.querySelector('.search-site__wrapper')) {
     })
 }
 
+// запуска видео с кнопки на странице invocie
+jQuery(document).ready(function ($) {
+    (function initPlayVideo() {
+      var $videoCover = $(".block-1-video__cover");
+      var $videoPlayerIframe = $(".block-1-video__player iframe");
+   
+      $videoCover.on("click", function () {
+        $videoCover.fadeOut();
+        $videoPlayerIframe[0].src += "&autoplay=1";
+      });
+    })();
+  });

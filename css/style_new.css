@@ -417,6 +417,14 @@ button:hover ._link-anim .l::after {
    font-weight: 700;
 }
 
+.sub-title-rule {
+   font-family: Nekst;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 24px;
+   color: #161616;
+}
+
 .title-rule.lh-48 {
    line-height: 48px;
 }
@@ -424,6 +432,10 @@ button:hover ._link-anim .l::after {
 @media (max-width:991.98px) {
    .title-rule {
       font-size: 36px;
+   }
+   .sub-title-rule {
+      font-size: 20px;
+      line-height: 20px;
    }
 
 }
@@ -434,6 +446,13 @@ button:hover ._link-anim .l::after {
       width: 100%;
       text-align: center;
       font-size: 24px;
+   }
+   .sub-title-rule {
+      font-size: 18px;
+      line-height: 18px;
+      max-width: 100%;
+      width: 100%;
+      text-align: center;
    }
    .mb-title-rule {
       margin-bottom: 20px;
@@ -505,6 +524,11 @@ button:hover ._link-anim .l::after {
 }
 
 .fs-18 {
+   font-size: 18px;
+   line-height: 21.6px;
+}
+
+.fs-14 {
    font-size: 18px;
    line-height: 21.6px;
 }
@@ -592,6 +616,10 @@ button:hover ._link-anim .l::after {
    font-size: 18px;
 }
 
+.link-nekst-style-rule.fs-16 {
+   font-size: 16px;
+   font-weight: normal;
+}
 
 .link-style-rule__arrow {
    position: relative;
@@ -1191,6 +1219,13 @@ button:hover ._link-anim .l::after {
    text-align: center;
 }
 
+.annotatio__block-mw-930  {
+   margin-right: auto;
+   margin-left: auto;
+   max-width: 930px;
+   text-align: center;
+}
+
 .annotatio__text {
    margin-right: auto;
    margin-left: auto; 
@@ -1232,10 +1267,27 @@ text-align: center;
    grid-template-columns: 1fr 1fr;
    gap: 4px;  
 }
+.annotatio__block-grid.gap10 {  
+   gap: 10px;  
+}
 
 .annotatio__block-grid p {
    color: #1843BF;
 }
+
+.annotatio__block-grid p.annotatio-text-color {
+font-family: Ubuntu;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+color: #565656;
+}
+
+.annotatio__block-grid-left ul p {
+   line-height: 18.38px;
+}
+
+
 
 .annotatio__block-grid p>span:first-child {
    color: black;
@@ -1244,6 +1296,11 @@ text-align: center;
 .annotatio__block-grid span {
    font-weight: 700;
 }
+
+.annotatio__block-grid-right p .link-nekst-style-rule span {
+font-weight: 400;
+}
+
 /* ??? min-width стояло */
 @media (max-width:767.98px) {
    .annotatio__annotatio-item.mb-list-rule {
@@ -1868,7 +1925,7 @@ text-align: center;
 .infoblocks_container {}
 
 .infoblocks__title { 
-   margin: 0 auto;
+   margin: 0 auto ;
    max-width: 970px;
    width: 100%;
    text-align: center; 
@@ -1896,6 +1953,9 @@ text-align: center;
    background-color: #f5f8fb;
 }
 
+.infoblocks__item-text .link-nekst-style-rule  {
+ font-weight: normal;
+}
 @media (min-width:991.98px) {
    .infoblocks__item {
       position: sticky;
@@ -2615,6 +2675,16 @@ max-width:800px;
    color: #1843BF;
 }
 
+.module__question-answer_list {
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 10px;
+}
+
+.module__question-answer_list>div{
+   margin-bottom: 20px;
+}
+
 @media (max-width:991.98px) {
    .module__question-answer-size {
       padding: 10px;
@@ -2627,6 +2697,10 @@ max-width:800px;
    .module__question-title {
       font-size: 30px;
    }
+   .module__question-answer_list {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      }
 }
 
 @media (max-width:766.98px) {
@@ -2638,6 +2712,13 @@ max-width:800px;
    .module__question-title {
       font-size: 20px;
    }
+   .module__question-answer_list {
+      display: grid;
+      grid-template-columns: 1fr;
+      }
+   .module__question-answer_list>div:not(:last-child){
+         margin-bottom: 10px;
+      }
 }
 
 ._touch .module__question.module__question-active .module__question-item,
@@ -3673,6 +3754,13 @@ lottie-player {
    text-align: center;
 }
 
+.how__title-mw-798 {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 798px;
+   text-align: center;
+}
+
 .how__title-title {}
 
 .how__title-text {}
@@ -3681,8 +3769,25 @@ lottie-player {
    margin-bottom: 20px;
    display: grid;
    grid-template-columns: 1fr 1fr;
-
    gap: 4px;
+}
+
+.how__content.onecolumn {  
+   grid-template-columns: 1fr;  
+   flex: 1 1 638px;
+}
+
+.how-flex {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   gap:20px ;
 }
 
 @media (max-width:766.98px) {
@@ -3757,8 +3862,13 @@ line-height: 36px;
    border-color: #ff6600;
 }
 
+.how__image {
+   flex: 1 1 540px;
+}
+
 .how__image img {
-   width: 100%;
+   width: 100%; 
+   max-width: 100%;  
 }
 
 .how__image-big {
@@ -3787,10 +3897,16 @@ line-height: 36px;
       line-height: 20px;
 
       }
+
 }
-
-
-
+   @media (max-width:991.98px) {
+      .how-flex {
+         flex-direction: column;
+      }
+      .how__image {
+         flex: 1 1 100%;
+      }
+   }
 
 
 /* ========================================== */
@@ -5816,6 +5932,7 @@ text-align:center;
    }
 }
 
+
 /* +++++++++++++++++++++++++++++++++++++++ */
 /* ================================================ */
 /* payment gateway*/
@@ -5835,6 +5952,18 @@ text-align:center;
    max-width: 870px;
    width: 100%;
    text-align: center;
+}
+.payment-gateway__text p:first-child {
+   font-family: Nekst;
+   font-size: 24px;
+   font-weight: 700;
+   line-height: 29px;  
+   margin-bottom: 10px;
+   color:#161616;
+}
+
+.payment-gateway__text.mw-930 { 
+   max-width: 930px;
 }
 
 .payment-gateway-inner {
@@ -5876,7 +6005,6 @@ text-align:center;
 }
 
 .payment-gateway__item-inner {
-   max-width: 380px;
    margin: 0 auto;
    text-align: center;
 }

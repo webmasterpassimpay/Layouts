@@ -1111,11 +1111,10 @@ if (document.querySelector('.search-site__wrapper')) {
         if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose() }
     })
 }
-
 // запуска видео с кнопки на странице invocie
 jQuery(document).ready(function ($) {
     (function initPlayVideo() {
-      var $videoCover = $(".block-1-video__cover");
+      var $videoCover = $(".block-1-video__background");
       var $videoPlayerIframe = $(".block-1-video__player iframe");
    
       $videoCover.on("click", function () {

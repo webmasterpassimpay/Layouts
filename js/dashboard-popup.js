@@ -178,7 +178,7 @@ if (structureBtn && window.screen.width < 993) {
   let cloneBtn = structureBtn.cloneNode(true);
   structureBtn.style.display = "none";
   cloneBtn.style.cssText = `
-    max-width: 324px;
+   
     margin: 0 auto;
     margin-top: 20px;
   `;

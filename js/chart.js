@@ -2,6 +2,7 @@ jQuery(document).ready(function($){
 	
 	if ($('#chart').length) {
 		var el = $('#chart');
+		var integer = el.attr('data-integer');
 		var chart;
 		var chartUrl = el.data('url');
 		var filter = $('.chart_filter a.active').data('filter');
@@ -51,6 +52,7 @@ jQuery(document).ready(function($){
 			if (step >= 1000000) {
 				str = parseFloat(step / 1000000).toFixed(1) + 'm';
 			}
+			if (integer) str = parseInt(str);
 			$('.chart_vertical').prepend('<div><span>'+ str +'</span></div>');
 		}
 		
@@ -59,9 +61,9 @@ jQuery(document).ready(function($){
 			if (max > 0) {
 				percent = Number(item.price) * 100 / max;
 			}
-			var price = '<div class="fs-12 color-green"><b>+'+ item.price +' $</b></div>';
-			if (item.type == 'withdraw') {
-				price = '<div class="fs-12 color-red"><b>-'+ item.price +' $</b></div>';
+			var price = '<div class="fs-14 tac"><b>'+ item.price +'</b></div>';
+			if (item.type == 'enter' || item.type == 'withdraw') {
+				price = '<div class="fs-12 color-red"><b>-$'+ item.priceWithdraw +'</b></div><div class="fs-12 color-green"><b>+$'+ item.priceEnter +'</b></div>';
 			}
 			$('.chart_horizontal').append('<div><span></span></div>');
 			$('.chart_lines').append('<div style="height:'+ percent +'%"><div class="chart_lines_bg"></div><div class="chart_popup">'+ price +'<div class="fs-12 color-gray"><b>'+ item.time +'</b></div></div></div>');
@@ -92,7 +94,7 @@ jQuery(document).ready(function($){
 		});
 		
 		
-		$('.chart_svg').append('<svg width="100%" height="100%" viewBox="0 0 '+ cW +' '+ cH +'" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="'+ path +'" stroke="#1843BF" /></svg>');
+		$('.chart_svg').append('<svg width="100%" height="100%" viewBox="0 0 '+ cW +' '+ cH +'" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="'+ path +'" stroke="#1843BF" /></svg>');
 		
 		el.removeClass('loading');
 	};

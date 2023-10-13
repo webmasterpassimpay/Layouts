@@ -427,20 +427,6 @@ a.ui-button:active,
     cursor: pointer;
 }
 
-.content_menu li,
-.content_menu li a {
-    display: flex;
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    padding: 20px;
-}
-
-.content_menu li {
-    flex-direction: column;
-}
-
 .content_menu li .flex {
     display: flex;
     align-items: center;
@@ -460,16 +446,11 @@ a.ui-button:active,
 }
 
 .exchange-block {
-    display: none;
+
 }
 
 .flex-direction.exchange-block {
     flex: 1 1 auto;
-}
-
-
-.transfer-block {
-    display: none;
 }
 
 .exchange-add {
@@ -506,7 +487,7 @@ a.ui-button:active,
 
 .exchange-add__btn {
     max-width: 163px;
-    height: 35px;
+    /* height: 35px; */
 }
 
 .exchange-choose {
@@ -569,17 +550,7 @@ a.ui-button:active,
     color: #fff;
 }
 
-.content_menu li {
-    border-radius: 20px;
-    padding: 20px 20px 10px 20px;
-    transition: all 300ms;
-}
 
-.content_menu li:hover,
-.content_menu li.active {
-    background: #FFFFFF;
-    box-shadow: 0px 15px 70px #DBE9F6;
-}
 
 .exchange-block-add {
     display: flex;
@@ -680,11 +651,6 @@ a.ui-button:active,
     align-items: center;
     justify-content: center;
     flex: 1 1 calc(50% -5px);
-}
-
-ul li a {
-    color: #3399FF;
-    text-decoration: underline #3399FF;
 }
 
 .flex_between_center {
@@ -977,8 +943,8 @@ ul li a {
     width: 250px;
     height: 41px;
     margin: 0 auto;
-    margin-top: 19px;
-    margin-bottom: 19px;
+    /* margin-top: 19px;
+    margin-bottom: 19px; */
     background: #fff;
     border: 1px solid #D9E3EE;
     border-radius: 26px;
@@ -1000,7 +966,7 @@ ul li a {
 
 
 .wrp_withdraw {
-    grid-template-columns: 1.9fr 1fr;
+    grid-template-columns: 1.32fr 1fr;
 }
 
 .exchange-block__title-row a {
@@ -1701,16 +1667,16 @@ ul li a {
     border: solid red;
 }
 
-.btn,
 .btn2,
+.btn,
 .btn3,
 .bnt4 {
     cursor: pointer;
 }
 
-.left {
+/* .left {
     overflow-y: visible;
-}
+} */
 
 @media only screen and (max-width: 992px) {
     .wallets__hover {
@@ -2232,7 +2198,7 @@ ul li a {
 .volatility__hint {
     position: relative;
     max-width: fit-content;
-    padding: 0px 0px 13px;
+    /*  padding: 0px 0px 13px; */
 }
 
 .volatility__header {
@@ -2976,9 +2942,9 @@ html .ui-button.ui-state-disabled:active {
     z-index: 10;
 }
 
-.mob_block_white {
+/* .mob_block_white {
     overflow-x: hidden !important;
-}
+} */
 
 .word-wrap {
     word-wrap: break-word;
@@ -3129,3 +3095,523 @@ html .ui-button.ui-state-disabled:active {
         flex: 1 1 100%;
     }
 }
+
+
+select {
+            width: 100%;
+        }
+
+        input[type=submit] {
+            width: 100%;
+        }
+
+		.create-exchange-order.disabled {
+			background: #CEDEF1;
+			cursor: no-drop;
+		}
+
+		.create-exchange-order.disabled::before {
+			background: inherit;
+		}
+
+		.create-exchange-order.mobile-only {
+			display: none;
+			margin-top: 10px;
+		}
+
+		.create-exchange-order:not(.mobile-only) {
+			display: block;
+		}
+
+		.wrp_withdraw_usd:before {
+			display: none;
+		}
+
+		.wrp_withdraw_usd:after {
+			content: url('/img/fi-rr-dollar.svg');
+			position: absolute;
+			top: 2px;
+			right: 10px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			font-size: 18px;
+			font-weight: bold;
+			color: #9FA8B1;
+			z-index: 3;
+		}
+
+		#crypto-usd-amount {
+			padding: 0 0 0 10px;
+		}
+
+		.name2 {
+			font-size: 14px;
+		}
+
+		.exchange-choose {
+			height: 40px;
+			border-radius: 5px;
+		}
+
+		.exchange-choose__item {
+			max-width: 33%;
+			-webkit-transition: none;
+    		transition: none;
+			border-radius: 6px;
+			height: auto !important;
+		}
+
+		.wrp_form {
+			min-height: auto;
+		}
+
+		.btn2.exchange-choose__item::before {
+			--size: 0;
+			background: #3E68E3;
+		}
+
+		.btn2.exchange-choose__item:hover {
+			background: #1843BF !important;
+		}
+
+		.wrp_input.exchange-wrp_input:last-child {
+			padding-bottom: 0 !important;
+		}
+
+		.oncard__selected-body {
+			padding: 10px;
+		}
+
+		.oncard__rate-block {
+			align-items: center;
+		}
+
+		.exchange-add {
+			height: 45px;
+			border-radius: 6px;
+		}
+
+		.exchange-add__btn {
+			margin-left: 10px;
+			min-height: auto !important;
+			border-radius: 6px;
+			height: auto;
+		}
+
+		#crypto-amount,
+		#fiat-amount {
+			color: #343434;
+			font-weight: 300;
+		}
+
+		.max-from-amount-wrapper {
+			color: #343434;
+		}
+
+		.oncard__lists {
+			max-height: 370px;
+		}
+
+		.currency_list_balance ul {
+			max-height: 355px;
+		}
+
+		.wrp_withdraw_rate_usd {
+			grid-template-columns: 2.5fr 1.5fr;
+		}
+
+		.content_menu_btn {
+			font-size: 16px;
+		}
+
+		.exchange__btn-exchange {
+			min-width: 25px;
+		}
+
+		.exchange-tabs__item {
+			flex: 0 1 33%;
+		}
+
+		.exchange-tabs__item-button {
+			min-height: 32px;
+		}
+
+		.wrp_input.crypto-wallet-wrapper {
+			margin-bottom: 15px;
+    		margin-top: 10px;
+		}
+
+		.exchange__conclusion div {
+			flex: 1 1 50%;
+		}
+
+		.exchange__conclusion-block {
+			max-width: 49%;
+			margin-bottom: 0;
+		}
+
+		.border_block-tabs .wrp_sell {
+			padding: 10px;
+		}
+
+		.tax__title {
+			margin: 10px 0;
+		}
+
+		.oncard__list-icon svg {
+			border: 3px solid #C6D6E5;
+    		border-radius: 33px;
+		}
+
+		.oncard__list {
+			padding-top: 10px;
+		}
+
+		.oncard__lists .oncard__list-body {
+			padding-bottom: 10px;
+		}
+
+		.btn_open_list_partners.mobile-only {
+			display: none !important;
+		}
+
+		/* .wrp_input.crypto-wallet-wrapper:last-child,
+		.wrp_input.xrp-tag-wrapper:last-child {
+			margin-bottom: 5px;
+		} */
+
+		@media (min-width: 1600px) and (max-width: 1800px) {
+			.select_currency_balance,
+			.oncard__selected {
+				display: block !important;
+			}
+
+			.input_inner.input_rate_inner:not(.usd, .telegram),
+			.wrp_withdraw_rate_usd {
+				margin-top: 10px;
+    			height: 75px !important;
+			}
+		}
+
+		@media (max-width: 1600px) {
+			.wrp_withdraw {
+				grid-gap: 5px;
+			}
+		}
+
+		@media (min-width: 1600px) {
+			.create-exchange-order.btn {
+				margin-top: 10px;
+			}
+		}
+
+		@media (max-width: 1280px) {
+			.open_list_partners:not(.mobile-only) {
+				display: flex !important;
+			}
+		}
+
+		@media (max-width: 1100px) {
+			.wrp_sell .wrp_form > div:not(.exchange__btn-exchange) {
+				min-width: 47% !important;
+			}
+			
+			.input_header {
+				font-size: 14px;
+			}
+
+			.select_currency_balance,
+			.oncard__selected {
+				display: block !important;
+			}
+
+			.input_inner.input_rate_inner:not(.usd, .telegram),
+			.wrp_withdraw_rate_usd {
+				margin-top: 10px;
+    			height: 75px !important;
+			}
+
+			.oncard__list,
+			.oncard__lists-name,
+			.oncard__list-body {
+				font-size: 16px;
+			}
+
+			.currency_list_balance,
+			.oncard__storage {
+				top: 50%;
+			}
+
+			.exchange__conclusion-block {
+				max-width: none;
+			}
+		}
+
+		.withdraw_info_list {
+			padding: 20px;
+		}
+
+		.withdraw_info_list li {
+			margin-bottom: 20px;
+		}
+
+		.exchange__conclusion-item {
+			border-bottom: 1px solid #D9E3EE;
+		}
+
+		.exchange__conclusion-item button {
+			border-bottom: none;
+		}
+
+		.loader {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(205, 224, 242, 0.5);
+			backdrop-filter: blur(5px);
+			z-index: 99;
+			border-radius: 10px;
+		}
+
+		#payment-method {
+			position: absolute;
+    		left: 50px;
+		}
+
+		.payment-arrow-wrapper {
+			z-index: 99;
+		}
+
+		.gradient {
+			position: absolute !important;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			/* background: white; */
+			z-index: 98;
+			background: linear-gradient(90deg, rgba(0,0,0,0) 80%, rgba(255,255,255,1) 90%);
+		}
+
+		#fiat-wallet {
+			padding-right: 15px;
+		}
+
+		.withdraw_info_list {
+			border-radius: 10px;
+		}
+
+		@media (min-width: 768px) and (max-width: 1100px) {
+			.exchange-wrp_input {
+				padding: 5px 0px !important;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.main {
+				padding: 20px;
+			}
+
+			.exchange-info-hidden {
+				margin-top: 10px;
+			}
+
+		}
+
+		@media (max-width: 768px) {
+			.currency_selected_balance .name {
+				font-size: 16px;
+			}
+
+			.currency_selected_balance_left .balance_icon,
+			.oncard__list-icon svg {
+				width: 40px;
+				min-width: 40px;
+				height: 40px;
+			}
+			
+			.create-exchange-order.mobile-only {
+				display: block;
+			}
+
+			.create-exchange-order:not(.mobile-only) {
+				display: none;
+			}
+
+			.content_menu {
+				display: none;
+			}
+
+			.btn_open_list_partners.mobile-only {
+				display: flex !important;
+			}
+
+			.wrp_content_menu>div:nth-child(1) {
+				margin-bottom: 0;
+			}
+
+			.exchange-block {
+				padding-top: 0;
+			}
+
+			.exchange-tabs {
+				margin-top: 0;
+			}
+		}
+
+		@media (max-width: 700px) {
+			.exchange-tabs {
+				display: flex;
+				/* border-bottom: 4px solid #C6D6E6; */
+			}
+
+			.exchange-tabs__item {
+				flex: 1 1 auto;
+				width: 33%;
+
+				border-bottom: 4px solid #C6D6E6;
+			}
+
+			.exchange-tabs__item.exchange-tabs__item-button-active {
+				border-bottom: 4px solid #1843BF;
+			}
+
+			.exchange-tabs__item-button {
+				font-size: 12px;
+				
+			}
+		}
+
+		@media (max-width: 576px) {
+			.flex_between_center.mobile-wrap {
+				/* display: block; */
+				flex-direction: column;
+    			align-items: flex-end;
+			}
+		}
+
+		@media (max-width: 520px) {
+			.exchange-add {
+				flex-direction: column;
+				height: auto;
+			}
+
+			.exchange-add__btn {
+				width: 100%;
+				max-width: none;
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+
+		@media (max-width: 450px) {
+			.exchange-add {
+				font-size: 12px !important;
+			}
+
+			.exchange-add__btn {
+				font-size: 12px;
+				/* padding: 10px 10px; */
+				/* max-width: 100px; */
+			}
+
+			.oncard__well span {
+				display: inline;
+			}
+		}
+
+		@media (max-width: 400px) {
+			.max-from-amount-wrapper {
+				display: block !important;
+				float:   none  !important;
+				margin-top: 5px;
+			}
+		}
+
+		@-webkit-keyframes waterfall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%); }
+  40%,
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(250%);
+            transform: translateY(250%); } }
+@keyframes waterfall {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%); }
+  40%,
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(250%);
+            transform: translateY(250%); } }
+
+.waterfall {
+	position: absolute;
+	left: 50%;
+	transition: 0.3s;
+}
+
+.waterfall div {
+  -webkit-animation: waterfall 1.5s infinite;
+          animation: waterfall 1.5s infinite;
+  /* background-color: var(--primary); */
+  background-color: #1843BF;
+  height: 20px;
+  left: 50%;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  width: 20px; }
+  .waterfall div:nth-of-type(1) {
+    -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+    margin-left: -10px; }
+  .waterfall div:nth-of-type(2) {
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+    margin-left: 15px; }
+  .waterfall div:nth-of-type(3) {
+    -webkit-animation-delay: 0.75s;
+            animation-delay: 0.75s;
+    margin-left: -35px; }
+  .waterfall div:nth-of-type(4) {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    margin-left: 40px; }
+  .waterfall div:nth-of-type(5) {
+    -webkit-animation-delay: 1.25s;
+            animation-delay: 1.25s;
+    margin-left: -60px; 
+}
+
+#exchange-order-form .currency_selected_balance .name {
+font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

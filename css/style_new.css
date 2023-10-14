@@ -529,8 +529,8 @@ button:hover ._link-anim .l::after {
 }
 
 .fs-14 {
-   font-size: 18px;
-   line-height: 21.6px;
+   font-size: 14px;
+   line-height: 17.6px;
 }
 
 @media (max-width:991.98px) {
@@ -5479,73 +5479,19 @@ text-align:center;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width:991.98px) {
+   .potential__info {
+      padding: 40px;  
+   }
+}
+
+@media (max-width:767.98px) {
+   .potential__info {
+      padding: 20px;
+   
+   }
+   
+}
 
 /* ================== */
 /* contact form */
@@ -6045,6 +5991,10 @@ text-align:center;
    .payment-gateway__item-text {
       font-size: 14px;
    }
+   .payment-gateway__text p:first-child {
+      font-size: 20px;
+      line-height: 24px;  
+   }
 }
 
 @media (max-width:767.98px) {
@@ -6065,6 +6015,10 @@ text-align:center;
 
    .payment-gateway__item-text {
       font-size: 14px;
+   }
+   .payment-gateway__text p:first-child {
+      font-size: 16px;
+      line-height: 20px;  
    }
    
 }
@@ -6109,7 +6063,6 @@ text-align:center;
    display: -ms-flexbox;
    display: flex;
    justify-content:space-between;   
-   padding: 0 20px;
    gap: 5px;
 }
 
@@ -6122,6 +6075,7 @@ text-align:center;
    justify-content: space-between;
    padding-bottom: 20px;
    flex: 0 0 50%;
+   padding: 20px;
 }
 
 .accounts__card-right {
@@ -6133,6 +6087,7 @@ text-align:center;
    justify-content: space-between;
    padding-bottom: 20px;
    flex: 0 0 50%;
+   padding: 20px;
 }
 
 .accounts__card-header {   
@@ -6147,6 +6102,7 @@ text-align:center;
    -webkit-box-align: center;
    -ms-flex-align: center;
    align-items: center;  
+   text-align: center;
 }
 
 .accounts__card-header h2 {
@@ -6168,11 +6124,11 @@ border-bottom: 5px solid #FEB46D;
 }
 
 .accounts__card-body {
-   padding: 20px; 
+   padding: 20px 0; 
 }
 
 .accounts__card-body_percent {
-   height: 120px;
+  
    background-color: #F5F8FB;
    border-radius: 10px;
    padding: 5px 20px;
@@ -6187,7 +6143,7 @@ border-bottom: 5px solid #FEB46D;
    font-weight: 400;
 }
 
-.accounts__card-body_list p:first-child {
+.accounts__card-body_list li:first-child p{
    font-family: "Nekst"; 
    font-size: 20px;
    line-height: 150%;
@@ -6221,6 +6177,12 @@ border-bottom: 5px solid #FEB46D;
    justify-content: center;
    align-items: center;   
 }
+.accounts__list-item {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;   
+}
 
 .accounts__list-item::before {
    content: "";
@@ -6235,13 +6197,8 @@ border-bottom: 5px solid #FEB46D;
    
 } 
 
-.accounts__cards-block a { 
-   border-radius:10px;    
-   min-height: 80px;
-   color: rgb(255, 255, 255);
-   display: flex;
-   justify-content: center;
-   align-items: center; 
+.accounts__cards-block a {   
+   min-height: 80px;    
    width:100%;
    max-width: 100%;
    font-family: "Nekst";
@@ -6272,12 +6229,50 @@ border-bottom: 5px solid #FEB46D;
       -ms-flex-direction: column;
       flex-direction: column;
       margin: 0;
+      padding: 0;
   }
   .accounts__card-body_percent p:last-child {
    font-size: 36px;
   }
 }
+   @media (max-width:767.98px) {
+      .accounts__card-header h2 {
+         font-size: 18px;
+         line-height: 21px;        
+      }
+      .accounts__card-body_list p:not(:first-child) {
+         font-family: "Nekst";
+         font-size: 14px;        
+     }
+     .accounts__card-body_list p:first-child {   
+      font-size: 14px;
+      line-height: 17px;     
+      }
+    
+   }
 
+   @media (max-width:399.98px) {
+      .accounts__list-item {       
+         justify-content: start;
+         text-align: left;
+         }
+         .accounts__card-body_list li {
+         padding: 10px 15px 10px 10px ;
+         }
+         .accounts__card-body_list p:first-child {   
+            font-size: 12px;
+            line-height: 14px;     
+         }
+         .accounts__card-body_list li:first-child p {
+            font-size: 16px;
+            line-height: 100%;
+          }
+          .accounts__card-header h2 {
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+   }
 /* ================================================ */
 /* Section individual
 /* ================================================ */

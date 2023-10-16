@@ -244,6 +244,7 @@ button:hover .link-anim span::after {
    opacity: 0.4;
 }
 
+
 a:hover._link-anim::after,
 button:hover._link-anim .l::after,
 a:hover ._link-anim::after,
@@ -903,6 +904,7 @@ button:hover ._link-anim .l::after {
    justify-content: flex-start;
    align-items: center;
    margin-bottom: 15px;
+  
 }
 
 .abaut-main__list-item:last-child {
@@ -911,6 +913,10 @@ button:hover ._link-anim .l::after {
 
 .abaut-main__list-item span {
    font-weight: 700;
+   color: #161616;
+}
+.abaut-main__background .abaut-main__list-item span {
+   color: #FFFFFF;
 }
 
 .abaut-main__list-item::before {
@@ -924,10 +930,6 @@ button:hover ._link-anim .l::after {
    min-width: 20px;
    margin-right: 12px;
    background-color: #fff;
-}
-
-.color-161616 li p>span {
-   color: #161616;
 }
 
 .abaut-main__content-text {
@@ -969,6 +971,10 @@ button:hover ._link-anim .l::after {
 
    .abaut-main__content-title {
       text-align: center;
+   }
+
+   .abaut-main__body {
+      padding: 20px 0px;
    }
 }
 
@@ -1287,9 +1293,7 @@ color: #565656;
    line-height: 18.38px;
 }
 
-
-
-.annotatio__block-grid p>span:first-child {
+.annotatio__block-grid p span.black {
    color: black;
 }
 
@@ -1428,6 +1432,7 @@ font-weight: 400;
    color: #161616;
    font-size: 24px;
    font-weight: 700;
+   font-family: Nekst;
 }
 
 .grid-block__text {
@@ -3790,22 +3795,11 @@ lottie-player {
    gap:20px ;
 }
 
-@media (max-width:766.98px) {
-   .how__content {
-      grid-template-columns: 1fr;
-   }
-   .how__body .how__title h3 {
-      margin: 0;
-   }
-}
 
-@media (max-width:766.98px) {}
 
 .how__content-item {
    display: flex;
    column-gap: 10px;
-
-
    padding: 10px;
    border-radius: 10px;
    border: 2px solid #F5F8FB;
@@ -3879,35 +3873,48 @@ line-height: 36px;
    display: none;
 }
 
-@media (max-width:766.98px) {
-   .how__image-big {
-      display: none;
-   }
 
-   .how__image-small {
-      display: block;
-   }
-   .how__content-text>.how__content-text_title{
-      font-size: 18px;
-      line-height: 20px;
-      margin-bottom: 5px;
-      }
-   .how__content-text> p:last-child{
-      font-size: 14px;
-      line-height: 20px;
-
-      }
-
-}
-   @media (max-width:991.98px) {
+@media (max-width:991.98px) {
       .how-flex {
          flex-direction: column;
       }
       .how__image {
          flex: 1 1 100%;
       }
-   }
+      .how-content.onecolumn {
+         flex: 1 1 100%;
+      }
+}
 
+@media (max-width:766.98px) {
+      .how__image-big {
+         display: none;
+      }
+   
+      .how__image-small {
+         display: block;
+      }
+   
+      .how__content-text>.how__content-text_title{
+         font-size: 18px;
+         line-height: 20px;
+         margin-bottom: 5px;
+      }
+   
+      .how__content-text> p:last-child{
+         font-size: 14px;
+         line-height: 20px;
+      }
+   
+      .how__content {
+         grid-template-columns: 1fr;
+      }
+   
+      .how__body .how__title h3 {
+         margin: 0;
+      }
+   
+   }
 
 /* ========================================== */
 /* crypto-payments */
@@ -5899,12 +5906,13 @@ text-align:center;
    width: 100%;
    text-align: center;
 }
-.payment-gateway__text p:first-child {
+
+.payment-gateway__text.nekst-24 {
    font-family: Nekst;
    font-size: 24px;
    font-weight: 700;
    line-height: 29px;  
-   margin-bottom: 10px;
+   margin-bottom: 20px;
    color:#161616;
 }
 
@@ -5943,7 +5951,7 @@ text-align:center;
 .payment-gateway__item-inner a {
    color:#ffffff;
    cursor: pointer;
-   text-decoration: underline;
+   text-decoration: none;   
 }
 
 .payment-gateway__button.button-orange {
@@ -5955,7 +5963,7 @@ text-align:center;
    text-align: center;
 }
 
-.payment-gateway__item-inner img {
+.payment-gateway__item-inner>img {
    background: #fff;
    -webkit-box-shadow: 0 38px 18px rgba(255, 255, 255, 0.32), 0 14.637px 5.73333px rgba(255, 255, 255, 0.19437), 0 3.0963px 1.46667px rgba(255, 255, 255, 0.12563);
    box-shadow: 0 38px 18px rgba(255, 255, 255, 0.32), 0 14.637px 5.73333px rgba(255, 255, 255, 0.19437), 0 3.0963px 1.46667px rgba(255, 255, 255, 0.12563);
@@ -5967,10 +5975,14 @@ text-align:center;
 }
 
 .payment-gateway__item-title {
-   font-size: 24px;
-   font-weight: bold;
+   font-family: Nekst;
+   line-height: 29px;  
+   font-size: 24px;  
+   font-weight: 700; 
    color: #fff;
-   margin-bottom: 20px;
+   margin-bottom: 20px; 
+   text-align: center;
+
 }
 
 .payment-gateway__item-text {
@@ -5991,7 +6003,7 @@ text-align:center;
    .payment-gateway__item-text {
       font-size: 14px;
    }
-   .payment-gateway__text p:first-child {
+   .payment-gateway__text.nekst-24  {
       font-size: 20px;
       line-height: 24px;  
    }
@@ -6016,7 +6028,7 @@ text-align:center;
    .payment-gateway__item-text {
       font-size: 14px;
    }
-   .payment-gateway__text p:first-child {
+   .payment-gateway__text.nekst-24 {
       font-size: 16px;
       line-height: 20px;  
    }

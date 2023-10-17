@@ -429,6 +429,7 @@ button:hover ._link-anim .l::after {
    margin-bottom: 20px;
    color: #161616;
    font-weight: 700;
+   line-height: 48px;
 }
 
 .sub-title-rule {
@@ -437,10 +438,6 @@ button:hover ._link-anim .l::after {
    font-weight: 700;
    line-height: 24px;
    color: #161616;
-}
-
-.title-rule.lh-48 {
-   line-height: 48px;
 }
 
 @media (max-width:991.98px) {
@@ -460,6 +457,7 @@ button:hover ._link-anim .l::after {
       width: 100%;
       text-align: center;
       font-size: 24px;
+      line-height: 28px;
    }
    .sub-title-rule {
       font-size: 18px;
@@ -570,6 +568,9 @@ button:hover ._link-anim .l::after {
    font-weight: 700;
 }
 
+.block-center {
+   margin:0 auto;
+}
 
 /* блок с белым фоном */
 .white-block-rule {
@@ -846,8 +847,6 @@ button:hover ._link-anim .l::after {
 
 
 
-
-
 /* ================================== */
 /* abaut-main */
 /* ================================== */
@@ -1023,12 +1022,21 @@ button:hover ._link-anim .l::after {
    flex: 0 0 58%;
    position: relative;
 }
+
 .block-1__image.fb50{
    -webkit-box-flex: 0;
    -ms-flex: 0 0 50%;
    flex: 0 0 50%;
    position: relative;
 }
+
+.block-1__image.fb55{
+   -webkit-box-flex: 0;
+   -ms-flex: 0 0 55%;
+   flex: 0 0 55%;
+   position: relative;
+}
+
 .problems .block-1__image {
    -webkit-box-flex: 0;
    -ms-flex: 0 0 45%;
@@ -1038,7 +1046,8 @@ button:hover ._link-anim .l::after {
 .block-1__image svg {
    width: 100%;
 }
-.block-1__image.mw-600 {
+
+.block-1__image.mw-600, .block-1__content.mw-600 {
    max-width: 600px;
 }
 
@@ -1047,13 +1056,34 @@ button:hover ._link-anim .l::after {
    cursor: pointer;
 }
 
-
 .block-1__content {
    -webkit-box-flex: 1;
    -ms-flex: 1 1 auto;
    flex: 1 1 auto;
 }
 
+
+.block-1__text {
+   -webkit-box-flex: 1;
+   -ms-flex: 0 1 716px;
+   flex: 1 1 716px;
+}
+
+.block-1__form {
+   -webkit-box-flex: 1;
+   -ms-flex: 1 1 580px;
+   flex: 1 1 580px;
+}
+
+.block-1-form__grid {
+   display: -ms-grid;
+   display: grid;
+   -ms-grid-columns: 1fr ;
+   grid-template-columns: 1fr;
+   -webkit-column-gap: 10px;
+   -moz-column-gap: 10px;
+   column-gap: 10px;
+}
 
 .block-1__shell {
    margin-bottom: 40px;
@@ -1062,6 +1092,16 @@ button:hover ._link-anim .l::after {
 .block-1__title {}
 
 .block-1__text {}
+
+.block-1__text-color-blue {
+   color:#1843BF;
+}
+
+.block1__text-yellow-bc {
+      background: rgba(255, 247, 227, 1);     
+      color: rgba(255, 102, 0, 1);
+      padding: 10px;  
+}
 
 .block-1__button.button-orange {}
 
@@ -1111,12 +1151,25 @@ button:hover ._link-anim .l::after {
 
 
 @media (max-width:991.98px) {
+
+
    .block-1__body {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
       gap: 20px;
+   }
+
+   .block-1__body.only-text { 
+      gap: 20px;     
+      align-items: flex-start;     }
+   }
+
+   .block-1__content.mw-600 {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
    }
 
    .block-1__image {
@@ -1134,8 +1187,20 @@ button:hover ._link-anim .l::after {
 
    .block-1__button.button-orange {
       margin: 0 auto;
-
    }
+
+   .block-1__text {
+      -webkit-box-flex: 1;
+      -ms-flex: 0 1 100%;
+      flex: 1 1 100%;
+   }
+   
+   .block-1__form {
+      -webkit-box-flex: 1;
+      -ms-flex: 0 1 100%;
+      flex: 1 1 100%;
+   }
+   
 
 }
 
@@ -4054,6 +4119,11 @@ line-height: 36px;
    border-left: 1px solid #cedef1;
 }
 
+.crypto-payments__text-right.no-border {
+   border-left: none;
+   padding-left: 40px;
+}
+
 .crypto-payments__text-right-title {
    font-family: 'Nekst';
    font-size: 24px;
@@ -4086,7 +4156,7 @@ line-height: 36px;
 
 @media (max-width: 1550px) {
    .crypto-payments__title {
-      margin: 0 auto 100px;
+      margin: 0 auto 80px;
    }
 
    .crypto-payments__title-title {
@@ -4151,8 +4221,11 @@ line-height: 36px;
    }
 }
 
-@media (max-width: 1170px) {
-
+@media (max-width: 1170px) {  
+      .crypto-payments__title {
+         margin: 0 auto 60px;
+      }
+   
    .crypto-payments__title-title {
       font-size: 40px;
       line-height: 47px;
@@ -4218,6 +4291,10 @@ line-height: 36px;
 
 @media (max-width: 991.98px) {
 
+   .crypto-payments__title {
+      margin: 0 auto 40px;
+  }
+
    .crypto-payments__title-title {
       font-size: 40px;
       line-height: 47px;
@@ -4231,6 +4308,13 @@ line-height: 36px;
       align-items: center;
       flex-direction: column;
    }
+
+   .crypto-payments__text {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 
    .crypto-payments__img {
       left: 0;
@@ -4270,6 +4354,11 @@ line-height: 36px;
       line-height: 18px;
    }
 
+    .crypto-payments__text-right.no-border {
+     
+      padding-left: 0px;
+   }
+
    /*    .crypto-payments__text-right {
       max-width: 372px;
       padding-left: 10px;
@@ -4290,7 +4379,7 @@ line-height: 36px;
 
 @media (max-width: 767.98px) {
    .crypto-payments__title {
-      margin: 0 auto 40px;
+      margin: 0 auto 20px;
    }
 
    .crypto-payments__title-title {
@@ -4599,6 +4688,10 @@ text-align:center;
    background: #fff url(../img/reviews/map.png) no-repeat center;
 }
 
+.reviews__inner.minh-763 { 
+   min-height: 763px;
+}
+
 
 
 .reviews__title {
@@ -4824,6 +4917,10 @@ text-align:center;
    transition: all 0.3s ease 0s;
 }
 
+.reviews__info>a {
+   cursor: pointer;
+}
+
 .reviews_info_swiper {
    width: 100%;
    overflow: hidden;
@@ -4858,7 +4955,7 @@ text-align:center;
 .reviews__info p {
    color: #565656;
    line-height: 150%;
-   margin-bottom: 5px;
+   margin-bottom: 10px;
    font-size: 14px;
    line-height: 21px;
    height: 126px;
@@ -4889,6 +4986,8 @@ text-align:center;
    font-weight: 700;
    font-family: Nekst;
    color: #161616;
+   font-size: 18px;
+   line-height: 21.6px;
 }
 
 .reviews__info span.city {
@@ -4917,6 +5016,10 @@ text-align:center;
    -webkit-box-pack: justify;
    -ms-flex-pack: justify;
    justify-content: space-between;
+}
+
+.reviews__arrows.bottom-50 {
+   bottom:50px;
 }
 
 .reviews__prev {
@@ -4961,6 +5064,11 @@ text-align:center;
    left: 0;
    width: 100%;
 }
+
+.wrp_reviews_list.up-145 {
+   top: 145px;  
+}
+
 
 .inner_reviews_list {
    position: relative;
@@ -5101,6 +5209,24 @@ text-align:center;
 .reviews__item._small {
    width: 4.375rem;
 }
+
+.reviews__trust-pilot {
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+   gap: 3px;
+   margin-top: 10px;
+}
+
+.reviews__trust-pilot img:first-child {
+  width: 100%;
+  max-width: 67px;
+}
+.reviews__trust-pilot img:last-child {
+   width: 100%;
+   max-width: 70px;
+ }
+
 
 @media (min-width: 47.99875em) {
    .reviews__img svg.reviews__mobile-bg {

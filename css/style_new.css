@@ -542,7 +542,7 @@ button:hover ._link-anim .l::after {
 
 .fs-14 {
    font-size: 14px;
-   line-height: 17.6px;
+   line-height: 21.6px;
 }
 
 @media (max-width:991.98px) {
@@ -1163,7 +1163,7 @@ button:hover ._link-anim .l::after {
 
    .block-1__body.only-text { 
       gap: 20px;     
-      align-items: flex-start;     }
+      align-items: flex-start;     
    }
 
    .block-1__content.mw-600 {
@@ -4033,7 +4033,7 @@ line-height: 36px;
 .crypto-payments__flex {
    width: 100%;
    position: relative;
-   padding: 20px 20px 30px;
+   padding: 20px 40px 30px;
    background: #fff;
    box-shadow: 0px 207px 83px rgba(174, 194, 213, 0.02), 0px 117px 70px rgba(174, 194, 213, 0.06), 0px 52px 52px rgba(174, 194, 213, 0.1), 0px 13px 29px rgba(174, 194, 213, 0.11), 0px 0px 0px rgba(174, 194, 213, 0.11);
    border-radius: 30px;
@@ -4166,7 +4166,7 @@ line-height: 36px;
    }
 
    .crypto-payments__flex {
-      padding: 20px 20px 30px;
+      padding: 20px 40px 30px;
       padding-left: 46%;
    }
 
@@ -4233,7 +4233,7 @@ line-height: 36px;
    }
 
    .crypto-payments__flex {
-      padding: 20px 20px 30px;
+      padding: 20px 40px 30px;
       padding-left: 36%;
    }
 
@@ -4294,6 +4294,10 @@ line-height: 36px;
    .crypto-payments__title {
       margin: 0 auto 40px;
   }
+
+  .crypto-payments {
+   padding: 0 40px 0 40px;
+}
 
    .crypto-payments__title-title {
       font-size: 40px;
@@ -4381,6 +4385,11 @@ line-height: 36px;
    .crypto-payments__title {
       margin: 0 auto 20px;
    }
+
+   .crypto-payments {
+      padding: 0 20px;
+   }
+   
 
    .crypto-payments__title-title {
       font-size: 26px;
@@ -5775,6 +5784,13 @@ text-align:center;
    column-gap: 10px;
 }
 
+.contact-form__grid.one-col {
+   -ms-grid-columns: 1fr;
+   grid-template-columns: 1fr ;
+ 
+}
+
+
 .contact-form__return {
    position: relative;
 }
@@ -6438,12 +6454,35 @@ border-bottom: 5px solid #FEB46D;
   align-items: center; 
   gap: 60px;
 }
-.individual__block.left {
+
+.individual__body.pad40 {
+   background: #FFF;
+   padding: 40px;
+   border-radius:20px;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   gap: 60px;
+ }
+
+.individual__block-left {
   width: 100%;
   max-width: 560px;
 }
-.individual__block.right {
+
+.individual__block-left.mw720 {
+   width: 100%;
+   max-width: 720px;
+ }
+ 
+
+.individual__block-right {
    max-width: 660px;
+   width: 100%;
+}
+
+.individual__block-right.mw580 {
+   max-width: 580px;
    width: 100%;
 }
 
@@ -6494,10 +6533,25 @@ border-bottom: 5px solid #FEB46D;
       align-items: center; 
       gap: 20px;
     }
+
+    .individual__body.pad40 {
+      background: #FFF;
+      padding: 40px;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+  }
     .contact-form__wrapper-mw660px {
       width: 100%;
       max-width: 100%;
     }
+    .individual__block-left.mw720 {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+  }
     .individual__block-left, .individual__block-right {
       width: 100%;
       max-width: 100%;
@@ -6505,13 +6559,18 @@ border-bottom: 5px solid #FEB46D;
     .individual__block-left p:first-child {
       line-height: 34px;
     }
+    .individual__block-right.mw580 {
+      max-width: 100%;
+      width: 100%;
+  }
 }
 
 @media (max-width:767.98px) {
    
-   .individual__body {
+   .individual__body, .individual__body.pad40 {
       padding: 20px;
    }
+
    .individual__block-text-container {
       justify-content: center;
       align-items: center;
@@ -6525,4 +6584,5 @@ border-bottom: 5px solid #FEB46D;
    .individual__block-left>p:last-child {
       text-align: center;
    }
+   
 }

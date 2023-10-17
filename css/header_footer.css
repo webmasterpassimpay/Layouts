@@ -2206,14 +2206,14 @@ font-size: 14px;
 
 
 .search-site__shell {
-   height: 100%;
+   /* height: 100%; */
    width: 100%;
    max-width: 1120px;
 }
 
 .search-site__padding {
    flex: 1 1 auto;
-   height: 100px;
+   /* height: 100px; */
 }
 
 .search-site__wrapper {
@@ -2256,8 +2256,25 @@ font-size: 14px;
    -ms-flex: 1 1 auto;
    flex: 1 1 auto;
    height: 100%;
+
+   /* ++++++++++ */
+   position: relative;
 }
 
+/* +++++ */
+.search-site__icon-mob {
+position: absolute;
+top: 9px;
+left: 0;
+
+}
+
+.search-site__clear-mob{
+   position: absolute;
+   top: 10px;
+   right: 0;
+
+}
 .search-site__input-item {
    display: block;
    width: 100%;
@@ -2353,6 +2370,93 @@ font-size: 14px;
    border-radius: 10px;
    background-color: #ffffff;
 }
+
+/* ++ */
+.close-button2-mob span {
+   color: #161616;
+   font-family: Ubuntu;
+   font-size: 26px;
+   line-height: 150%;
+}
+
+/* +++++++++++++++++++++++++++++++++++++ */
+@media (max-width:1300px) {
+
+#button-search-close {
+   display: none;
+}
+.search-site__input-item {
+   background-color:white;
+   border-radius:42px;
+   padding: 0 60px;
+}
+.search-site__icon {
+   display: none;
+}
+
+.search-site__icon-mob {
+   display: block !important;
+   position: absolute;
+   top: 10px;
+   left: 10px;
+}
+
+.search-site__clear {
+   display: none;
+} 
+
+.search-site__clear-mob {
+   display: block !important;
+   position: absolute;
+   top: 12px;
+   right: 15px;
+}
+
+.close-button2-mob {
+   display: block !important;
+}
+
+.close-button2-mob span:hover {
+   color: #1843BF;
+}
+  
+}
+
+/* +++++++++++++++++++++++++++++++++++++ */
+@media (max-width:430px) {
+
+  /* скрыть placeholder <430px */
+
+      .search-site__input-item::-webkit-input-placeholder {
+      color:white;
+      }
+  
+      .search-site__input-item:-moz-placeholder { /* Firefox 18- */
+      color:white;
+      }
+  
+      .search-site__input-item::-moz-placeholder {  /* Firefox 19+ */
+      color:white;
+      }
+  
+      .search-site__input-item:-ms-input-placeholder {  
+      color:white;
+      }   
+
+      .close-button2-mob-cross {
+         display: inline-block !important;
+         cursor: pointer;
+       
+      }
+      .close-button2-mob-cross img {
+          width: 20px;
+      }
+
+      .close-button2-mob {
+         display: none !important;
+      }
+      
+ }
 
 
 

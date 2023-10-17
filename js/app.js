@@ -1097,18 +1097,22 @@ if (document.querySelector('.search-site__wrapper')) {
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('#search-site__clear')) {
             searchSiteInput.value = '';
+            console.log('input')
         }
         if (event.target.closest('#button-search-open')) {
-            searchSiteModal.style.display = "flex"
+            searchSiteModal.style.display = "flex";
+            searchSiteModal.style["align-items"]= "flex-start";
             document.querySelector('body').style.overflow = 'hidden';
+            console.log('flex')
         }
-        if (event.target.closest('#button-search-close')) {
+        if (event.target.closest('#button-search-close') || event.target.closest('#button-search-close-mob') || event.target.closest('#button-search-close-mob-cross')) {
             searchSiteClose();
+            console.log('close')
         }
         //  #button-search-open
     })
     searchSiteModal.addEventListener('mousedown', (e) => {
-        if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose() }
+        if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose() ; console.log(1)}
     })
 }
 // запуска видео с кнопки на странице invocie

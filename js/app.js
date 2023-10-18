@@ -763,6 +763,11 @@ if (document.querySelector('.link-anim')) {
         e.innerHTML = '<span>' + `${e.innerHTML.split(' ').join(' </span><span>')}` + '</span>'
     })
 }
+if (document.querySelector('.module__question-answer-size a')) {
+    document.querySelectorAll('.module__question-answer-size a').forEach((e) => {
+        e.innerHTML = '<span>' + `${e.innerHTML.split(' ').join(' </span><span>')}` + '</span>'
+    })
+}
 
 
 const mediaQuery768 = window.matchMedia('(max-width: 767.98px)');
@@ -964,6 +969,7 @@ if (document.querySelector('#header')) {
         langMove();
         window.addEventListener('resize', function () {
             langMove();
+			mediaQuery = window.innerWidth <= 768;
         })
     }
 

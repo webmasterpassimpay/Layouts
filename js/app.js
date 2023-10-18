@@ -1111,15 +1111,17 @@ if (document.querySelector('.search-site__wrapper')) {
         }
         //  #button-search-open
     })
-    // searchSiteModal.addEventListener('mousedown', (e) => {
-    //     if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose() ; console.log(1)}
-    // })
-
-    // для сафари клик закрытия mousedown-click
-    searchSiteModal.addEventListener('click', (e) => {
-        if (e.target == searchSiteModal) { searchSiteClose() ; console.log(1)}
+    searchSiteModal.addEventListener('mousedown', (e) => {
+        if (e.target == searchSiteModal || e.target.closest('#button-search-close-mob-cross')) { searchSiteClose() ; console.log(1)}
     })
+
+    searchSiteModal.addEventListener('touchend', (e) => {
+        if( e.target == searchSiteModal && e.target.closest('#button-search-close-mob-cross'))
+         { searchSiteClose() ; console.log(2)}
+    }
+    )
 }
+
 // запуска видео с кнопки на странице invocie
 jQuery(document).ready(function ($) {
     (function initPlayVideo() {

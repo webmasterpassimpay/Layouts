@@ -1696,6 +1696,7 @@ border-radius: 10px;
 font-weight: 500;
 font-size: 14px;
 color: #1843BF;
+border:none;
 }
 .btn_download_history:after {
 content:'';

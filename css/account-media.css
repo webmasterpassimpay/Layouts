@@ -1102,7 +1102,7 @@ max-width: 100%;
 .mob_support_empty {
 display:block;
 }
-.header_right > .lang {
+.header_right > .header__lang {
 display:none;
 }
 .wrp_input_grid {

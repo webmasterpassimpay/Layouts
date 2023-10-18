@@ -1,3 +1,52 @@
+a.link-anim {
+color: #1843bf;
+}
+.link-anim span,
+.module__question-answer-size a span {
+   position: relative;
+   padding: 0 1px;
+   display: inline-block;
+   -webkit-transition: color ease 0.3s;
+   -o-transition: color ease 0.3s;
+   transition: color ease 0.3s;
+   text-decoration: none;
+   line-height: 1.2;
+}
+
+.link-anim span::after,
+.module__question-answer-size a span::after {
+   content: "";
+   position: absolute;
+   z-index: 0;
+   left: 0;
+   bottom: -2px;
+   width: 100%;
+   height: 1px;
+
+   background-color: #cedef1;
+   -webkit-transition: height ease 0.3s;
+   -o-transition: height ease 0.3s;
+   transition: height ease 0.3s;
+   opacity: 0.4;
+}
+
+a:hover.link-anim span::after,
+button:hover.link-anim span::after,
+a:hover .link-anim span::after,
+button:hover .link-anim span::after,
+.module__question-answer-size a:hover span::after {
+   height: 100%;
+}
+.module__question-answer-size a:after {
+content:'';
+display:inline-block;
+vertical-align: middle;
+width:14px;
+height:14px;
+background:url(../svg/arrow-link.svg) no-repeat center;
+margin-left:5px;
+}
+
 .network-icon-shadow {
    position: relative;
 }
@@ -708,7 +757,7 @@ grid-template-columns: 1fr 1fr;
 }
 
 .new-submenu__link {
-padding: 5px 10px;
+padding: 10px 20px;
 margin: 0px;
 display: block;
 width: 100%;

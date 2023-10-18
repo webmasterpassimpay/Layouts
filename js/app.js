@@ -1112,7 +1112,8 @@ if (document.querySelector('.search-site__wrapper')) {
         //  #button-search-open
     })
     searchSiteModal.addEventListener('mousedown', (e) => {
-        if (e.target == searchSiteModal || e.target.closest('#button-search-close-mob-cross')) { searchSiteClose() ; console.log(1)}
+        if (e.target == searchSiteModal && e.target.closest('#button-search-close-mob-cross')) 
+        { searchSiteClose() ; console.log(1)}
     })
 
     searchSiteModal.addEventListener('touchend', (e) => {

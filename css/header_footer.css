@@ -2127,6 +2127,10 @@
 /* search site */
 /* ================== */
 
+#search-site-modal {
+  cursor: pointer;
+}
+
 .search-site {
   /*    -webkit-box-pack: center;
    -ms-flex-pack: center;

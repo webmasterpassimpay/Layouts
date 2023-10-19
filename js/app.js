@@ -802,8 +802,15 @@ if (document.querySelector('.module__questions')) {
                 if (e == event.target.closest('.module__question') && !e.classList.contains('module__question-active')) {
                     e.classList.add('module__question-active');
                     sizeQuestion(e);
-                } else {
-                    closeQuestion(e)
+                } 
+                // -------------  не дает закрыться блоку при выделении текста для копирования
+                else {
+                    if(event.target.closest('.module__question-answer') && window.getSelection().toString()) {    
+                        return;                                  
+                    }
+                // ------------- 
+                
+                    else {closeQuestion(e)}                    
                 }
             })
         } else {

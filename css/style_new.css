@@ -1039,8 +1039,12 @@ button:hover ._link-anim .l::after {
   flex: 1 1 auto;
 }
 
-.block-1__content.mw-462 {
-  max-width: 462px;
+.block-1__content.fb462 {
+  flex: 1 1 462px;
+}
+
+.block-1__content.fb678 {
+  flex: 1 1 678px;
 }
 
 .block-1__text {
@@ -1218,6 +1222,10 @@ button:hover ._link-anim .l::after {
     -ms-flex: 0 1 100%;
     flex: 1 1 100%;
   }
+
+  .block-1__content.fb462, .block-1__content.fb678  {
+    flex: 1 1 100%;
+}
 }
 
 @media (max-width: 767.98px) {

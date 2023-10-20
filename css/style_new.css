@@ -383,6 +383,10 @@ button:hover ._link-anim .l::after {
   margin-bottom: 40px;
 }
 
+.mb-10 {
+  margin-bottom: 10px;
+}
+
 .mb-no-rule {
   margin-bottom: 0;
 }
@@ -506,6 +510,7 @@ button:hover ._link-anim .l::after {
   font-family: "Nekst";
   font-weight: 700;
   color: #161616;
+  line-height: 21.6px;
 }
 
 .fs-18 {
@@ -1386,6 +1391,10 @@ button:hover ._link-anim .l::after {
   column-gap: 20px;
 }
 
+.annotatio__annotatio.mb-title-rule {
+  margin-bottom: 40px;
+}
+
 .annotatio__annotatio-item {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 10%;
@@ -1458,9 +1467,14 @@ button:hover ._link-anim .l::after {
   .annotatio__annotatio {
     display: block;
   }
+
   .annotatio__block-grid {
     grid-template-columns: 1fr;
   }
+
+  .annotatio__annotatio.mb-title-rule {
+    margin-bottom: 20px;
+}
 }
 
 /* ================================== */
@@ -2713,6 +2727,12 @@ button:hover ._link-anim .l::after {
 /* ================================= */
 .module__questions {
 }
+.module__questions-title-mw-735px {
+  max-width: 735px;
+  text-align: center;
+  margin: 0 auto 40px;
+}
+
 
 .module__question-title {
   text-align: center;
@@ -2752,6 +2772,10 @@ button:hover ._link-anim .l::after {
   height: 20px;
   border-bottom: 1px solid #cedef1;
   margin-bottom: 30px;
+}
+
+.module__question-answer-line.mb-10 { 
+  margin-bottom: 10px;
 }
 
 .module__question-answer-size ol li {
@@ -4417,6 +4441,10 @@ lottie-player {
   .crypto-payments__text-left-list {
     max-width: unset;
   }
+  .crypto-payments__text-left-list.text-left .crypto-payments__text-left-item {
+    text-align: left;
+  }
+
 
   .crypto-payments__text-left-item {
     margin-bottom: 15px;
@@ -5568,6 +5596,32 @@ lottie-player {
   font-family: 700;
 }
 
+.potential__info a.button-orange { 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 40px;
+    width: 100%;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    min-height: 60px;
+    border-radius: 10px;
+    font-family: "Nekst";
+    font-size: 16px;
+    line-height: 18px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+
 @media (max-width: 479.98px) {
   .potential__info {
     padding-top: 30px;
@@ -5585,6 +5639,12 @@ lottie-player {
   .potential__info {
     padding: 20px;
   }
+  .potential__info a.button-orange { 
+ 
+    width: 100%;
+    max-width: 100%;    
+}
+
 }
 
 /* ================== */

@@ -1096,6 +1096,13 @@
 }
 
 @media (max-width: 768px) {
+
+  /* запрет скрола страницы за модалкой меню */
+  .menu-open .no-scroll {
+    overflow-y: hidden;
+    height: 100vh;
+  }
+
   .new-submenu {
     position: static;
     width: 100%;

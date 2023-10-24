@@ -1115,23 +1115,40 @@ if (document.querySelector('.search-site__wrapper')) {
             document.querySelector('body').style.overflow = 'hidden';
             console.log('flex')
         }
-        if (event.target.closest('#button-search-close') || event.target.closest('#button-search-close-mob') || event.target.closest('#button-search-close-mob-cross')) {
-            searchSiteClose();
-            console.log('close')
-        }
+        // if (event.target.closest('#button-search-close') || event.target.closest('#button-search-close-mob') || event.target.closest('#button-search-close-mob-cross')) {
+        //     searchSiteClose();
+        //     console.log('close')
+        // }
         //  #button-search-open
     })
-    searchSiteModal.addEventListener('mousedown', (e) => {
-        if (e.target == searchSiteModal && e.target.closest('#button-search-close-mob-cross')) 
-        { searchSiteClose() ; console.log(1)}
-    })
 
-    searchSiteModal.addEventListener('touchend', (e) => {
-        if( e.target == searchSiteModal && e.target.closest('#button-search-close-mob-cross'))
-         { searchSiteClose() ; console.log(2)}
-    }
-    )
+    searchSiteModal.addEventListener('mousedown', (e) => {
+        if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose() }
+    })
+    // searchSiteModal.addEventListener('touchend', (e) => {
+    //     if (e.target.closest('#button-search-close') || e.target.closest('#button-search-close-mob') || e.target.closest('#button-search-close-mob-cross')) { 
+    //         searchSiteClose() ;
+    //         e.preventDefault();
+    //     }
+    // })
+    
 }
+
+// закрытие модалки поиска для safari вариант
+jQuery(document).ready(function($){
+    var $searchSiteModal = $(".search-site"); 
+    var buttonClose = $(".close-button2"); 
+    var buttonCloseMob = $(".close-button2-mob"); 
+    var buttonCloseMobCross = $(".close-button2-mob-cross");       
+$('.close-button2, .close-button2-mob,.close-button2-mob-cross').on('click touchstart touchend', 
+function(e) {
+      $searchSiteModal.fadeOut();
+      $('body').css('overflow', '');
+      console.log(0)
+    });
+});
+
+
 
 // запуска видео с кнопки на странице invocie
 jQuery(document).ready(function ($) {

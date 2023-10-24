@@ -2313,6 +2313,7 @@
 .close-button2-mob-cross,
 .search-site__icon-mob {
   display: none;
+  cursor: pointer;
 }
 
 .close-button2-mob span {
@@ -2321,6 +2322,10 @@
   font-size: 18px;
   line-height: 150%;
   font-weight: 700;
+}
+
+.close-button2-mob-cross img {
+  cursor: pointer;
 }
 
 /* +++++++++++++++++++++++++++++++++++++ */

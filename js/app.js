@@ -975,27 +975,47 @@ if (document.querySelector('#header')) {
 
 
     /* позиционирование header при прокрутке*/
-    let callback2 = function (entries, observer) {
-        if (!entries[0].isIntersecting) {// && !mediaQuery768.matches
-            header.classList.add('fixed-start');
-            hp.style.marginBottom = '100px';
+    // let callback2 = function (entries, observer) {
+    //     if (!entries[0].isIntersecting) {// && !mediaQuery768.matches
+    //         header.classList.add('fixed-start');
+    //         hp.style.marginBottom = '100px';
+    //         requestAnimationFrame(() => {
+    //             header.classList.add('fixed');
+    //         })
+
+    //     } else {
+    //         header.classList.remove('fixed-start');
+    //         header.classList.remove('fixed');
+    //         hp.style.marginBottom = '0px';
+    //     }
+    // };
+    // let observer2 = new IntersectionObserver(callback2, { rootMargin: '0px' });
+    // observer2.observe(hp);
+
+
+    // фон для .header  при прокрутке
+    function addClassOnScroll(selector, className, scrollOffset) {
+
+        const targetElement = document.querySelector('.header'); 
+    
+        window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;  
+
+        if (scrollPosition >= scrollOffset && !targetElement.classList.contains('fixed-start')) {
             requestAnimationFrame(() => {
-                header.classList.add('fixed');
-            })
+                targetElement.classList.add('fixed-start');
+            })          
+        } 
 
-        } else {
-            header.classList.remove('fixed-start');
-            header.classList.remove('fixed');
-            hp.style.marginBottom = '0px';
+        if(scrollPosition <= scrollOffset && targetElement.classList.contains('fixed-start')) {
+            targetElement.classList.remove('fixed-start');
         }
-    };
+        });
+    }  
 
-    let observer2 = new IntersectionObserver(callback2, { rootMargin: '0px' });
-    observer2.observe(hp);
-
-
-
+    addClassOnScroll(".header", "fixed-start", 80);
 }
+
 
 /* модальное окно "язык/валюта" */
 if (document.querySelector('.language')) {
@@ -1104,50 +1124,38 @@ if (document.querySelector('.search-site__wrapper')) {
         document.querySelector('body').style.overflow = '';
     }
 
+// закрытие модалки поиска десктоп, очистка input, открытие
     document.body.addEventListener('click', (event) => {
         if (event.target.closest('#search-site__clear') || event.target.closest('#search-site__clear-mob')) {
-            searchSiteInput.value = '';
-            console.log('input')
+            searchSiteInput.value = '';           
         }
         if (event.target.closest('#button-search-open')) {
             searchSiteModal.style.display = "flex";
             searchSiteModal.style["align-items"]= "flex-start";
-            document.querySelector('body').style.overflow = 'hidden';
-            console.log('flex')
+            document.querySelector('body').style.overflow = 'hidden';          
         }
-        // if (event.target.closest('#button-search-close') || event.target.closest('#button-search-close-mob') || event.target.closest('#button-search-close-mob-cross')) {
-        //     searchSiteClose();
-        //     console.log('close')
-        // }
+        if (event.target.closest('#button-search-close')) {
+            searchSiteClose();           
+        }
         //  #button-search-open
     })
 
+    // закрытие по клику вне модалки
     searchSiteModal.addEventListener('mousedown', (e) => {
-        if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose() }
-    })
-    // searchSiteModal.addEventListener('touchend', (e) => {
-    //     if (e.target.closest('#button-search-close') || e.target.closest('#button-search-close-mob') || e.target.closest('#button-search-close-mob-cross')) { 
-    //         searchSiteClose() ;
-    //         e.preventDefault();
-    //     }
-    // })
-    
+        if (e.target == searchSiteModal || e.target.closest('.search-site__padding')) { searchSiteClose()
+        }
+    })    
 }
 
-// закрытие модалки поиска для safari вариант
-jQuery(document).ready(function($){
-    var $searchSiteModal = $(".search-site"); 
-    var buttonClose = $(".close-button2"); 
-    var buttonCloseMob = $(".close-button2-mob"); 
-    var buttonCloseMobCross = $(".close-button2-mob-cross");       
-$('.close-button2, .close-button2-mob,.close-button2-mob-cross').on('click touchstart touchend', 
-function(e) {
-      $searchSiteModal.fadeOut();
-      $('body').css('overflow', '');
-      console.log(0)
+    // закрытие модалки поиска моб
+    jQuery(document).ready(function($){
+        var $searchSiteModal = $(".search-site");    
+        $('.close-button2, .close-button2-mob,.close-button2-mob-cross').on('click touchstart touchend', 
+        function() {
+            $searchSiteModal.fadeOut();
+            $('body').css('overflow', '');            
+        });
     });
-});
-
 
 
 // запуска видео с кнопки на странице invocie

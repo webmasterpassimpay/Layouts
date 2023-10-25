@@ -1011,6 +1011,16 @@ if (document.querySelector('#header')) {
             targetElement.classList.remove('fixed-start');
         }
         });
+        
+        // сохранение меню при перезагрузке стр
+
+        window.addEventListener("load", () => {
+            const initialScrollPosition = window.scrollY;        
+            if (initialScrollPosition >= scrollOffset) {
+              targetElement.classList.add(className);
+            }
+          });
+
     }  
 
     addClassOnScroll(".header", "fixed-start", 80);

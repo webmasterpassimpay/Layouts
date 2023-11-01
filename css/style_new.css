@@ -2907,6 +2907,7 @@ color:#1A75E2
 
 .module__question-answer-size {
   padding: 40px 20px 20px;
+  width: 100%;
 }
 
 .module__question-answer-size img {

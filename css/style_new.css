@@ -100,6 +100,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+html.noscroll{
+  overflow-x: hidden;
+}
+
 button,
 input,
 textarea {
@@ -1141,6 +1145,14 @@ color:#1A75E2
   grid-template-columns: 36% 1fr;
 }
 
+.block-1__table-grid.bc-white {
+background-color: #fff;
+}
+.block-1__table-grid.mw-820 {
+  max-width:820px;
+  grid-template-columns: min(50%, 245px) minmax(50%, 1fr);
+}
+  
 .block-1__table-grid-text {
   padding: 20px;
   font-family: Ubuntu;
@@ -1389,7 +1401,11 @@ color:#1A75E2
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
-
+  .block-1__table-grid.mw-820 {
+    max-width:820px;
+    grid-template-columns: 1fr;
+  }
+    
   .block-1__table-grid-caption.mob {
     display: block;
   }

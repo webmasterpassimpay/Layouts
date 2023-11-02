@@ -975,57 +975,38 @@ if (document.querySelector('#header')) {
 
 
     /* позиционирование header при прокрутке*/
-    // let callback2 = function (entries, observer) {
-    //     if (!entries[0].isIntersecting) {// && !mediaQuery768.matches
-    //         header.classList.add('fixed-start');
-    //         hp.style.marginBottom = '100px';
-    //         requestAnimationFrame(() => {
-    //             header.classList.add('fixed');
-    //         })
-
-    //     } else {
-    //         header.classList.remove('fixed-start');
-    //         header.classList.remove('fixed');
-    //         hp.style.marginBottom = '0px';
-    //     }
-    // };
-    // let observer2 = new IntersectionObserver(callback2, { rootMargin: '0px' });
-    // observer2.observe(hp);
-
-
-    // фон для .header  при прокрутке
-    function addClassOnScroll(selector, className, scrollOffset) {
-
-        const targetElement = document.querySelector('.header'); 
-    
-        window.addEventListener("scroll", () => {
-        const scrollPosition = window.scrollY;  
-
-        if (scrollPosition >= scrollOffset && !targetElement.classList.contains('fixed-start')) {
-            requestAnimationFrame(() => {
-                targetElement.classList.add('fixed-start');
-            })          
-        } 
-
-        if(scrollPosition <= scrollOffset && targetElement.classList.contains('fixed-start')) {
-            targetElement.classList.remove('fixed-start');
-        }
-        });
+  
+    function showHideHeader (selector,className,defaultOffset) {
+        let lastScroll = 0;        
+        const targetElement = document.querySelector(selector);        
+        const currentPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+        const hasClassName = () => targetElement.classList.contains(className);
         
-        // сохранение меню при перезагрузке стр
+        window.addEventListener('scroll', () => {
 
-        window.addEventListener("load", () => {
-            const initialScrollPosition = window.scrollY;        
-            if (initialScrollPosition >= scrollOffset) {
-              targetElement.classList.add(className);
+            if(currentPosition() < defaultOffset && hasClassName()) {
+                //start position
+                targetElement.classList.remove(className);
             }
-          });
 
-    }  
-
-    addClassOnScroll(".header", "fixed-start", 80);
+            if(currentPosition() > lastScroll && hasClassName() && currentPosition() > defaultOffset) {
+                //scroll down
+                targetElement.classList.remove(className);
+            }
+            
+            if(currentPosition() < lastScroll && !hasClassName() && currentPosition() > defaultOffset){
+                //scroll up
+                targetElement.classList.add(className);
+            }
+        
+            lastScroll = currentPosition();
+        })
+    }
+    showHideHeader('.header', 'sticky-start', 100);
 }
 
+
+  
 
 /* модальное окно "язык/валюта" */
 if (document.querySelector('.language')) {

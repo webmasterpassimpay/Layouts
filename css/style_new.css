@@ -3010,7 +3010,7 @@ color: #000000;
   gap: 10px;
   min-height: 100px;
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: #F5F8FB;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
@@ -3018,6 +3018,10 @@ color: #000000;
   font-weight: 400;
   font-size: 24px;
   color: #1843bf;
+}
+
+.module__question:last-child .module__question-item { 
+  margin-bottom: 0px; 
 }
 
 .module__question-answer_list {
@@ -3028,6 +3032,12 @@ color: #000000;
 
 .module__question-answer_list > div {
   margin-bottom: 20px;
+}
+
+.module__question-list-wrapper {
+background-color: #ffffff;
+padding: 10px;
+border-radius: 20px;
 }
 
 @media (max-width: 991.98px) {
@@ -3075,13 +3085,15 @@ color: #000000;
     0px 38.51852px 25.48148px 0px rgba(87, 144, 187, 0.04);
   box-shadow: 0px 1.85185px 3.14815px 0px rgba(87, 144, 187, 0.02), 0px 8.14815px 6.51852px 0px rgba(87, 144, 187, 0.03), 0px 20px 13px 0px rgba(87, 144, 187, 0.04),
     0px 38.51852px 25.48148px 0px rgba(87, 144, 187, 0.04);
+    background-color: #fff;
+    
 }
 
 .module__question-arrow {
   position: relative;
   width: 60px;
   height: 60px;
-  fill: transparent;
+  fill: #ffffff;
   transition: all 0.3s;
 }
 

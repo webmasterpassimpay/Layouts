@@ -479,7 +479,7 @@ button:hover ._link-anim .l::after {
   margin-bottom: 40px;
   color: #161616;
   font-weight: 700;
-  line-height: 48px;
+  line-height: 120%;
 }
 
 .title-block-rule.lh-48 {
@@ -636,6 +636,11 @@ button:hover ._link-anim .l::after {
   white-space: nowrap;
 }
 
+
+.link-nekst-style-rule.blue1 span {
+  color:#1843bf
+  }
+  
 .link-nekst-style-rule.blue2 {
 color:#1A75E2
 }
@@ -2983,6 +2988,10 @@ background-color: #fff;
   margin-bottom: 10px;
 }
 
+.module__question-answer-size ol[type="a"] li {
+  list-style-type: lower-latin;
+}
+
 .module__question-answer-size ol li::marker {
 font-family: Ubuntu;
 font-size: 16px;
@@ -4242,6 +4251,10 @@ lottie-player {
   text-align: center;
 }
 
+.how__title.mw-1026 {
+  max-width: 1026px;
+}
+
 .how__title-title {
 }
 
@@ -4259,6 +4272,9 @@ color:#1F2226;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4px;
+}
+.how__content.mb-40 {
+  margin-bottom: 40px;  
 }
 
 .how__content.threecolumn {
@@ -4319,7 +4335,7 @@ color:#1F2226;
 .how__content-text.column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:  flex-start;
   align-items: flex-start;
   color: #1a75e2;
   font-family: Ubuntu;
@@ -4434,6 +4450,11 @@ color:#1F2226;
   
   align-items:center;
   
+}
+.how__content-text.column {
+
+  justify-content:  center;
+
 }
 }
 @media (max-width: 399.98px) {
@@ -5759,6 +5780,11 @@ color:#1F2226;
     row-gap: 20px;
   }
 }
+.title-block-rule.mw-979{
+max-width: 979px;
+text-align: center;
+margin: 0  auto 40px;
+}
 
 .block-scroll__body {
   max-height: 420px;
@@ -5832,7 +5858,14 @@ color:#1F2226;
 
 .block-scroll__block-list-text {
 }
+.block-scroll__block-list-text>span.title{
+  font-size: 16px;
+  font-weight: 700;
+}
 
+{
+
+}
 .block-scroll__block-link {
 }
 

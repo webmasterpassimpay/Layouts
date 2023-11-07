@@ -423,7 +423,7 @@ button:hover ._link-anim .l::after {
   margin-bottom: 20px;
   color: #161616;
   font-weight: 700;
-  line-height: 48px;
+  line-height: 120%;
 }
 
 .sub-title-rule {
@@ -2756,8 +2756,20 @@ background-color: #fff;
   .application__cont {
     order: 1;
   }
+
+}
+@media (max-width:767.98px) {
+  .application__download ul {
+  justify-content: center;
+}
 }
 
+@media (max-width: 349.98px) {
+.application__download ul {
+    flex-direction: column;
+  align-items: center;
+}
+}
 /* =================================== */
 /* media about us */
 /* =================================== */
@@ -3203,11 +3215,6 @@ color: #000000;
   font-weight: 700;
   color: #ffffff;
   background-color: #1a75e2;
-}
-
-.module__question-bu {
-  color: #1843bf;
-  text-decoration: underline;
 }
 
 .module__question-list-text {
@@ -4097,13 +4104,14 @@ lottie-player {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  /* -webkit-box-align: center;
+  -ms-flex-align: center; */
+  /* align-items: center; */
   -webkit-gap: 25px;
   -moz-gap: 25px;
   gap: 25px;
   max-width: 50%;
+ 
 }
 
 .calculator-info__item-img {
@@ -4147,6 +4155,9 @@ lottie-player {
   .calculator-info__items {
     flex-wrap: wrap;
   }
+  .calculator-info__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -4155,19 +4166,44 @@ lottie-player {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 40px;
+    gap: 40px;    
   }
-
   .calculator-info__item {
     flex: 1 1 auto;
     max-width: 100%;
+      -webkit-box-align: center;
+    -ms-flex-align: center; 
+    align-items: center;
+    margin-bottom: 0;
   }
-
+  .calculator-info__item:not(:last-child) {
+    margin-bottom: 0px;
+}
   .calculator-info__item-info-title {
     font-size: 18px;
   }
 }
 
+@media (max-width: 767.98px) {
+.calculator-info__title {
+  margin: 0 auto 20px;
+
+}
+.calculator-info__items {
+  gap: 20px;    
+}
+
+}
+@media (max-width: 399.98px) {
+.calculator-info__item-img {
+  min-width: 75px;
+  width: 75px;
+  height: 75px;  
+}
+.calculator-info__item-img img {
+ max-width: 53px;  
+}
+}
 /* ======================================== */
 /* how */
 /* ======================================== */
@@ -4193,6 +4229,10 @@ lottie-player {
   margin-right: auto;
   max-width: 798px;
   text-align: center;
+}
+
+.how__title.mw-700 { 
+  max-width: 700px;
 }
 
 .how__title-mw-970 {
@@ -4258,12 +4298,9 @@ color:#1F2226;
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 5px 18px;
-
   border-radius: 10px;
   border: 2px solid #1a75e2;
-
   color: #000;
   font-family: Ubuntu;
   font-size: 24px;
@@ -4273,7 +4310,7 @@ color:#1F2226;
 .how__content-text {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:flex-start;
   color: #1a75e2;
   font-family: Ubuntu;
   font-size: 16px;
@@ -4378,9 +4415,9 @@ color:#1F2226;
     grid-template-columns: 1fr;
   }
 
-  .how__body .how__title h3 {
+  /* .how__body .how__title h3 {
     margin: 0;
-  }
+  } */
 
   .how__content.threecolumn {
     grid-template-columns: 1fr;   
@@ -4392,6 +4429,11 @@ color:#1F2226;
     border-radius: 10px;    
     font-size: 20px;
     
+}
+.how__content-text {
+  
+  align-items:center;
+  
 }
 }
 @media (max-width: 399.98px) {
@@ -4423,6 +4465,11 @@ color:#1F2226;
   width: 100%;
   max-width: 780px;
   margin: 0 auto 100px;
+}
+
+.crypto-payments__title.mw-850 {
+ 
+  max-width: 850px;
 }
 
 .crypto-payments__title-title {
@@ -5108,8 +5155,13 @@ color:#1F2226;
   .map__content-text {
     text-align: center;
   }
+  .map__animation {
+    min-height: auto;
+    margin: 20px 0 0 0;
+  }
 
 }
+
 
 /* =============================================== */
 /* reviews */

@@ -703,6 +703,8 @@ button:hover ._link-anim .l::after {
   overflow-y: auto;
   display: none;
   background-color: rgba(238, 244, 255, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 /* фон контента модального окна */
@@ -1133,7 +1135,6 @@ button:hover ._link-anim .l::after {
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
-  margin-bottom: 0;
 }
 .abaut-main__content.business {
   position: static;
@@ -1160,6 +1161,10 @@ button:hover ._link-anim .l::after {
     text-align: left;
     font-size: 24px;
   }
+  .abaut-main__content-title.business  {
+    text-align: center;
+    font-size: 24px;
+  }
 
   .abaut-main__body {
     padding: 20px 0px;
@@ -1175,12 +1180,16 @@ button:hover ._link-anim .l::after {
     width: 100%;
 
 }
-
 .abaut-main__content.business {
-
-  align-items:initial;
  
+  display: flex;
+  align-items:initial;
+  
 }
+.abaut-main__content-list.business {
+  align-self: center;
+}
+
 }
 @media (max-width: 539.98px) {
   .abaut-main__background__windowImg {
@@ -4267,8 +4276,11 @@ lottie-player {
 }
 
 @media (max-width: 991.98px) {
-  .integration__item {
+  .integration__item:nth-child(2n) {
     border-right: none;
+  }
+  .integration__item.no-border:nth-child(2n+1) {
+    border-right: 1px solid #4da1ff;
   }
 }
 
@@ -4313,8 +4325,16 @@ lottie-player {
 }
 
 @media (max-width: 767.98px) {
-  .integration__item {
+  .integration__item:not(:last-child) {
     padding: 20px 0;
+    border-bottom: 1px solid #4da1ff;
+    border-right: none;
+  }
+  .integration__item.no-border {
+    border-right: none;
+  }
+  .integration__item.no-border:nth-child(2n+1) {
+    border-right: none;
   }
 }
 @media (max-width: 399.98px) {

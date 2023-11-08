@@ -894,13 +894,26 @@ button:hover ._link-anim .l::after {
 
 .abaut-main.business {
   padding-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 @media (max-width: 1470px) {
 .abaut-main.business{
   padding-bottom: calc(1vw * (200 / 14.70));
+  margin-bottom:calc(1vw * (100 / 14.70));
 }
 }
+@media (max-width: 767.98px) {
+  .abaut-main.business{
+    padding-bottom: calc(1vw * (100 / 7.68));
+    margin-bottom:100px;
+  }
+  }
+  @media (max-width: 399.98px) {
+    .abaut-main.business{
+      margin-bottom:70px;
+    }
+    }
 .abaut-main__background {
   background: #1843bf;
   box-shadow: 0px 1.85185px 3.14815px 0px rgba(2, 85, 255, 0.02), 0px 8.14815px 6.51852px 0px rgba(2, 85, 255, 0.03), 0px 20px 13px 0px rgba(2, 85, 255, 0.04),
@@ -1077,11 +1090,13 @@ button:hover ._link-anim .l::after {
   text-align: left;
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 1650px)and (min-width: 1470px) {
   .abaut-main__background__windowImg {
     bottom:-40%;
   }
-
+  .abaut-main.business{
+    padding-bottom: 250px;
+  }
 
 }
 @media (max-width: 1470px) and (min-width: 991.98px){

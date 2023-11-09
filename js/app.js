@@ -821,6 +821,23 @@ if (document.querySelector('.module__questions')) {
         }
     })
     window.addEventListener('resize', () => { moduleQuestion.forEach(e => { sizeQuestion(e) }) })
+
+    // не обрезать тень последнему элементу li в Questions
+    const lastListItem = moduleQuestion[moduleQuestion.length-1];
+    const section = document.querySelector(".module__questions");
+    
+    if (lastListItem && section) { 
+    if (lastListItem && section) {
+        
+    lastListItem.addEventListener("mouseenter", () => {
+        section.classList.remove("overflow-rule");
+    });
+
+    lastListItem.addEventListener("mouseleave", () => {
+        section.classList.add("overflow-rule");
+    });
+  }
+}
 }
 
 if (document.querySelector('.bug__modal')) {

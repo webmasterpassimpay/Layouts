@@ -925,11 +925,11 @@ button:hover ._link-anim .l::after {
   box-shadow: 0px 1.85185px 3.14815px 0px rgba(2, 85, 255, 0.02), 0px 8.14815px 6.51852px 0px rgba(2, 85, 255, 0.03), 0px 20px 13px 0px rgba(2, 85, 255, 0.04),
     0px 38.51852px 25.48148px 0px rgba(2, 85, 255, 0.04);
   border-radius: 40px;
- 
+ position: relative;
 }
 
 .abaut-main__parrent {
-  position: relative;
+ 
   
 }
 
@@ -987,19 +987,21 @@ button:hover ._link-anim .l::after {
 
 .abaut-main__background-img {
   overflow: hidden;
-  border-radius:40px
+  border-radius:40px;
+  
 
 }
+
 .abaut-main__background__windowImg {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0);
   width: 51.5%;
   bottom: -22%;
   -webkit-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
   z-index: 4;
-  min-height: ;
+
 }
 
 .abaut-main__background__windowImg img {
@@ -1207,13 +1209,16 @@ button:hover ._link-anim .l::after {
     bottom: -150px;
 }
 
-.abaut-main__content.business {
+.abaut-main__content.business {  
   position: static;
   transform: translate(0,0);
   max-width: 100%;
   padding: 0 20px 150px;
   margin-top: -40%;
   gap: 40px ; 
+ 
+
+  
   
 }
 .abaut-main__content-text.business {
@@ -3188,7 +3193,7 @@ button:hover ._link-anim .l::after {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 35px;
+  padding: 40px;
   width: 100%;
   min-height: 350px;
   background-color: #ffffff;
@@ -3242,6 +3247,10 @@ button:hover ._link-anim .l::after {
 
 .about-media__link {
   color: #0c319b;
+  font-weight: normal;
+  margin-bottom: 0;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 .about-media__button .button-blue {
@@ -3252,6 +3261,11 @@ button:hover ._link-anim .l::after {
 @media (max-width: 767.98px) {
   .about-media__button .button-blue {
     max-width: 100%;
+  }
+  .about-media__title {
+   
+    font-size:24px;
+   
   }
 }
 
@@ -4312,7 +4326,7 @@ a.home-buisnes-intro__button-started {
 .integration__img>div:nth-child(2) {
   display: flex;
   align-items: flex-end;
-  margin-bottom: -20px;
+  margin-bottom: -21px;
 }
 
 .integration__img-item img {
@@ -6523,9 +6537,11 @@ gap:40px;
 .performance-blog__item-link a {
   font-family: "Nekst";
   font-size: 24px;
-  line-height: 29px;
+  line-height: 120%;
   color: #1843bf;
   transition: all 0.5s;
+  white-space: wrap;
+  text-align: left;
 }
 
 .performance-blog__item-text {
@@ -6534,18 +6550,18 @@ gap:40px;
   font-weight: 400;
   font-size: 12px;
   line-height: 150.4%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #565656;
 }
 
 .performance-blog__item-after {
-  padding: 0 10px;
+  padding: 3px 10px;
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150.4%;
-  color: #ff7f2e;
+  color: #FF6600;
   background: #ffffff;
   border-radius: 3px;
   transition: all 0.5s;
@@ -6553,7 +6569,7 @@ gap:40px;
 
 .performance-blog__item-after:hover {
   color: #fff;
-  background: #feb46d;
+  background: #FF6600;
 }
 
 /* ========================================== */

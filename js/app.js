@@ -1099,20 +1099,27 @@ if (document.querySelector('#block_scroll')) {
 }
 
 if (document.querySelector('#contact-form')) {
-    let returnValue = document.querySelector('#return-value');
-    let returnInput = document.forms.contact_form;
+    const returnValue = document.querySelector('#return-value');
+    const returnInput = document.forms.contact_form;
     //  let valueChecked = document.querySelector('#return-value-checked');
-    let valueBlock = document.querySelector('#return-value-block');
-    let contactFormBlock = document.querySelector('#contact_form-block');
+    const valueBlock = document.querySelector('#return-value-block');
+    const contactFormBlock = document.querySelector('#contact_form-block');
     document.body.addEventListener('click', (event) => {
         valueBlock.classList.toggle('active', event.target.closest('#return-value-button'));
         if (event.target.closest('#contact-form-open')) {
             contactFormBlock.style.display = 'flex';
-            document.body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";           
         }
         if (event.target.closest('.btn_close_modal')) {
             contactFormBlock.style.display = 'none';
             document.body.style.overflow = "";
+           
+        }
+        // закрытие модалкт контактной формы по клику вне модалки
+         if (!event.target.closest('.contact-form__wrapper') && !event.target.closest('#contact-form-open')) {
+            contactFormBlock.style.display = 'none';
+            document.body.style.overflow = "";    
+           
         }
     })
     returnInput.addEventListener('change', (event => {
@@ -1121,6 +1128,7 @@ if (document.querySelector('#contact-form')) {
             //    valueBlock.classList.remove('active');
         }
     }))
+
 }
 
 if (document.querySelector('.search-site__wrapper')) {

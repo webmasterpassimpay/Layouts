@@ -6540,8 +6540,12 @@ gap:40px;
   line-height: 120%;
   color: #1843bf;
   transition: all 0.5s;
-  white-space: wrap;
+  white-space:normal;
   text-align: left;
+}
+.performance-blog__item-link a span {
+  white-space:normal;
+  
 }
 
 .performance-blog__item-text {

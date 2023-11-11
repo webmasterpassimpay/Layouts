@@ -8203,6 +8203,172 @@ lottie-player {
 .tabs-sticky__cards {
   width: 100%;
   max-width: 640px;
+}
+
+.tabs-sticky__cards-inner {
+  position: relative;
+  height: 100vh;
+  max-height: 500px;
+  overflow-y: hidden;
+}
+
+.tabs-sticky__card-item {
+  position: absolute; 
+ top: -500px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+  transition: top 1.2s ease-in-out;
+  background-color: #fff;
+}
+
+.tabs-sticky__tab-item.active {
+  color: #ffffff;
+  background-color: #1a75e2;
+  border-radius: 10px;
+}
+
+.tabs-sticky__tab-item.active .arrow-line {
+  stroke: #ff6600;
+}
+
+.tabs-sticky__tab-item.active .arrow-circule {
+  fill: #ffffff;
+}
+
+.tabs-sticky__card-item:first-child {
+ z-index: 10;
+ top: 0;
+}
+
+.tabs-sticky__card-img {
+  flex: 1 1 50%;
+}
+.tabs-sticky__card-text {
+  flex: 1 1 50%;
+  padding: 20px 0;
+}
+
+/* адаптив */
+
+
+@media (max-width: 1249.98px) {
+  .tabs-sticky__card-item {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .tabs-sticky__tab-item {
+    font-size: 16px;
+  }
+  .tabs-sticky__card-img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .tabs-sticky__tabs {
+    flex: 1 1 41.6%;
+  }
+  .tabs-sticky__cards {
+    width: 100%;
+    flex: 1 1 40%;
+  }
+  .tabs-sticky__content {
+    gap: 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  .tabs-sticky__cards {
+    width: 100%;
+    flex: 1 1 30%;
+  }
+}
+
+
+@media (min-width: 649.98px) {
+  .tabs-sticky__title-mob {
+    display: none;
+  }
+}
+@media (max-width: 649.98px) {
+  .tabs-sticky__container {
+    display: none;
+  }
+  .tabs-sticky__title-mob {
+    margin-bottom: 40px;
+  }
+
+  .tabs-sticky .advantages__item {
+    gap: 10px;
+  }
+}
+
+/* copy ready*/
+
+/* .tabs-sticky {
+}
+
+.tabs-sticky__title {
+  margin: 0 auto 40px;
+  text-align: center;
+  max-width: 980px;
+}
+
+.tabs-sticky__content {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  position: relative;
+}
+
+.tabs-sticky__tabs {
+  padding: 0 20px 10px;
+  border: 1px solid #cedef1;
+  border-radius: 10px;
+  flex: 0 1 41.6%;
+}
+
+.tabs-sticky__tab-item {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 60px;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  font-family: "Nekst";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  color: #1843bf;
+  border-bottom: 1px solid #cedef1;
+}
+
+.tabs-sticky__tab-item:last-child {
+  padding: 10px 10px 9px 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.tabs-sticky__tab-item:hover {
+  color: #ffffff;
+  background-color: #1a75e2;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.tabs-sticky__tab-item:hover svg .arrow-line {
+  stroke: #ff6600;
+}
+
+.tabs-sticky__tab-item:hover svg .arrow-circule {
+  fill: #ffffff;
+}
+
+.tabs-sticky__cards {
+  width: 100%;
+  max-width: 640px;
 
   top: 0;
   right: 0;
@@ -8214,7 +8380,6 @@ lottie-player {
   gap: 40px;
   align-items: flex-start;
   width: 100%; 
-  /* transition: top 1.2s ease-in-out; */
   background-color: #fff;
 }
 
@@ -8244,24 +8409,8 @@ lottie-player {
   padding: 20px 0;
 }
 
-/* адаптив */
 
-/* @media (max-width: 75em) {
-  .tabs-sticky__content {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    position: relative;
-    flex-direction: column;
-  }
-  .tabs-sticky__tabs {
-    order: 2;
-  }
-  .tabs-sticky__cards {
-    width: 100%;
-    max-width: 100%;
-  }
-} */
+
 @media (max-width: 1249.98px) {
   .tabs-sticky__card-item {
     flex-direction: column;
@@ -8281,7 +8430,6 @@ lottie-player {
 }
 .tabs-sticky__cards {
   width: 100%;
-  /* max-width: 640px; */
   flex: 1 1 40%;
 }
 .tabs-sticky__content {
@@ -8295,22 +8443,6 @@ lottie-player {
   flex: 1 1 30%;
 }
 }
-/* @media (max-width: 767.98px) {
-  .tabs-sticky__card-item {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .tabs-sticky__tab-item {
-    font-size: 14px;
-  }
-  .tabs-sticky__content {
-    display: flex;
-    justify-content: space-between;
-    gap: 0px;
-    position: relative;
-    flex-direction: column;
-  }
-} */
 
 @media (min-width: 649.98px) {
   .tabs-sticky__title-mob {
@@ -8331,4 +8463,4 @@ lottie-player {
     gap: 10px;
    }
 
-}
+} */

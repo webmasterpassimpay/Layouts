@@ -1186,3 +1186,97 @@ jQuery(document).ready(function ($) {
       });
     })();
   });
+
+  if (document.querySelector('.tabs-sticky')) {
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     // Получаем все элементы tabs-sticky__tab-item
+    //     var tabItems = document.querySelectorAll(".tabs-sticky__tab-item");
+    
+    //     // Получаем все элементы tabs-sticky__card-item
+    //     var cardItems = document.querySelectorAll(".tabs-sticky__card-item");
+    
+    //     // По умолчанию скрываем все tabs-sticky__card-item, кроме первого
+    //     for (var i = 1; i < cardItems.length; i++) {
+    //         cardItems[i].style.display = "none";
+    //     }
+    
+    //     // Добавляем обработчик события для каждого элемента tabs-sticky__tab-item
+    //     tabItems.forEach(function (tab, index) {
+    //         tab.addEventListener("click", function () {
+    //             // Скрываем все tabs-sticky__card-item
+    //             cardItems.forEach(function (card) {
+    //                 card.style.display = "none";
+    //             });
+    
+    //             // Показываем только выбранный tabs-sticky__card-item
+    //             cardItems[index].style.display = "flex";
+    //         });
+    //     });
+    // });
+
+
+
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     // Получаем все элементы tabs-sticky__tab-item
+    //     var tabItems = document.querySelectorAll(".tabs-sticky__tab-item");
+    
+    //     // Получаем все элементы tabs-sticky__card-item
+    //     var cardItems = document.querySelectorAll(".tabs-sticky__card-item");
+    
+    //     // Добавляем обработчик события для каждого элемента tabs-sticky__tab-item
+    //     tabItems.forEach(function (tab, index) {
+    //         tab.addEventListener("click", function () {
+    //             // Скрываем все tabs-sticky__card-item
+    //             cardItems.forEach(function (card) {
+    //                 card.style.display = "none";
+    //             });
+    
+    //             // Показываем только выбранный tabs-sticky__card-item
+    //             cardItems[index].style.display = "flex";
+    //         });
+    //     });
+    // });
+    
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Получаем все элементы tabs-sticky__tab-item
+        var tabItems = document.querySelectorAll(".tabs-sticky__tab-item");
+    
+        // Добавляем обработчик события для каждого элемента tabs-sticky__tab-item
+        tabItems.forEach(function (tab, index) {
+            tab.addEventListener("click", function () {
+                // Получаем все элементы tabs-sticky__card-item здесь
+                var cardItems = document.querySelectorAll(".tabs-sticky__card-item");
+    
+                // Убираем класс active у всех tabs-sticky__tab-item
+                tabItems.forEach(function (tab) {
+                    tab.classList.remove("active");
+                });
+    
+                // Добавляем класс active только к выбранному tabs-sticky__tab-item
+                tab.classList.add("active");
+    
+                // // Устанавливаем начальное значение top
+                // let top = 0;
+    
+                
+                //     top = cardItems[index].offsetTop;
+                //     console.log(cardItems[index].offsetTop);
+    
+                    // прячем все tabs-sticky__card-item
+                    cardItems.forEach(function (card, i) {
+                        card.style.display = "none";
+                    });
+    
+                    // cardItems[index].style.right = "0";
+                    // cardItems[index].style.top = `-${top}px`;
+                    cardItems[index].style.display = "flex";
+            });
+        });
+    });
+    
+    
+    };
+    
+  

@@ -8156,7 +8156,7 @@ lottie-player {
 }
 
 .tabs-sticky__tabs {
-  padding: 0 20px 10px;
+  padding: 10px 20px 10px;
   border: 1px solid #cedef1;
   border-radius: 10px;
   flex: 0 1 41.6%;
@@ -8185,11 +8185,14 @@ lottie-player {
   border-bottom: 1px solid #ffffff;
 }
 
+
+
 .tabs-sticky__tab-item:hover {
   color: #ffffff;
   background-color: #1a75e2;
   border-radius: 10px;
   cursor: pointer;
+
 }
 
 .tabs-sticky__tab-item:hover svg .arrow-line {
@@ -8208,7 +8211,7 @@ lottie-player {
 .tabs-sticky__cards-inner {
   position: relative;
   height: 100vh;
-  max-height: 500px;
+  max-height: 535px;
   overflow-y: hidden;
 }
 
@@ -8220,7 +8223,8 @@ lottie-player {
   gap: 40px;
   align-items: flex-start;
   width: 100%;
-  transition: top 1.2s ease-in-out;
+  transition: top 1.2s ease-in-out, border-top 0.2s ;
+  
   background-color: #fff;
 }
 
@@ -8228,7 +8232,12 @@ lottie-player {
   color: #ffffff;
   background-color: #1a75e2;
   border-radius: 10px;
+  margin: 10px 0;
 }
+.tabs-sticky__tab-item.next-border {
+  border-top: 1px solid #cedef1;
+}
+
 
 .tabs-sticky__tab-item.active .arrow-line {
   stroke: #ff6600;

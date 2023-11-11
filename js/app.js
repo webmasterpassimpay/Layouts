@@ -1192,30 +1192,34 @@ jQuery(document).ready(function ($) {
 
     document.addEventListener("DOMContentLoaded", function () {
         // Получаем все элементы tabs-sticky__tab-item
-        var tabItems = document.querySelectorAll(".tabs-sticky__tab-item");
+        const tabItems = document.querySelectorAll(".tabs-sticky__tab-item");
     
         // Добавляем обработчик события для каждого элемента tabs-sticky__tab-item
         tabItems.forEach(function (tab, index) {
             tab.addEventListener("click", function () {
-                // Получаем все элементы tabs-sticky__card-item здесь
-                var cardItems = document.querySelectorAll(".tabs-sticky__card-item");
+                // Получаем все элементы tabs-sticky__card-item 
+                const cardItems = document.querySelectorAll(".tabs-sticky__card-item");
     
                 // Убираем класс active у всех tabs-sticky__tab-item
                 tabItems.forEach(function (tab) {
                     tab.classList.remove("active");
+                    tab.classList.remove("next-border");
                 });
     
                 // Добавляем класс active только к выбранному tabs-sticky__tab-item
                 tab.classList.add("active");
-    
+
+                // Добавляем класс next-border к следующему tabs-sticky__tab-item
+                if(tabItems[index+1]) {
+                tabItems[index+1].classList.add("next-border");
+                }
             
-                    // прячем все tabs-sticky__card-item
-                    cardItems.forEach(function (card, i) {
-                        card.style.top = "-500px";
-                    });
-    
-                    cardItems[index].style.top = "0px";
-                    
+                // прячем все tabs-sticky__card-item
+                cardItems.forEach(function (card ) {
+                    card.style.top = "-500px";
+                });
+                // показываем нужный tabs-sticky__card-item
+                cardItems[index].style.top = "0px";                    
             });
         });
     });

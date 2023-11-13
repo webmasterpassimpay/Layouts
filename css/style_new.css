@@ -4089,7 +4089,7 @@ padding-top: 53.195318561945%;
   margin: 0 auto;
 }
 
-/* .wrp_intro_bg:after {
+.wrp_intro_bg:after {
   content: "";
   position: absolute;
   top: 62%;
@@ -4097,7 +4097,7 @@ padding-top: 53.195318561945%;
   width: 360px;
   height: 360px;
   background: url(../img/first-screen/points.svg) no-repeat left top;
-} */
+}
 
 .inner_intro_bg {
   padding-top: 44.62%;

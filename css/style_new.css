@@ -890,6 +890,16 @@ button:hover ._link-anim .l::after {
   --size: 60px;
 }
 
+
+
+/* =============SVG===================== */
+.hidden {
+  position: absolute;
+  z-index: -100;
+  width: 0;
+  height: 0;
+}
+
 /* ================================== */
 /* abaut-main */
 /* ================================== */

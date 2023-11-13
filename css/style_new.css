@@ -4027,16 +4027,14 @@ a.home-buisnes-intro__button-started {
   max-width: 45.62vw;
   width: 100%;
 }
-.intro__img.bus{
-overflow: hidden;
-position: relative;
-  
-    padding-top: 26.5976592809725%;
-  
 
-  /* max-width: 51.50vw;
-  width: 100%; */
-  /* padding-bottom: 53.195318561945%; */
+.intro__img.bus{
+/* overflow: hidden; */
+position: relative;  
+padding-top: 26.5976592809725%;
+/* max-width: 51.50vw;
+width: 100%; */
+/* padding-bottom: 53.195318561945%; */
 }
 
 

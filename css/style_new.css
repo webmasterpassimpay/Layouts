@@ -4028,8 +4028,14 @@ a.home-buisnes-intro__button-started {
   width: 100%;
 }
 .intro__img.bus{
-  max-width: 51.50vw;
-  width: 100%;
+overflow: hidden;
+position: relative;
+  
+    padding-top: 26.5976592809725%;
+  
+
+  /* max-width: 51.50vw;
+  width: 100%; */
   /* padding-bottom: 53.195318561945%; */
 }
 
@@ -4038,6 +4044,8 @@ a.home-buisnes-intro__button-started {
   width: 100%;
 }
 .intro__img.bus img {
+  position: absolute;
+  top: 0;
   width: 100%;
 }
 
@@ -4089,7 +4097,7 @@ a.home-buisnes-intro__button-started {
 }
 
 .inner_intro_bg.per {
-  /* padding-top: 44.62%; */
+  padding-top: 45%;
   border-radius: 40px;
   background: #1843bf;
   overflow: hidden;
@@ -4166,6 +4174,13 @@ a.home-buisnes-intro__button-started {
     padding-top: 20px;
   
   }
+  .intro__img.bus{
+
+      
+        padding-top: 53.195318561945%;
+      
+    
+    }
 }
 
 /* 1470px - 320px*/

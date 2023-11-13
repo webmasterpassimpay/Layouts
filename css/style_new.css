@@ -6821,19 +6821,28 @@ lottie-player {
   border-radius: 30px;
   background: linear-gradient(180deg, #ff9f2e 0%, #f60 100%);
 }
+
 .intro__inner.bus{
   border-radius: none;
   background: none
 }
-wrp_intro_bg {
+.wrp_intro_bg {
   display: none;
 }
+
 .intro__img {
   max-width: 100%;
   width: 100%;
   position: relative;
   bottom:0;
 }
+.intro__img.pers {
+  max-width: 45.62vw;
+  width: 100%;
+  position: relative;
+  bottom:-20px;
+}
+
 .inner_intro_bg {
   
   background:none;

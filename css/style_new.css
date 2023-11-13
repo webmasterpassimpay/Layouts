@@ -1286,6 +1286,13 @@ button:hover ._link-anim .l::after {
   }
 
 }
+@media (max-width: 399.98px) {
+  .abaut-main__content-title.business {
+  
+    font-size: 20px;
+}
+
+}
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 /* ================================== */
@@ -4028,23 +4035,27 @@ a.home-buisnes-intro__button-started {
   width: 100%;
 }
 
+.intro__img-wrapper.bus{
+width: 100%;
+max-width: 51.551vw;
+/* max-width: 927.92px; */
+position: relative; 
+}
+
 .intro__img.bus{
-/* overflow: hidden; */
-position: relative;  
-padding-top: 26.5976592809725%;
-/* max-width: 51.50vw;
-width: 100%; */
-/* padding-bottom: 53.195318561945%; */
+padding-top: 53.195318561945%;
 }
 
 
 .intro__img img {
   width: 100%;
 }
+
 .intro__img.bus img {
   position: absolute;
   top: 0;
   width: 100%;
+  max-width: 100%;
 }
 
 .intro__bg {
@@ -4172,13 +4183,7 @@ width: 100%; */
     padding-top: 20px;
   
   }
-  .intro__img.bus{
 
-      
-        padding-top: 53.195318561945%;
-      
-    
-    }
 }
 
 /* 1470px - 320px*/
@@ -6801,7 +6806,7 @@ lottie-player {
   width: 100%;
 }
 
- .intro__img.bus {
+ .intro__img-wrapper.bus {
   position: relative;
   bottom: -20px;
   max-width: 100%;
@@ -6824,10 +6829,10 @@ wrp_intro_bg {
   display: none;
 }
 .intro__img {
-  max-width: 45.62vw;
+  max-width: 100%;
   width: 100%;
   position: relative;
-  bottom:-20px;
+  bottom:0;
 }
 .inner_intro_bg {
   

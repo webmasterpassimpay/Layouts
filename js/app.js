@@ -228,6 +228,7 @@
     };
     const da = new DynamicAdapt("max");
     da.init();
+    
     new Swiper(".advantages__swiper", {
         pagination: {
             el: ".advantages__pagination"
@@ -235,9 +236,19 @@
     });
     new Swiper(".carousel-crypto__swiper", {
         slidesPerView: "auto",
-        spaceBetween: 30,
+        spaceBetween: 25,
         loop: true,
-        autoplay: true
+        autoplay: true,
+        breakpoints: {
+           
+            320: {
+                centeredSlides: true
+            },
+            1024: {
+                centeredSlides: false
+            },
+
+        }
     });
     new Swiper(".carousel-footer__swiper", {
         slidesPerView: "auto",

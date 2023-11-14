@@ -415,7 +415,6 @@
 
 .header__search {
   margin-left: 20px;
-  /*  background-color: #F5F8FB; */
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
@@ -442,6 +441,27 @@
 .header__search-img img {
   width: 37px;
   height: 37px;
+}
+
+
+/*в планшетном режиме иконка header-search прячется под бургер 767 - 900 px*/
+
+@media (min-width: 768px) and (max-width:900px) {
+  .header__lang-body {
+    margin-right: 0px;
+  }
+  .header__search {
+    margin-left: 0px;  
+  }
+  .header__inner { 
+    column-gap: 10px;
+  }
+  .header__logo { 
+    margin-right: 10px;    
+  }
+  .header__regAuth-list {  
+    column-gap: 10px;
+  }
 }
 
 .header__burger {
@@ -696,7 +716,6 @@
   margin: 0px;
   display: block;
   width: 100%;
-  /* max-width: 400px; */
 }
 
 .new-submenu__body {
@@ -801,13 +820,13 @@
   line-height: 150%;
 }
 
-.header__search {
+/* .header__search {
   margin-left: 20px;
   background-color: #ffffff;
   border-radius: 10px;
   overflow: hidden;
   order: 6;
-}
+} */
 
 /* .header__search._dynamic_adapt_ {
    position: relative;

@@ -36,8 +36,8 @@
 
  
   
-  /* width: calc(100% - 50px); */
-   margin: 0px 10px; 
+  width: calc(100% - 20px);
+   margin: 0 auto; 
 }
 
 .header.sticky-start {  

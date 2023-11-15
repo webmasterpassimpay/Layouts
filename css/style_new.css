@@ -4082,7 +4082,8 @@ padding-top: 53.195318561945%;
   top: 0;
   left: 0;
   z-index: -1;
-  padding: 0 20px;
+  /*боковой скрол убрать -было 20px*/
+  padding: 0 40px;
 }
 
 .wrp_intro_bg {

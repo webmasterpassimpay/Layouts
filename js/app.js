@@ -838,8 +838,7 @@ if (document.querySelector('.module__questions')) {
     const section = document.querySelector(".module__questions");
     
     if (lastListItem && section) { 
-    if (lastListItem && section) {
-        
+    
     lastListItem.addEventListener("mouseenter", () => {
         section.classList.remove("overflow-rule");
     });
@@ -847,7 +846,7 @@ if (document.querySelector('.module__questions')) {
     lastListItem.addEventListener("mouseleave", () => {
         section.classList.add("overflow-rule");
     });
-  }
+  
 }
 }
 
@@ -897,9 +896,9 @@ if (document.querySelector('#header')) {
     var header = document.querySelector('#header');
     var hp = document.querySelector('#hp');
     var headerNav = document.querySelector('.header__nav');
-    var fonMenu = document.querySelector('.header__nav-fon-menu');
-    var fonMenuIn = document.querySelector('.header__nav-fon-menu-in');
-    var fonMenuArrow = document.querySelector('.header__nav-fon-menu-arrow');
+    // var fonMenu = document.querySelector('.header__nav-fon-menu');
+    // var fonMenuIn = document.querySelector('.header__nav-fon-menu-in');
+    // var fonMenuArrow = document.querySelector('.header__nav-fon-menu-arrow');
     var newSubmenu = document.querySelectorAll('.new-submenu');
     var btnTouchOpen = false;
     /* открывает меню при наведении мышкой 'hover' */
@@ -928,13 +927,17 @@ if (document.querySelector('#header')) {
                 e.style.opacity = '1';
                 e.style.transform = 'translate(0px, 0px)';
                 e.style.pointerEvents = 'all';
+                console.log(1);
             } else {
+                console.log(2);
                 e.style.opacity = '0';
                 e.style.pointerEvents = 'none';
                 if (e.classList.contains('submenu-left')) {
                     e.style.transform = 'translate(-30px, 0px)';
+                    console.log(3);
                 } else {
                     e.style.transform = 'translate(30px, 0px)';
+                    console.log(4);
                 }
             }
         })
@@ -953,6 +956,7 @@ if (document.querySelector('#header')) {
         if (!mediaQuery) {
             if (event.target.closest('._with-submenu-button')) {
                 openMenu(event);
+                console.log(5);
             }
         }
         if (btnTouchOpen == event.target) {
@@ -985,21 +989,28 @@ if (document.querySelector('#header')) {
             }
         })
     }
-    /* перемещение кнопки "язык/валюта" */
 
-    function langMove() {
-        if (mediaQuery) {
-            document.querySelector('.header__logo').after(document.querySelector('.header__lang'))
-        } else if (!mediaQuery && window.innerWidth < 1257) {
-            document.querySelector('.mobile-header__inner').prepend(document.querySelector('.header__lang'))
-        }
-    }
-    if (document.querySelector('.header__lang')) {
-        langMove();
-        window.addEventListener('resize', function () {
-            langMove();
-        })
-    }
+    /* перемещение кнопки "язык/валюта" */
+    
+
+    // function langMove() {
+    //     if (mediaQuery) {
+    //         document.querySelector('.header__logo').after(document.querySelector('.header__lang'))
+    //         console.log('after');
+    //     } else if (!mediaQuery && window.innerWidth < 1257) {
+    //         console.log('prepend');
+    //         console.log(window.innerWidth);
+          
+    //         document.querySelector('.mobile-header__inner').prepend(document.querySelector('.header__lang'))
+    //     }
+    // }
+    // if (document.querySelector('.header__lang')) {
+    //     console.log('langMove()');
+    //     langMove();
+    //     window.addEventListener('resize', function () {
+    //         langMove();
+    //     })
+    // }
 
 
     /* позиционирование header при прокрутке*/

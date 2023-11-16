@@ -896,9 +896,9 @@ if (document.querySelector('#header')) {
     var header = document.querySelector('#header');
     var hp = document.querySelector('#hp');
     var headerNav = document.querySelector('.header__nav');
-    // var fonMenu = document.querySelector('.header__nav-fon-menu');
-    // var fonMenuIn = document.querySelector('.header__nav-fon-menu-in');
-    // var fonMenuArrow = document.querySelector('.header__nav-fon-menu-arrow');
+    var fonMenu = document.querySelector('.header__nav-fon-menu');
+    var fonMenuIn = document.querySelector('.header__nav-fon-menu-in');
+    var fonMenuArrow = document.querySelector('.header__nav-fon-menu-arrow');
     var newSubmenu = document.querySelectorAll('.new-submenu');
     var btnTouchOpen = false;
     /* открывает меню при наведении мышкой 'hover' */
@@ -917,27 +917,29 @@ if (document.querySelector('#header')) {
     function openMenu(event) {
         var siseSubmenuX = event.target.closest('._with-submenu').querySelector('.new-submenu__wrapper').clientHeight;
         var siseSubmenuY = event.target.closest('._with-submenu').querySelector('.new-submenu__wrapper').clientWidth;
+       
         fonMenu.style.opacity = "1";
         fonMenu.style.pointerEvents = "all";
         fonMenuIn.style.height = siseSubmenuX + 40 + 'px';
         fonMenuIn.style.width = siseSubmenuY + 40 + 'px';
         fonMenuArrow.style.left = -fonMenu.offsetLeft + event.target.closest('._with-submenu-button').offsetLeft + event.target.closest('._with-submenu-button').clientWidth / 2 + 'px';
+        
         newSubmenu.forEach(e => {
             if (e == event.target.closest('._with-submenu').querySelector('.new-submenu')) {
                 e.style.opacity = '1';
                 e.style.transform = 'translate(0px, 0px)';
                 e.style.pointerEvents = 'all';
-                console.log(1);
+                
             } else {
-                console.log(2);
+              
                 e.style.opacity = '0';
                 e.style.pointerEvents = 'none';
                 if (e.classList.contains('submenu-left')) {
                     e.style.transform = 'translate(-30px, 0px)';
-                    console.log(3);
+                   
                 } else {
                     e.style.transform = 'translate(30px, 0px)';
-                    console.log(4);
+                    
                 }
             }
         })
@@ -956,7 +958,7 @@ if (document.querySelector('#header')) {
         if (!mediaQuery) {
             if (event.target.closest('._with-submenu-button')) {
                 openMenu(event);
-                console.log(5);
+               
             }
         }
         if (btnTouchOpen == event.target) {
@@ -1127,6 +1129,7 @@ if (document.querySelector('#contact-form')) {
     const valueBlock = document.querySelector('#return-value-block');
     const contactFormBlock = document.querySelector('#contact_form-block');
     document.body.addEventListener('click', (event) => {
+        
         valueBlock.classList.toggle('active', event.target.closest('#return-value-button'));
         if (event.target.closest('#contact-form-open')) {
             contactFormBlock.style.display = 'flex';

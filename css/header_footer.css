@@ -506,7 +506,7 @@
   display: none;
 }
 
-/* .header__nav-fon-menu {
+.header__nav-fon-menu {
   position: absolute;
   top: 17px;
   right: -210px;
@@ -517,15 +517,15 @@
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
   pointer-events: none;
-} */
-
-@media (max-width: 1279.98px) {
-  /* .header__nav-fon-menu {
-    right: -65px;
-  } */
 }
 
-/* .header__nav-fon-menu-in {
+@media (max-width: 1279.98px) {
+  .header__nav-fon-menu {
+    right: -65px;
+  }
+}
+
+.header__nav-fon-menu-in {
   position: relative;
   border-radius: 10px;
   background-color: #ffffff;
@@ -534,9 +534,9 @@
   transition: height 0.5s;
   -webkit-box-shadow: 0 30px 70px rgba(16, 28, 50, 0.25);
   box-shadow: 0 30px 70px rgba(16, 28, 50, 0.25);
-} */
+}
 
-/* .header__nav-fon-menu-arrow {
+.header__nav-fon-menu-arrow {
   position: absolute;
   top: -10px;
   width: 20px;
@@ -548,7 +548,7 @@
   -webkit-transition: right 0.5s;
   -o-transition: right 0.5s;
   transition: right 0.5s;
-} */
+}
 
 .new-submenu__item {
   -webkit-box-flex: 1;
@@ -707,9 +707,9 @@
     right: 0px;
   }
 
-  /* .header__nav-fon-menu {
+  .header__nav-fon-menu {
     right: -20px;
-  } */
+  }
 }
 
 /* изменил как в фигме падинги ++++++++++++++++++++++++++++++++ */
@@ -1150,9 +1150,9 @@
     row-gap: 20px;
   }
 
-  /* .header__nav-fon-menu {
+  .header__nav-fon-menu {
     display: none;
-  } */
+  }
 
   ._with-submenu {
     border: none;

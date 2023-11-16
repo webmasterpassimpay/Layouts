@@ -57,7 +57,6 @@
             if (bodyLockStatus && e.target.closest(".icon-menu")) {
                 bodyLockToggle();
                 document.documentElement.classList.toggle("menu-open"); 
-                
                   /* запрет скрола страницы за модалкой меню */
                 document.body.classList.toggle("no-scroll")
             }
@@ -913,17 +912,19 @@ if (document.querySelector('#header')) {
     /* открывает меню при клике */
     //const mediaQuery = window.matchMedia('(max-width: 768px)'); /* медиазапрос для меню */
     var mediaQuery = window.innerWidth <= 768;
-
     function openMenu(event) {
         var siseSubmenuX = event.target.closest('._with-submenu').querySelector('.new-submenu__wrapper').clientHeight;
         var siseSubmenuY = event.target.closest('._with-submenu').querySelector('.new-submenu__wrapper').clientWidth;
        
         fonMenu.style.opacity = "1";
+
+        fonMenu.style.display = "block";
+
         fonMenu.style.pointerEvents = "all";
         fonMenuIn.style.height = siseSubmenuX + 40 + 'px';
         fonMenuIn.style.width = siseSubmenuY + 40 + 'px';
         fonMenuArrow.style.left = -fonMenu.offsetLeft + event.target.closest('._with-submenu-button').offsetLeft + event.target.closest('._with-submenu-button').clientWidth / 2 + 'px';
-        
+
         newSubmenu.forEach(e => {
             if (e == event.target.closest('._with-submenu').querySelector('.new-submenu')) {
                 e.style.opacity = '1';
@@ -931,15 +932,13 @@ if (document.querySelector('#header')) {
                 e.style.pointerEvents = 'all';
                 
             } else {
-              
+
                 e.style.opacity = '0';
                 e.style.pointerEvents = 'none';
                 if (e.classList.contains('submenu-left')) {
                     e.style.transform = 'translate(-30px, 0px)';
-                   
                 } else {
                     e.style.transform = 'translate(30px, 0px)';
-                    
                 }
             }
         })
@@ -952,13 +951,14 @@ if (document.querySelector('#header')) {
         })
         fonMenu.style.opacity = "0";
         fonMenu.style.pointerEvents = "none";
+        // убираем из потока чтобы не было переполнения контейнера и скролла на ios
+        fonMenu.style.display = "none";
     }
     function openNavMenu(event) {
         /* больше 766,98 px */
         if (!mediaQuery) {
             if (event.target.closest('._with-submenu-button')) {
                 openMenu(event);
-               
             }
         }
         if (btnTouchOpen == event.target) {

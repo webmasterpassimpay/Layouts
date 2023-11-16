@@ -513,6 +513,10 @@
   z-index: 1;
   padding-top: 30px;
   opacity: 0;
+
+  /* убираем из потока чтобы не было переполнения контейнера и скролла на ios */
+  display: none;
+
   -webkit-transition: opacity 0.3s;
   -o-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -712,6 +716,13 @@
   }
 }
 
+@media (min-width:768px){
+
+  .menu-open .no-scroll {
+    /* overflow-y: hidden; */
+    height: 100vh;
+  }
+}
 /* изменил как в фигме падинги ++++++++++++++++++++++++++++++++ */
 
 .new-submenu__link {
@@ -1110,8 +1121,8 @@
 
   /* запрет скрола страницы за модалкой меню */
   .menu-open .no-scroll {
-    overflow-y: hidden;
-    height: 100vh;
+     overflow: hidden;
+    /* height: 100vh; */
   }
 
   .new-submenu {

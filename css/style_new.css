@@ -4864,7 +4864,7 @@ lottie-player {
   /* align-items: center; */
   -webkit-gap: 25px;
   -moz-gap: 25px;
-  gap: 25px;
+  gap: 20px;
   max-width: 50%;
 }
 
@@ -9486,10 +9486,10 @@ input[type="date"] {
 /* @media 91em*/
 @media (min-width: 91.875em) {
   .partners-calc-cont__inner {
-    padding-bottom: 1.875rem;
+    padding-bottom: 0;
     padding-top: 2.5rem;
-    padding-right: 3.4375rem;
-    padding-left: 3.4375rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
   }
   .partners-calc-cont__total {
     padding-right: 3.4375rem;
@@ -9649,9 +9649,9 @@ input[type="date"] {
 
 /* @media 25em*/
 @media ((max-width: 25em)) {
-  .partners-calc-cont__buttons-item p {
+  /* .partners-calc-cont__buttons-item p {
     font-size: 1.875rem;
-  }
+  } */
   .partners-calc-cont__buttons-item {
     padding: 0 15px;
   }
@@ -9662,6 +9662,10 @@ input[type="date"] {
   .partners-calc-cont__total p {
     font-size: 1.125rem;
   }
+  .partners-calc-cont__range-box {    
+    padding: 20px;
+   
+}
 }
 
 /* @media 20em*/
@@ -9711,10 +9715,8 @@ input[type="date"] {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   background: #1843bf;
-  -webkit-box-shadow: 0 100px 80px rgba(2, 85, 255, 0.07), 0 64.8148px 46.8519px rgba(2, 85, 255, 0.0531481), 0 38.5185px 25.4815px rgba(2, 85, 255, 0.0425185), 0 20px 13px rgba(2, 85, 255, 0.035),
-    0 8.14815px 6.51852px rgba(2, 85, 255, 0.0274815), 0 1.85185px 3.14815px rgba(2, 85, 255, 0.0168519);
-  box-shadow: 0 100px 80px rgba(2, 85, 255, 0.07), 0 64.8148px 46.8519px rgba(2, 85, 255, 0.0531481), 0 38.5185px 25.4815px rgba(2, 85, 255, 0.0425185), 0 20px 13px rgba(2, 85, 255, 0.035),
-    0 8.14815px 6.51852px rgba(2, 85, 255, 0.0274815), 0 1.85185px 3.14815px rgba(2, 85, 255, 0.0168519);
+  box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px #0255FF04, 0px 8.148148536682129px 6.518518447875977px 0px #0255FF07, 0px 20px 13px 0px #0255FF09, 0px 38.51852035522461px 25.481481552124023px 0px #0255FF0B;
+  -webkit-box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px #0255FF04, 0px 8.148148536682129px 6.518518447875977px 0px #0255FF07, 0px 20px 13px 0px #0255FF09, 0px 38.51852035522461px 25.481481552124023px 0px #0255FF0B;
   border-radius: 50px;
   overflow: hidden;
   padding: 2px;

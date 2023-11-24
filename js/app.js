@@ -1231,7 +1231,7 @@ jQuery(document).ready(function ($) {
                const cardItems = document.querySelectorAll(".tabs-sticky__card-item");
                 
                // Убираем класс active у всех tabs-sticky__tab-item
-               
+
                tabItems.forEach(function (tab) {
                    tab.classList.remove("active");
                    tab.classList.remove("next-border");
@@ -1257,12 +1257,43 @@ jQuery(document).ready(function ($) {
                cardItems[index].style.top = "0";   
                 });
             }
-        });
+            else {
+                // Mobile and tablet
+                tab.addEventListener("touchstart", function () {
+                    const cardItems = document.querySelectorAll(".tabs-sticky__card-item");
+                
+                    // Убираем класс active у всех tabs-sticky__tab-item
+     
+                    tabItems.forEach(function (tab) {
+                        tab.classList.remove("active");
+                        tab.classList.remove("next-border");
+                    });
+        
+                    // Добавляем класс active только к выбранному tabs-sticky__tab-item
+                    tab.classList.add("active");
+     
+                    // Добавляем класс next-border к следующему tabs-sticky__tab-item
+     
+                    if(tabItems[index+1]) {
+                    tabItems[index+1].classList.add("next-border");
+                    }
+                
+                    // прячем все tabs-sticky__card-item
+     
+                    cardItems.forEach(function (card ) {
+                        card.style.top = "-600px";
+                    });
+     
+                    // показываем нужный tabs-sticky__card-item
+     
+                    cardItems[index].style.top = "0";   
+                });
+            }
     
     
     });
     
     
-    };
+    })
     
-  
+}

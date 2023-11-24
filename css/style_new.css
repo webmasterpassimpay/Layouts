@@ -1373,7 +1373,7 @@ button:hover ._link-anim .l::after {
   .abaut-main__content-title,
   .abaut-main__content-title.business {
     text-align: left;
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -2817,11 +2817,10 @@ button:hover ._link-anim .l::after {
   }
 }
 
-@media (max-width: 399.98px) {
+@media (max-width: 767.98px) {
   .infoblocks__item:last-child {
-    margin-bottom: 0px;
-    /* padding-bottom: 0px; */
-  }
+    margin-bottom: 50px;
+   }
 }
 
 /* ============================ */
@@ -4974,7 +4973,7 @@ lottie-player {
   }
 
   .calculator-info__item-info-title {
-    font-size: 18px;
+    font-size: 20px;
   }
   .calculator-info__items.partner {
     display: grid;
@@ -8987,26 +8986,25 @@ lottie-player {
 .tabs-sticky__cards {
   width: 100%;
   max-width: 640px;
-}
-
-.tabs-sticky__cards-inner {
   position: relative;
   height: 100vh;
-  max-height: 535px;
+  max-height: 565px;
   overflow-y: hidden;
 }
 
 .tabs-sticky__card-item {
-  position: absolute;
-  top: -500px;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  align-items: flex-start;
-  width: 100%;
-  transition: top 1.2s ease-in-out, border-top 0.2s;
-
-  background-color: #fff;
+    position: absolute;
+    top: -500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: flex-start;
+    width: 100%;
+    transition: top 0.8s ease-in-out, border-top 0.2s;    
+    gap: 20px;
+    background-color: #fff;
+    padding: 0;
+    height: 100%;
 }
 
 .tabs-sticky__tab-item.active {
@@ -9031,13 +9029,20 @@ lottie-player {
   z-index: 10;
   top: 0;
 }
-
-.tabs-sticky__card-img {
-  flex: 1 1 50%;
+.tabs-sticky__card-item:last-child {
+ gap: 0;
 }
+
+.tabs-sticky__card-img { 
+  max-width: 355px;
+  margin: 0 auto;
+}
+
 .tabs-sticky__card-text {
-  flex: 1 1 50%;
-  padding: 20px 0;
+  padding:  0;
+  text-align: center;
+  display: flex;
+
 }
 
 /* -------адаптив ----------*/
@@ -9050,8 +9055,7 @@ lottie-player {
   .tabs-sticky__tab-item {
     font-size: 16px;
   }
-  .tabs-sticky__card-img {
-    max-width: 300px;
+  .tabs-sticky__card-img {  
     margin: 0 auto;
   }
   .tabs-sticky__tabs {

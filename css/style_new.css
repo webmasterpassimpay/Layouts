@@ -10765,9 +10765,9 @@ input[type="date"] {
 /*1170*/
 
 @media (max-width:1170px) {
-  .callback-page {
+  /* .callback-page {
     padding: 0 20px 60px
-}
+} */
 
 /* .callback-page .callback-page_cont {
     padding: 70px 20px

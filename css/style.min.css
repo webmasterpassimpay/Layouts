@@ -13901,8 +13901,6 @@ a[disabled=disabled] {
     
 }
 
-
-
 .balance_search input {
     width: 100%;
     height: 60px;
@@ -13915,7 +13913,7 @@ a[disabled=disabled] {
     border: none;
     background-repeat: no-repeat;
     background-position: 8px center;
-    background-image: url('/svg/search.svg');
+    background-image: url("/svg/search2.svg");
     background-size: 30px 30px;
 }
 
@@ -14266,7 +14264,7 @@ max-width: 20px;
     }
     .balance_search_reset {
         
-        top: 12.5px;
+        top: 10px;
       
     }
 }

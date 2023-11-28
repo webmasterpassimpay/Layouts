@@ -13931,21 +13931,34 @@ text-align: left;
 .balance_search_reset {
     position: absolute;
     z-index: 5;
-    top: 17.5px;
+    top: 15px;
     right: 8px;
     width: 25px;
     height: 25px;
-    background: #fff;
-    border-radius: 5px;
+    
+    
     border: none;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    
+        padding: 5px;
+        border-radius: 50%;
+        background-color: #fff;
+        min-width: 30px;
+        min-height: 30px;
+    
 }
 
 .balance_search_reset:hover {
     box-shadow: 0 0 4px rgba(0, 0, 0, .4)
 }
+
+.balance_search_reset img {
+width: 100%;
+max-width: 20px;
+}
+
 
 .tariff_item.search_hide {
     display: none

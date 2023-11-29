@@ -3716,6 +3716,7 @@ button:hover ._link-anim .l::after {
 
 .module__question-table-body.col-3 {
   grid-template-columns: 1fr 1fr 1fr;
+  overflow: scroll;
 }
 
 .module__question-table-body-bt-lr {

@@ -3458,6 +3458,11 @@ button:hover ._link-anim .l::after {
   .about-media__title {
     font-size: 24px;
   }
+  .about-media__item {
+
+    padding: 20px;
+    
+  }
 }
 
 /* ================================= */
@@ -7081,23 +7086,32 @@ gap: 40px;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+@media (max-width: 1279.98px) {
+
+  .potential__inner {  
+    background: url(../img/potential/potential_bg_2.svg) no-repeat left bottom/35%, #fff url(../img/potential/potential_bg_3.webp) no-repeat 604px center;
+}
+}
 
 @media (max-width: 479.98px) {
   .potential__info {
     padding-top: 30px;
     padding-bottom: 60px;
+    
   }
 }
 
 @media (max-width: 991.98px) {
   .potential__info {
     padding: 40px;
+    min-height: 400px;
   }
 }
 
 @media (max-width: 767.98px) {
   .potential__info {
     padding: 20px;
+    min-height: 350px;
   }
 
   .potential__info a.button-orange {
@@ -7107,9 +7121,7 @@ gap: 40px;
   .potential__info a {
     margin-top: 0px;
   }
-  .potential__info {
-    min-height: 500px;
-  }
+
   .intro__img {
     max-width: 35.62vw;
     width: 100%;
@@ -7121,6 +7133,11 @@ gap: 40px;
     max-width: 100%;
     width: 100%;
   }
+
+    .potential__inner {  
+      background: url(../img/potential/potential_bg_2.svg) no-repeat left bottom/50%, #fff url(../img/potential/potential_bg_3.webp) no-repeat 604px center;
+    }
+  
 }
 @media (max-width: 550.98px) {
   .intro__inner {

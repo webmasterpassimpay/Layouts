@@ -7082,15 +7082,13 @@ gap: 40px;
   transition: all 0.5s;
 }
 
-@media (max-width: 479.98px) {
-  .potential__info {
-    padding-top: 30px;
-    padding-bottom: 60px;
-  }
+@media (max-width: 1279.98px) {
+
   .potential__inner {  
-    background: url(../img/potential/potential_bg_2.svg) no-repeat left bottom/80%, #fff url(../img/potential/potential_bg_3.webp) no-repeat 604px center;
+    background: url(../img/potential/potential_bg_2.svg) no-repeat left bottom/35%, #fff url(../img/potential/potential_bg_3.webp) no-repeat 604px center;
 }
 }
+
 
 @media (max-width: 991.98px) {
   .potential__info {
@@ -7102,7 +7100,9 @@ gap: 40px;
   .potential__info {
     padding: 20px;
   }
-
+  .potential__inner {  
+    background: url(../img/potential/potential_bg_2.svg) no-repeat left bottom/50%, #fff url(../img/potential/potential_bg_3.webp) no-repeat 604px center;
+}
   .potential__info a.button-orange {
     width: 100%;
     max-width: 100%;
@@ -7157,6 +7157,13 @@ gap: 40px;
   }
   .intro__text {
     margin-bottom: 0rem;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .potential__info {
+    padding-top: 30px;
+    padding-bottom: 60px;
   }
 }
 /* ================== */

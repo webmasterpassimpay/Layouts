@@ -7087,6 +7087,9 @@ gap: 40px;
     padding-top: 30px;
     padding-bottom: 60px;
   }
+  .potential__inner {  
+    background: url(../img/potential/potential_bg_2.svg) no-repeat left bottom/80%, #fff url(../img/potential/potential_bg_3.webp) no-repeat 604px center;
+}
 }
 
 @media (max-width: 991.98px) {

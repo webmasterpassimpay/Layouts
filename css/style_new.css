@@ -3593,6 +3593,7 @@ button:hover ._link-anim .l::after {
   }
 }
 
+
 @media (max-width: 766.98px) {
   .module__question-item {
     padding: 20px;
@@ -3612,7 +3613,12 @@ button:hover ._link-anim .l::after {
     margin-bottom: 10px;
   }
 }
-
+@media (max-width: 349.98px) {
+  .module__question-item {
+ flex-direction: column;
+ text-align: center;
+  }
+}
 ._touch .module__question.module__question-active .module__question-item,
 ._pc .module__question:hover .module__question-item,
 ._pc .module__question.module__question-active .module__question-item {

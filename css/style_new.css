@@ -11059,9 +11059,9 @@ padding:  0;
 
 /*520*/
 @media (max-width:520px) {
-  .callback-page {
+  /* .callback-page {
     padding: 0 20px 60px
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_title h2 {
     font-size: 20px;    

@@ -189,11 +189,11 @@ input::-ms-clear {
 }
 
 input:required:valid {
-  border: 2px solid rgb(80, 203, 84)
+  border: 1px solid rgb(80, 203, 84)
  }
  
  input:required:invalid {
-   border: 2px solid rgb(202, 82, 82);
+   border: 1px solid #cedef1;
  }
 
 button {

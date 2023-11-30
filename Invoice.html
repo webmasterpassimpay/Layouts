@@ -1027,19 +1027,20 @@
                            <div class="contact-form__wrapper-mw660px ">
                               <div class="contact-form__body">                    
                      
-                                <form action="#" method="post" name="contact_form" id="contact-form-invoice">
+                                <form action="#" method="post" name="contact_form" id="">
                                     <div class="contact-form__grid">
                      
                                        <div class="contact-form__input-shell">
-                                          <input class="contact-form__input" type="text" name="" id="" placeholder="Your Telegram nickname">
+                                          <input  class="contact-form__input" pattern="^[a-zA-Z0-9_@]{6,32}$" type="text"  name="" required id="telegram_field" placeholder="Your Telegram nickname *">
+                                         
                                        </div>
-                                       <div class="contact-form__input-shell">
-                                          <input class="contact-form__input" type="text" name="" id="" placeholder="Email">
+                                       <div  class="contact-form__input-shell">
+                                          <input required class="contact-form__input" type="email" name="" id="" placeholder="Email *">
                                        </div>
                                                                  
                                     </div>
-                                     <div class="contact-form__input-shell">
-                                          <input class="contact-form__input" type="text" name="" id="" placeholder="Link to your project">
+                                     <div  class="contact-form__input-shell">
+                                          <input required class="contact-form__input" type="text" name="" id="" placeholder="Link to your project *">
                                     </div> 
                                     <p class="contact-form__text text-white mb-10">By clicking the "Send" button, you give your consent to the PassimPay Administration to process and store your personal and other data provided in the form above.</p>
                                     <button class="contact-form__button button-white btn-white-text btn1" type="submit">Send</button>

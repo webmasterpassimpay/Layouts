@@ -110,6 +110,14 @@ input::-ms-clear {
   display: none;
 }
 
+input:required:valid {
+  border: 2px solid rgb(80, 203, 84)
+ }
+ 
+ input:required:invalid {
+   border: 2px solid rgb(202, 82, 82);
+ }
+
 button {
   cursor: pointer;
   background-color: transparent;

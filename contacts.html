@@ -1145,13 +1145,13 @@
           </div>
         </section>
 
-        <section class="callback-page">
+        <section class="callback-page mb-section-rule">
           
             <div class="callback-page__container">
           <div class="callback-page_cont">
             <div class="callback-page_title">
               <h2 class="title-rule">Обратная связь</h2>
-              <p>Если у Вас есть вопрос или предложение о сотрудничестве, свяжитесь с нами любым удобным для Вас способом.</p>
+              <p class="text-rule fs-18">Если у Вас есть вопрос или предложение о сотрудничестве, свяжитесь с нами любым удобным для Вас способом.</p>
             </div>
             <div class="callback-page_flex">
               <div class="callback-page_left">
@@ -1201,19 +1201,35 @@
                       <path d="M18.8887 70.4167H81.1109V73.3334H18.8887V70.4167Z" fill="black" />
                     </svg>
                   </div>
-                  <p>Email</p>
+                  <p class="sub-title-rule normal">Email</p>
                 </div>
                 <div class="contacts_item">
-                  <p>Служба поддержки клиентов&#58;</p>
-                  <a class="_link-anim" href="/cdn-cgi/l/email-protection#790a0c0909160b0d3909180a0a1014091800571016">
-                    <span class="__cf_email__" data-cfemail="54272124243b262014243527273d3924352d7a3d3b">[email&#160;protected]</span>
-                  </a>
+                  <p class="text-rule">Служба поддержки клиентов&#58;</p>
+                  <a class="link-nekst-style-rule fs-16" href="/cdn-cgi/l/email-protection#790a0c0909160b0d3909180a0a1014091800571016">
+                    <span class="_link-anim __cf_email__" data-cfemail="54272124243b262014243527273d3924352d7a3d3b">
+                      support@passimpay.io
+                    </span>
+                    <span class="link-style-rule__arrow">
+                       <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                    </span>
+                 </a>
+                  <!-- <a class="_link-anim" href="/cdn-cgi/l/email-protection#790a0c0909160b0d3909180a0a1014091800571016">
+                    <span class="__cf_email__" data-cfemail="54272124243b262014243527273d3924352d7a3d3b">support@passimpay.io</span>
+                  </a> -->
                 </div>
                 <div class="contacts_item">
-                  <p>Для бизнеса&#58;</p>
-                  <a class="_link-anim" href="/cdn-cgi/l/email-protection#5231373d12223321213b3f22332b7c3b3d">
-                    <span class="__cf_email__" data-cfemail="1774727857677664647e7a67766e397e78">[email&#160;protected]</span>
-                  </a>
+                  <p class="text-rule">Для бизнеса&#58;</p>
+                  <a class="link-nekst-style-rule fs-16" href="/cdn-cgi/l/email-protection#5231373d12223321213b3f22332b7c3b3d">
+                    <span class="_link-anim __cf_email__" data-cfemail="1774727857677664647e7a67766e397e78">
+                      ceo@passimpay.io
+                    </span>
+                    <span class="link-style-rule__arrow">
+                       <img src="./svg/arrow-diagonal-bl.svg" alt="">
+                    </span>
+                 </a>
+                  <!-- <a class="_link-anim" href="/cdn-cgi/l/email-protection#5231373d12223321213b3f22332b7c3b3d">
+                    <span class="__cf_email__" data-cfemail="1774727857677664647e7a67766e397e78">ceo@passimpay.io</span>
+                  </a> -->
                 </div>
                 </div>
                 <div>
@@ -1282,32 +1298,31 @@
                       <path d="M18.8887 60.6945H81.1109V63.6111H18.8887V60.6945Z" fill="black" />
                     </svg>
                   </div>
-                  <p>Telegram-чат</p>
+                  <p class="sub-title-rule normal">Telegram-чат</p>
                 </div>
                 <div class="bottom">
-                  <p>Получите ответы на Ваши вопросы</p>
-                  <p>в режиме 24/7.</p>
+                  <p class="text-rule">Получите ответы на Ваши вопросы</p>
+                  <p class="text-rule">в режиме 24/7.</p>
                 </div>
                 <br />
-                <div class="middle-footer__social">
-                  <ul>
-                    <li>
+                <div class="">
+                  
                       <a href="https://t.me/+oe9_mzbS2bswZGMy" target="_blank" rel="noopener noreferrer">
                         <img src="/img/telegram-logo.svg" alt="" />
                       </a>
-                    </li>
-                  </ul>
+                  
                 </div>
                 </div>               
             
               </div>
-              <div class="callback-page_form">
+
+              <div class="callback-page_form ">
                 <p class="text-rule fs-14 mb-list-rule">Вы можете использовать форму ниже или любой другой способ связи.
                    Мы всегда онлайн и готовы к сотрудничеству.</p>
                 <form name="contacts" method="post">
                   <div class="flex">
                     <label for="" class="text-input">
-                      <input type="text" id="contacts_firstname" name="contacts[firstname]" required="required" placeholder="Имя" />
+                      <input type="text" id="contacts_firstname" name="contacts[firstname]" required="required" placeholder="Имя *" />
                     </label>
                     <label for="" class="text-input">
                       <input type="text" id="contacts_lastname" name="contacts[lastname]" placeholder="Фамилия" />
@@ -1315,7 +1330,7 @@
                   </div>
                   <div class="flex">
                     <label for="" class="text-input">
-                      <input type="email" id="contacts_email" name="contacts[email]" required="required" placeholder="E-mail" />
+                      <input type="email" id="contacts_email" name="contacts[email]" required="required" placeholder="E-mail *" />
                     </label>
                     <label for="" class="text-input">
                       <input type="tel" id="contacts_phone" name="contacts[phone]" placeholder="Номер телефона" />
@@ -1344,15 +1359,16 @@
                     </label>
                   </div>
 
-                  <label for="" class="text-input">
+                  <label for="" class="text-input mb-list-rule">
                     <textarea id="contacts_message" name="contacts[message]" required="required" placeholder="Введите Ваше сообщение"></textarea>
                   </label>
 
-                  <p>Нажимая кнопку «Отправить», Вы даете свое согласие Администрации PassimPay на обработку и хранение Ваших персональных и других данных, представленных в форме выше.</p>
+                  <p class="text-rule mb-list-rule">Нажимая кнопку «Отправить», Вы даете свое согласие Администрации PassimPay на обработку и хранение Ваших персональных и других данных, представленных в форме выше.</p>
 
                   <div class="contactformerror"></div>
 
                   <label for="" class="input-btn">
+                 
                     <button class="button-blue btn1 mw100" type="submit">
                       <span>Отправить</span>
                       <span class="about-media__button-arrow">
@@ -2178,7 +2194,8 @@
     <script src="./js/swiper-bundle.min.js"></script>
 
     <script src="./js/lottie-player.js"></script>
-    <script src="./js/app.js?201"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/app2.min.js"></script>
     <!--<script src="/js/app.min.js" ></script>-->
     <!--<script src="/js/app2.min.js" ></script>-->
     <script src="./js/window-scroll.js"></script>

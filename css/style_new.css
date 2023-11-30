@@ -105,7 +105,85 @@ input,
 textarea {
   font-family: inherit;
 }
-
+.select{
+  position:relative
+}
+.select__item{
+  position:relative
+}
+.select__title{
+  color:#000;
+  border:1px solid #d9d9d9;
+  background-color:#fff;
+  cursor:pointer;
+  border-radius:4px
+}
+@media (max-width:991.98px){
+  .select__title{
+      font-size:18px
+  }
+}
+.select__value{
+  display:flex;
+  font-size:14px;
+  height:30px;
+  padding:0 15px;
+  align-items:center;
+  justify-content:space-between;
+  flex-direction:row-reverse
+}
+.select__value:before{
+  content:"";
+  display:inline-block;
+  transition:all .3s ease 0s;
+  width:14px;
+  height:8px;
+  background:url("../img/icons/select.svg") center/100% no-repeat
+}
+.select__input{
+  width:100%;
+  background-color:transparent;
+  height:100%
+}
+.select__options{
+  color:#000;
+  position:absolute;
+  top:50px;
+  border-radius:0 0 4px 4px;
+  min-width:100%;
+  left:0;
+  background-color:#fff;
+  border-top:0;
+  border:1px solid #d9d9d9;
+  border-top:0;
+  font-size:14px;
+  padding:10px 0 5px
+}
+@media (max-width:991.98px){
+  .select__options{
+      font-size:18px
+  }
+}
+.select__option{
+  cursor:pointer;
+  padding:5px 15px;
+  margin:0;
+  display:block!important
+}
+@media (min-width:992px){
+  .select__option:hover{
+      background:#d9d9d9
+  }
+}
+.select._active{
+  z-index:5
+}
+.select._active .select__value:before{
+  transform:rotate(-180deg)
+}
+.select._active .select__options{
+  display:block
+}
 input::-ms-clear {
   display: none;
 }
@@ -620,6 +698,9 @@ button:hover ._link-anim .l::after {
 .bold {
   font-weight: 700;
 }
+.normal {
+  font-weight: 400;
+}
 
 .block-center {
   margin: 0 auto;
@@ -712,6 +793,12 @@ button:hover ._link-anim .l::after {
   position: relative;
   top: -3px;
   left: -3px;
+}
+@media (max-width: 319.98px) {
+  .link-nekst-style-rule {
+   
+    font-size: 14px;
+  }
 }
 
 /* фон модального окна */
@@ -10561,7 +10648,7 @@ input[type="date"] {
 .callback-page .callback-page_cont .callback-page_title {
   width: 100%;
   max-width: 860px;
-  margin: 0 auto 70px;
+  margin: 0 auto 40px;
   text-align: center;
 }
 /* 
@@ -10574,7 +10661,7 @@ input[type="date"] {
   color: #161616
 } */
 
-.callback-page .callback-page_cont .callback-page_title p {
+/* .callback-page .callback-page_cont .callback-page_title p {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
@@ -10582,7 +10669,7 @@ input[type="date"] {
   line-height: 150.4%;
   text-align: center;
   color: #565656
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_flex {
   width: 100%;
@@ -10631,19 +10718,19 @@ input[type="date"] {
   margin-right: 30px
 }
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon p {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon p {
   font-family: "Nekst";
   font-size: 24px;
   line-height: 100%;
   color: #161616
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item {
   width: 100%;
   margin-bottom: 20px
 }
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item p {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item p {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
@@ -10651,9 +10738,9 @@ input[type="date"] {
   line-height: 150.4%;
   color: #161616;
   margin-bottom: 5px
-}
+} */
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item a {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item a {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
@@ -10661,20 +10748,20 @@ input[type="date"] {
   line-height: 150.4%;
   color: #1843bf;
   display: inline-block
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .bottom {
   width: 100%
 }
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .bottom p {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .bottom p {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150.4%;
   color: #565656
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form {
   width: 100%;
@@ -10752,7 +10839,7 @@ input[type="date"] {
   resize: none;
   height: 127px
 }
-
+/* 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form p {
   font-family: "Ubuntu";
   font-style: normal;
@@ -10761,9 +10848,9 @@ input[type="date"] {
   line-height: 150.4%;
   color: #565656;
   max-width: 822px;
-  /* margin: 24px 0 36px; */
+  margin: 24px 0 36px; 
   padding: 40px 0;
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form .input-btn {
   width: 100%;
@@ -10771,7 +10858,7 @@ input[type="date"] {
   display: block
 }
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_form form .input-btn button {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_form form .input-btn button {
   width: 100%;
   height: 58px;
   cursor: pointer;
@@ -10781,7 +10868,16 @@ input[type="date"] {
   font-size: 18px;
   line-height: 18px;
   color: #fff
+} */
+.select__title {
+  color: #000;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
 }
+
+
 /*-----media-----*/
 
 /*1170*/
@@ -10817,42 +10913,40 @@ input[type="date"] {
     max-width: unset;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    /* flex-direction: column; */
+   
     text-align: center;
-    margin-bottom: 40px;
-
+    margin-bottom: 20px;
 }
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon {
     margin-bottom: 20px;
     max-width: max-content
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon:nth-child(5) {
     margin-top: 40px
 }
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon p {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon p {
     font-size: 24px
-}
+} */
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item {
     margin-bottom: 15px
-}
+} */
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item p {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item p {
     font-size: 16px;
     margin-bottom: 5px
-}
+} */
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item a {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item a {
     font-size: 16px
-}
+} */
 
-.callback-page .callback-page_cont .callback-page_flex .callback-page_left .bottom p {
+/* .callback-page .callback-page_cont .callback-page_flex .callback-page_left .bottom p {
     font-size: 16px
-}
+} */
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form {
     max-width: unset
@@ -10893,7 +10987,7 @@ input[type="date"] {
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form .input-btn {
-    max-width: 296px;
+    max-width: 100%;
     margin: 0 auto
 }
 
@@ -10910,6 +11004,15 @@ input[type="date"] {
 
 }
 
+/*991*/
+@media (max-width:991.98px) {
+  .select__options {
+    font-size: 18px;
+}
+.select__title {
+  font-size: 18px;
+}
+}
 /*767*/
 @media (max-width:767.98px) {
   .callback_page_flex_desc {
@@ -10930,14 +11033,28 @@ input[type="date"] {
 }
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left {
 
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 .callback-page .callback-page_cont .callback-page_title {
   margin: 0 auto 20px;
 }
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form p {
-padding: 20px 0;
+padding:  0;
 }
+.callback-page .callback-page_cont .callback-page_title h2 {
+  font-size: 24px;  
+}
+
+.callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon_shadow svg{
+  width: 75px;
+  height: 75px;
+}
+.callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon_shadow {
+
+  margin-right: 20px
+}
+
+
 }
 
 /*520*/
@@ -10946,22 +11063,12 @@ padding: 20px 0;
     padding: 0 20px 60px
 }
 
-/* .callback-page .callback-page_cont {
-    padding: 70px 20px
-} */
-
-/* .callback-page .callback-page_cont .callback-page_title {
-    margin: 0 auto 40px
-} */
-
 .callback-page .callback-page_cont .callback-page_title h2 {
-    font-size: 30px;
-    line-height: 36px;
-    /* margin-bottom: 30px */
+    font-size: 20px;    
 }
 
 .callback-page .callback-page_cont .callback-page_title p {
-    font-size: 16px
+    font-size: 14px
 }
 
 .callback-page .callback-page_cont .callback-page_flex {
@@ -10972,15 +11079,20 @@ padding: 20px 0;
     max-width: unset;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     text-align: left;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    gap: 20px;
+    text-align: center;
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon {
-    margin-bottom: 35px;
-    max-width: max-content
+  margin: 0 auto ;
+  max-width: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon:nth-child(5) {
@@ -10988,11 +11100,12 @@ padding: 20px 0;
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon_shadow {
-    margin-right: 10px
+   order: 1;
+   margin-right: 0;
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .icon p {
-    font-size: 24px
+    font-size: 20px
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item {
@@ -11000,7 +11113,7 @@ padding: 20px 0;
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .contacts_item p {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 5px
 }
 
@@ -11009,7 +11122,7 @@ padding: 20px 0;
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_left .bottom p {
-    font-size: 16px
+    font-size: 14px
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form {

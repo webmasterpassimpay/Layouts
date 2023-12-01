@@ -132,6 +132,20 @@ textarea {
   justify-content:space-between;
   flex-direction:row-reverse
 }
+@media (max-width:1170.98px){
+  .select__value{
+   
+    font-size:16px;
+   
+  }
+}
+@media (max-width:599.98px){
+  .select__value{
+   
+    font-size:14px;
+   
+  }
+}
 .select__value:before{
   content:"";
   display:inline-block;
@@ -160,11 +174,6 @@ textarea {
   padding:14px 10px;  
 }
 
-@media (max-width:991.98px){
-  .select__options{
-      font-size:18px
-  }
-}
 .select__option{
   cursor:pointer;
   padding:5px 15px;
@@ -10813,8 +10822,7 @@ input[type="date"] {
   background: #fff;
   border-radius: 10px;
   font-family: "Ubuntu";
-  font-style: normal;
-  font-weight: 500;
+  font-style: normal;  
   font-size: 14px;
   line-height: 18px;
   border: 1px solid #c6d6e5;
@@ -11015,9 +11023,7 @@ input[type="date"] {
 
 /*991*/
 @media (max-width:991.98px) {
-  .select__options {
-    font-size: 18px;
-}
+
 .select__title {
   font-size: 18px;
 }
@@ -11158,7 +11164,7 @@ padding:  0;
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input textarea,.callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input input {
     height: 50px;
     padding: 0 16px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 18px
 }
 

@@ -1322,7 +1322,7 @@
                 <form name="contacts" method="post">
                   <div class="flex">
                     <label for="" class="text-input">
-                      <input type="text" id="contacts_firstname" name="contacts[firstname]" required="required" placeholder="Имя *" />
+                      <input type="text" id="contacts_firstname" name="contacts[firstname]" required required="required" placeholder="Имя *" />
                     </label>
                     <label for="" class="text-input">
                       <input type="text" id="contacts_lastname" name="contacts[lastname]" placeholder="Фамилия" />
@@ -1357,7 +1357,7 @@
                         <option value="Личная рекомендация">Личная рекомендация</option>
                       </select>
                     </label>
-                  </div>
+                  </div>                 
 
                   <label for="" class="text-input mb-list-rule">
                     <textarea id="contacts_message" name="contacts[message]" required="required" placeholder="Введите Ваше сообщение"></textarea>
@@ -2038,7 +2038,7 @@
       </div>
     </div>
 
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css?143" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
 
     <script src="./js/jquery.min.js"></script>
     <!-- Swiper JS -->
@@ -2051,7 +2051,7 @@
     <!--<script src="/js/app2.min.js" ></script>-->
     <script src="./js/window-scroll.js"></script>
 
-    <script src="./js/app2.min.js?101"></script>
+    <script src="./js/app2.min.js"></script>
 
     <script>
       $("body").delegate('form[name="contacts"]', "submit", function (e) {

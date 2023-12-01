@@ -146,19 +146,20 @@ textarea {
   height:100%
 }
 .select__options{
-  color:#000;
+  color:#9fa8b1;
   position:absolute;
-  top:50px;
+  top:55px;
   border-radius:0 0 4px 4px;
   min-width:100%;
   left:0;
   background-color:#fff;
   border-top:0;
   border:1px solid #d9d9d9;
-  border-top:0;
+  border-radius:10px;
   font-size:14px;
-  padding:10px 0 5px
+  padding:14px 10px;  
 }
+
 @media (max-width:991.98px){
   .select__options{
       font-size:18px
@@ -170,6 +171,11 @@ textarea {
   margin:0;
   display:block!important
 }
+
+.select__option:not(:last-child){  
+  margin-bottom:10px;  
+}
+
 @media (min-width:992px){
   .select__option:hover{
       background:#d9d9d9
@@ -189,7 +195,7 @@ input::-ms-clear {
 }
 
 input:required:valid {
-  border: 1px solid rgb(80, 203, 84)
+  border: 1px solid rgb(80, 203, 84) !important
  }
  
  input:required:invalid {
@@ -10681,8 +10687,8 @@ input[type="date"] {
 }
 
 .callback_page_flex_desc {
-  margin-top: 70px;
-  padding-top: 50px;
+  margin-top: 40px;
+  padding-top: 40px;
   border-top: 1px solid #ececec;
   color: #f60;
   line-height: normal
@@ -10803,14 +10809,17 @@ input[type="date"] {
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input textarea,.callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input .select__title,.callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input input {
   width: 100%;
   height: 50px;
-  padding: 0 16px;
-  background: #f5f8fb;
-  border-radius: 3px;
+  padding: 14px 10px;
+  background: #fff;
+  border-radius: 10px;
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 18px
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #c6d6e5;
+  color: #9fa8b1;
+ font-family: Ubuntu;
 }
 
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input textarea::placeholder,.callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input input::placeholder {
@@ -10820,7 +10829,7 @@ input[type="date"] {
 .callback-page .callback-page_cont .callback-page_flex .callback-page_form form .text-input .select__title {
   outline: none;
   color: #9fa8b1;
-  border: unset;
+  /* border: unset; */
   display: flex;
   justify-content: center;
   align-items: center

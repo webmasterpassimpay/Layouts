@@ -3238,17 +3238,63 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			$('.balance_search input').val('');
 			$('.tariff_item').removeClass('search_hide');
 		});
+		// $('body').delegate('.balance_edit_btns button', 'click', function(){
+		// 	$(this).toggleClass('active');
+		// 	$('.balance_edit_btns button').not(this).removeClass('active');
+		// 	var i = $('.balance_edit_btns button.active').index();
+		// 	$('.tariff_item').removeClass('hide2');
+		// 	if (i >= 0) {
+		// 		if (i == 0)  $('.tariff_item.token').addClass('hide2');
+		// 		if (i == 1)  $('.tariff_item.coin').addClass('hide2');
+		// 		if (i == 2)  $('.tariff_item.coin, .tariff_item.token:not(.stable)').addClass('hide2');
+		// 	}
+		// });
 		$('body').delegate('.balance_edit_btns button', 'click', function(){
-			$(this).toggleClass('active');
-			$('.balance_edit_btns button').not(this).removeClass('active');
-			var i = $('.balance_edit_btns button.active').index();
-			$('.tariff_item').removeClass('hide2');
-			if (i >= 0) {
-				if (i == 0)  $('.tariff_item.token').addClass('hide2');
-				if (i == 1)  $('.tariff_item.coin').addClass('hide2');
-				if (i == 2)  $('.tariff_item.coin, .tariff_item.token:not(.stable)').addClass('hide2');
-			}
-		});
+    $(this).toggleClass('active');
+    $('.balance_edit_btns button').not(this).removeClass('active');
+    var i = $('.balance_edit_btns button.active').index();
+    $('.tariff_item').removeClass('hide2');
+    
+    if (i >= 0) {
+        if (i == 0) {
+            $('.tariff_item.token').addClass('hide2');
+        }
+        if (i == 1) {
+            $('.tariff_item.coin').addClass('hide2');
+        }
+        if (i == 2) {
+            $('.tariff_item.coin, .tariff_item.token:not(.stable)').addClass('hide2');
+        }
+    }
+
+    // Получаем видимые элементы без класса hide2
+    var visibleItems = $('.tariff_item:not(.hide2)');
+
+    // Изменяем порядок с анимацией через позиционирование
+    var leftOffset = 0;
+    var topOffset = 0;
+
+    visibleItems.each(function(index) {
+        $(this).css({
+            'position': 'absolute',
+            'transition': 'left 3.5s, top 3.5s',
+            'left': leftOffset + 'px',
+            'top': topOffset + 'px'
+        });
+
+        if (index % 2 === 0) {
+            leftOffset += $(this).outerWidth() + 10; // Добавляем отступ
+        } else {
+            topOffset += $(this).outerHeight() + 10; // Добавляем отступ
+            leftOffset = 0; // Сбрасываем left для следующей строки
+        }
+    });
+});
+
+
+
+
+		
 		jQuery(document).ready(function($) {
 			var actionlog = $('#tariff_list');
 			var actionlogScroll = actionlog.parent();
